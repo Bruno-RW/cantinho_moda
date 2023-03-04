@@ -1,0 +1,17 @@
+{
+    "name": "brunorw/cantinho_moda",
+    "description": "TCC/estágio para loja de venda de roupas Cantinho da Moda",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "CantinhoModa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno-RW",
+            "email": "bruno_wunsch@hotmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,5 @@
+# Ignorando a pasta /vendor do COMPOSER
+/vendor
+
+# Ignorando o arquivo constants.php que tem senhas particulares
+config/constants.php
