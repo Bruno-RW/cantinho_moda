@@ -13,5 +13,7 @@
             "email": "bruno_wunsch@hotmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "bramus/router": "^1.6"
+    }
 }
