@@ -137,7 +137,7 @@ button.white {
 #hero {
     height: 90vh;
     padding: 0 80px;
-    background-image: url("../../img/img/hero4.png");
+    background-image: url("/assets/img/banners/hero1.png");
     background-size: cover;
     background-position: top 25% right 0;
 }
@@ -160,7 +160,7 @@ button.white {
     padding: 14px 60px 14px 65px;
     background-repeat: no-repeat;
     background-color: transparent;
-    background-image: url("../../img/img/button.png");
+    background-image: url("/assets/img/botoes/botao1.png");
 }
 
 #qualidades .fe-box {
@@ -291,7 +291,7 @@ button.white {
     height: 40vh;
     background-size: cover;
     background-position: center;
-    background-image: url("../../img/img/banner/b2.jpg");
+    background-image: url("/assets/img/banners/b1.jpg");
 }
 #banner h2 {
     font-size: 30px;
@@ -332,10 +332,10 @@ button.white {
     min-width: 630px;
     background-size: cover;
     background-position: center;
-    background-image: url("../../img/img/banner/b17.jpg");
+    background-image: url("/assets/img/banners/b2.jpg");
 }
 #sm-banner .banner-box2 {
-    background-image: url("../../img/img/outros/roupas1.jpg");
+    background-image: url("/assets/img/banners/b3.jpg");
 }
 #sm-banner .banner-box:hover button {
     background: #088178;
@@ -362,20 +362,20 @@ button.white {
     min-width: 30%;
     background-size: cover;
     background-position: center;
-    background-image: url("../../img/img/banner/b7.jpg");
+    background-image: url("/assets/img/banners/b4.jpg");
 }
 #banner3 .banner-box2 {
-    background-image: url("../../img/img/banner/b4.jpg");
+    background-image: url("/assets/img/banners/b5.jpg");
 }
 #banner3 .banner-box3 {
-    background-image: url("../../img/img/banner/b18.jpg");
+    background-image: url("/assets/img/banners/b6.jpg");
 }
 
 #jornal {
     background-color: #041E42;
     background-repeat: no-repeat;
     background-position: 20% 30%;
-    background-image: url("../../img/img/banner/b14.png");
+    background-image: url("/assets/img/banners/b7.png");
 }
 #jornal h4 {
     color: #fff;
