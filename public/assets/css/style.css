@@ -863,3 +863,67 @@ button.white {
 #login .logar-registrar a:hover {
     text-decoration: underline;
 }
+
+
+/* ERROR 404 */
+#erro {
+    margin: 40px 0;
+}
+
+#erro .container {
+    width: 800px;
+    height: 500px;
+
+    padding: 20px;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+#erro .container h1 {
+    color: #B79130;
+    font-size: 18vh;
+    font-weight: 700;
+    margin: 25px 0 10px 0;
+}
+#erro .container h4 {
+    font-weight: 700;
+    font-size: 2em;
+    color: #1A1A1A;
+
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+#erro .container p {
+    color: #1A1A1A;
+    font-size: 1.2em;
+    
+    text-align: center;
+    padding: 0 70px 0 70px;
+}
+#erro .container span {
+    font-weight: 600;
+}
+
+#erro .container .btn {
+    display: flex;
+    margin: 25px 0;
+}
+#erro .container .btn a {
+    display: inline-block;
+    color: #B79130;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    margin: 0 10px;
+    padding: 10px 25px;
+
+    border-radius: 25px;
+    border: 2px solid #B79130;
+    transition: all .3s ease;
+}
+#erro .container .btn a:hover {
+    color: #FFF;
+    background: #B79130;
+}
