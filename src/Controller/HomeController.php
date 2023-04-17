@@ -11,7 +11,7 @@ class HomeController extends FrontController
     public function index()
     {
         $dados = [];
-        $dados['titulo'] = 'Página inicial';
+        $dados['titulo'] = 'Home';
         $dados['topo'] = $this->carregaHTMLTopo();
         $dados['rodape'] = $this->carregaHTMLRodape();
         
