@@ -677,3 +677,189 @@ button.white {
         margin-top: 10px;
     }
 }
+
+
+/* LOGAR/REGISTRAR */
+#login .container {
+    width: 500px;
+    height: 430px;
+
+    /* overflow: hidden; */
+    border-radius: 20px;
+    background: transparent;
+
+    transition: height .2s ease;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+#login .container.ativo {
+    height: 520px;
+}
+#login .container.ativo .form-box.logar {
+    transition: none;
+    transform: translateX(-500px);
+}
+
+#login .form-box {
+    width: 100%;
+    padding: 40px;
+}
+#login .form-box h2 {
+    font-weight: 700;
+    font-size: 34px;
+    color: #162938;
+
+    margin-top: 30px;
+    text-align: center;
+}
+#login .form-box.logar {
+    /* display: none; */
+}
+#login .form-box.registrar {
+    position: absolute;
+    transform: translateX(500px);
+}
+
+#login .fa-xmark {
+    position: absolute;
+    font-size: 24px;
+    color: #FFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    width: 45px;
+    height: 45px;
+
+    cursor: pointer;
+    background: #162938;
+    border-bottom-left-radius: 20px;
+}
+
+#login .input-box {
+    margin: 30px 0;
+    /* padding: 0; */
+
+    width: 100%;
+    height: 50px;
+
+    position: relative;
+    border-bottom: 2px solid #162938;
+}
+#login .input-box label {
+    position: absolute;
+    color: #162938;
+    font-weight: 500;
+    font-size: 1em;
+
+    top: 50%;
+    left: 0;
+
+    transition: .5s;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+#login .input-box input:focus~label,
+#login .input-box input:valid~label {
+    top: -5px;
+}
+#login .input-box input {
+    color: #162938;
+    font-weight: 600;
+    font-size: 1em;
+
+    padding-right: 35px;
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+    background: transparent;
+}
+#login .input-box i {
+    position: absolute;
+    font-size: 1.2em;
+    color: #162938;
+
+    right: 8px;
+    line-height: 40px;
+}
+
+#login .esqueci-senha {
+    display: flex;
+    justify-content: space-between;
+
+    color: #162938;
+    font-weight: 500;
+    font-size: 14px;
+
+    margin: -10px 0px 40px;
+}
+#login .esqueci-senha label input {
+    accent-color: #162938;
+    margin-right: 10px;
+}
+#login .esqueci-senha a {
+    color: #162938;
+    text-decoration: none;
+}
+#login .esqueci-senha a:hover {
+    text-decoration: underline;
+}
+
+#login .termos {
+    text-align: start;
+}
+#login .termos p {
+    color: #162938;
+    font-size: 12px;
+    font-weight: 500;
+    margin: -15px 0px 15px;
+}
+#login .termos a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #162938;
+}
+#login .termos a:hover {
+    text-decoration: underline;
+}
+
+#login .btn {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    
+    width: 100%;
+    height: 45px;
+    
+    border: none;
+    outline: none;
+    
+    cursor: pointer;
+    border-radius: 6px;
+    background: #162938;
+}
+
+#login .logar-registrar {
+    color: #162938;
+    font-weight: 500;
+    font-size: 14px;
+
+    margin-top: 25px;
+    text-align: center;
+}
+#login .logar-registrar a {
+    color: #162938;
+    font-weight: 600;
+    text-decoration: none;
+}
+#login .logar-registrar a:hover {
+    text-decoration: underline;
+}
