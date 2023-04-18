@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-/* GERAL */
+/* ------ GERAL ------ */
 * {
     margin: 0;
     padding: 0;
@@ -75,7 +75,7 @@ button.white {
 }
 
 
-/* ----- CABEÇALHO ----- */
+/* ------ CABEÇALHO ------ */
 #header {
     padding: 20px 80px;
     z-index: 999;
@@ -139,7 +139,195 @@ button.white {
 }
 
 
-/* ----- HOME ----- */
+/* ------ BANNER CABEÇALHO ------ */
+#header-banner {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+
+    padding: 14px;
+    height: 40vh;
+    width: 100%;
+
+    background-size: cover;
+}
+#header-banner h2 {
+    color: #FFF;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+#header-banner p {
+    color: #FFF;
+    font-size: 16px;
+    margin: 15px 0 0;
+}
+
+
+/* ------ RODAPÉ ------ */
+#jornal {
+    background-color: #041E42;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-image: url("/assets/img/banners/b7.png");
+}
+#jornal h4 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+#jornal p {
+    color: #818EA0;
+    font-size: 14px;
+    font-weight: 600;
+}
+#jornal p span {
+    color: #FFBD27;
+}
+#jornal .form {
+    width: 40%;
+}
+#jornal input {
+    font-size: 14px;
+    
+    width: 100%;
+    height: 3.125rem;
+    padding: 0 .5em;
+
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#jornal button {
+    color: #fff;
+    max-height: 3.56em;
+    white-space: nowrap;
+    
+    background-color: #088178;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#footer {
+    padding-bottom: 20px;
+}
+#footer h4 {
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+#footer p {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+#footer a {
+    color: #222;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+#footer .col{
+    margin-bottom: 20px;
+}
+#footer .logo {
+    max-width: 200px;
+    margin-bottom: 30px;
+}
+#footer .pagamentos img {
+    max-width: 50px;
+}
+#footer .siga {
+    margin-top: 30px;
+}
+#footer .siga i {
+    color: #222;
+    cursor: pointer;
+    padding-right: 4px;
+    font-size: 30px;
+}
+#footer .siga i:hover,
+#footer a:hover {
+    color: #B79130;
+}
+#footer .copyright {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/* ------ ERROR 404 ------ */
+#erro {
+    margin: 40px 0;
+}
+
+#erro .container {
+    width: 800px;
+    height: 500px;
+
+    padding: 20px;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+#erro .container h1 {
+    color: #B79130;
+    font-size: 18vh;
+    font-weight: 700;
+    margin: 25px 0 10px 0;
+}
+#erro .container h4 {
+    font-weight: 700;
+    font-size: 2em;
+    color: #1A1A1A;
+    
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+#erro .container p {
+    color: #1A1A1A;
+    font-size: 1.2em;
+    
+    text-align: center;
+    padding: 0 70px 0 70px;
+}
+#erro .container span {
+    font-weight: 600;
+}
+
+#erro .container .btn {
+    display: flex;
+    margin: 25px 0;
+    align-items: center;
+}
+#erro .container .btn a {
+    display: inline-block;
+    color: #B79130;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    margin: 0 10px;
+    padding: 10px 25px;
+
+    border-radius: 25px;
+    border: 2px solid #B79130;
+    transition: all .3s ease;
+}
+#erro .container .btn a:hover {
+    color: #FFF;
+    background: #B79130;
+}
+
+
+/* ------ HOME ------ */
 #hero {
     height: 90vh;
     padding: 0 80px;
@@ -399,287 +587,20 @@ button.white {
     background-image: url("/assets/img/banners/b6.jpg");
 }
 
-#jornal {
-    background-color: #041E42;
-    background-repeat: no-repeat;
-    background-position: 20% 30%;
-    background-image: url("/assets/img/banners/b7.png");
-}
-#jornal h4 {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 700;
-}
-#jornal p {
-    color: #818EA0;
-    font-size: 14px;
-    font-weight: 600;
-}
-#jornal p span {
-    color: #FFBD27;
-}
-#jornal .form {
-    width: 40%;
-}
-#jornal input {
-    font-size: 14px;
-    
-    width: 100%;
-    height: 3.125rem;
-    padding: 0 .5em;
 
-    outline: none;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-#jornal button {
-    color: #fff;
-    max-height: 3.56em;
-    white-space: nowrap;
-    
-    background-color: #088178;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+/* ------ LOJA ------ */
+
+
+/* ------ SOBRE ------ */
+
+
+/* ------ CONTATO ------ */
+#header-banner.contato-banner {
+    background-image: url("/assets/img/banners/b8.png");
 }
 
 
-/* RODAPÉ */
-#footer {
-    padding-bottom: 20px;
-}
-#footer h4 {
-    font-size: 14px;
-    font-weight: 700;
-    padding-bottom: 20px;
-}
-#footer p {
-    font-size: 13px;
-    font-weight: 500;
-    margin: 0 0 8px 0;
-}
-#footer a {
-    color: #222;
-    font-size: 13px;
-    margin-bottom: 10px;
-    text-decoration: none;
-}
-#footer .col{
-    margin-bottom: 20px;
-}
-#footer .logo {
-    max-width: 200px;
-    margin-bottom: 30px;
-}
-#footer .pagamentos img {
-    max-width: 50px;
-}
-#footer .siga {
-    margin-top: 30px;
-}
-#footer .siga i {
-    color: #222;
-    cursor: pointer;
-    padding-right: 4px;
-    font-size: 30px;
-}
-#footer .siga i:hover,
-#footer a:hover {
-    color: #B79130;
-}
-#footer .copyright {
-    margin-top: 30px;
-    text-align: center;
-}
-
-
-/* MEDIA HOME */
-@media (max-width:799px) {
-    .section-p1 {
-        padding: 40px 40px;
-    }
-
-    #navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-
-        position: fixed;
-        right: -3000px;
-        top: 0;
-
-        height: 100vh;
-        width: 300px;
-        padding: 80px 0 0 10px;
-
-        transition: .3s;
-        background-color: #E3E6F3;
-        box-shadow: 0 40px 60px rgba(0, 0, 0, .1);
-    }
-    #navbar.ativo {
-        right: 0px;
-    }
-    #navbar li {
-        margin-bottom: 25px;
-    }
-
-    #celular {
-        display: flex;
-        align-items: center;
-    }
-    #celular i {
-        color: #1A1A1A;
-        font-size: 24px;
-        padding-left: 20px;
-    }
-
-    #fechar {
-        display: initial;
-        position: absolute;
-
-        font-size: 24px;
-        color: #222;
-        
-        top: 30px;
-        left: 30px;
-    }
-
-    #li-usuario {
-        display: none;
-    }
-
-    #hero {
-        height: 70vh;
-        padding: 0 80px;
-        background-position: top 30% right 30%;
-    }
-
-    #qualidades {
-        justify-content: center;
-    }
-    #qualidades .fe-box {
-        margin: 15px 15px;
-    }
-
-    #produtos .pro-container {
-        justify-content: center;
-    }
-    #produtos .pro {
-        margin: 15px;
-    }
-
-    #banner {
-        height: 20vh;
-    }
-
-    #sm-banner .banner-box {
-        min-width: 100%;
-        height: 30vh;
-        justify-content: space-between;
-    }
-    #sm-banner .banner-box2 {
-        margin-top: 40px;
-    }
-
-    #banner3 {
-        padding: 0 40px;
-    }
-    #banner3 .banner-box {
-        width: 28%;
-    }
-
-    #jornal .form {
-        width: 70%;
-    }
-}
-@media (max-width:477px) {
-    h1 {
-        font-size: 38px;
-    }
-    h2 {
-        font-size: 32px;
-    }
-
-    .section-p1 {
-        padding: 20px
-    }
-
-    #header {
-        padding: 10px 30px;
-    }
-
-    #navbar {
-        max-width: 200px;
-    }
-
-    #hero {
-        padding: 0 20px;
-        background-position: 55%;
-    }
-
-    #qualidades {
-        justify-content: space-between;
-    }
-    #qualidades .fe-box {
-        width: 155px;
-        margin: 0 0 15px 0
-    }
-
-    #produtos .pro-container {
-        justify-content: center;
-    }
-    #produtos .pro {
-        width: 100%;
-    }
-
-    #banner {
-        height: 40vh;
-    }
-
-    #sm-banner .banner-box {
-        height: 40vh;
-    }
-    #sm-banner .banner-box2 {
-        margin-top: 20px;
-    }
-
-    #banner3 {
-        padding: 0 20px;
-    }
-    #banner3 .banner-box {
-        width: 100%;
-    }
-
-    #jornal {
-        padding: 40px 20px;
-    }
-    #jornal .form {
-        width: 100%;
-    }
-    #jornal input {
-        padding: 0 .25em;
-    }
-
-    #footer .top {
-        padding-right: 20px;
-
-    }
-    #footer .logo {
-        width: 100%;
-    }
-    #footer .pad {
-        margin-top: 20px;
-    }
-    #footer .copyright {
-        text-align: start;
-        margin-top: 10px;
-    }
-}
-
-
-/* LOGAR/REGISTRAR */
+/* ------ LOGAR/CADASTRAR ------ */
 #login .container {
     width: 500px;
     height: 430px;
@@ -865,73 +786,185 @@ button.white {
 }
 
 
-/* ERROR 404 */
-#erro {
-    margin: 40px 0;
-}
+/* ------ MEDIA ------ */
+@media (max-width:799px) {
 
-#erro .container {
-    width: 800px;
-    height: 500px;
+    /* ---- GERAL ---- */
+    .section-p1 {
+        padding: 40px 40px;
+    }
 
-    padding: 20px;
 
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    border: 2px solid rgba(255, 255, 255, .5);
-}
-#erro .container h1 {
-    color: #B79130;
-    font-size: 18vh;
-    font-weight: 700;
-    margin: 25px 0 10px 0;
-}
-#erro .container h4 {
-    font-weight: 700;
-    font-size: 2em;
-    color: #1A1A1A;
+    /* ---- CABEÇALHO ---- */
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        position: fixed;
+        right: -3000px;
+        top: 0;
+
+        height: 100vh;
+        width: 300px;
+        padding: 80px 0 0 10px;
+
+        transition: .3s;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, .1);
+    }
+    #navbar.ativo {
+        right: 0px;
+    }
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #celular {
+        display: flex;
+        align-items: center;
+    }
+    #celular i {
+        color: #1A1A1A;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #fechar {
+        display: initial;
+        position: absolute;
+
+        font-size: 24px;
+        color: #222;
+        
+        top: 30px;
+        left: 30px;
+    }
+
+    #li-usuario {
+        display: none;
+    }
+
+
+    /* ---- RODAPÉ ---- */
+    #jornal .form {
+        width: 70%;
+    }
+
+
+    /* ---- HOME ---- */
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    #qualidades {
+        justify-content: center;
+    }
+    #qualidades .fe-box {
+        margin: 15px 15px;
+    }
+
+    #produtos .pro-container {
+        justify-content: center;
+    }
+    #produtos .pro {
+        margin: 15px;
+    }
+
+    #banner {
+        height: 20vh;
+    }
+
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 30vh;
+        justify-content: space-between;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 40px;
+    }
+
+    #banner3 {
+        padding: 0 40px;
+    }
+    #banner3 .banner-box {
+        width: 28%;
+    }
     
-    text-align: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-#erro .container p {
-    color: #1A1A1A;
-    font-size: 1.2em;
+
+    /* ---- LOJA ---- */
+
+
+    /* ---- SOBRE ---- */
+
+
+    /* ---- CONTATO ---- */
+
+
+    /* ---- LOGIN/CADASTRAR ---- */
+
     
-    text-align: center;
-    padding: 0 70px 0 70px;
-}
-#erro .container span {
-    font-weight: 600;
 }
 
-#erro .container .btn {
-    display: flex;
-    margin: 25px 0;
-    align-items: center;
-}
-#erro .container .btn a {
-    display: inline-block;
-    color: #B79130;
-    font-weight: 500;
-
-    text-transform: uppercase;
-    text-decoration: none;
-
-    margin: 0 10px;
-    padding: 10px 25px;
-
-    border-radius: 25px;
-    border: 2px solid #B79130;
-    transition: all .3s ease;
-}
-#erro .container .btn a:hover {
-    color: #FFF;
-    background: #B79130;
-}
-
-/* MEDIA ERROR 404 */
 @media (max-width:477px) {
+
+    /* ---- GERAL ---- */
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+
+    .section-p1 {
+        padding: 20px
+    }
+
+
+    /* ---- CABEÇALHO ---- */
+    #header {
+        padding: 10px 30px;
+    }
+
+    #navbar {
+        max-width: 200px;
+    }
+
+
+    /* ---- BANNER-CABEÇALHO ---- */
+
+
+    /* ---- RODAPÉ ---- */
+    #jornal {
+        padding: 40px 20px;
+    }
+    #jornal .form {
+        width: 100%;
+    }
+    #jornal input {
+        padding: 0 .25em;
+    }
+
+    #footer .top {
+        padding-right: 20px;
+
+    }
+    #footer .logo {
+        width: 100%;
+    }
+    #footer .pad {
+        margin-top: 20px;
+    }
+    #footer .copyright {
+        text-align: start;
+        margin-top: 10px;
+    }
+
+
+    /* ---- ERROR 404 ---- */
     #erro .container {
         height: 430px;
         padding: 0px;
@@ -956,4 +989,63 @@ button.white {
     #erro .container .btn a {
         padding: 10px 25px;
     }
+
+
+    /* ---- HOME ---- */
+    #hero {
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    #qualidades {
+        justify-content: space-between;
+    }
+    #qualidades .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0
+    }
+
+    #produtos .pro-container {
+        justify-content: center;
+    }
+    #produtos .pro {
+        width: 100%;
+    }
+
+    #banner {
+        height: 40vh;
+    }
+
+    #sm-banner .banner-box {
+        height: 40vh;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
+    }
+
+    #banner3 {
+        padding: 0 20px;
+    }
+    #banner3 .banner-box {
+        width: 100%;
+    }
+
+
+    /* ---- LOJA ---- */
+
+
+    /* ---- SOBRE ---- */
+
+
+    /* ---- CONTATO ---- */
+    #header-banner.contato-banner h2 {
+        font-size: 46px;
+    }
+    #header-banner.contato-banner p {
+        font-size: 20px;
+    }
+
+    /* ---- LOGIN/CADASTRAR ---- */
+
+    
 }
