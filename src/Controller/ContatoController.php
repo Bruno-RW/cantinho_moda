@@ -32,6 +32,7 @@ class ContatoController extends FrontController
 
             $nome = trim($_POST['nome']);
             $email = trim($_POST['email']);
+            $assunto = trim($_POST['assunto']);
             $mensagem = trim($_POST['mensagem']);
 
             if (strlen($nome) < 6) {
@@ -43,16 +44,21 @@ class ContatoController extends FrontController
                 throw new Exception('O e-mail está incorreto');
             }
 
+            if (strlen($assunto) < 4) {
+                throw new Exception('Por favor, seja mais descritivo sobre o assunto');
+            }
+
             if (strlen($mensagem) < 6) {
                 throw new Exception('Por favor, seja mais descritivo na mensagem');
             }
 
-            $assunto = 'Contato via site - ' .date('d/m/Y H:i:s');
+            $dataMsg = date('d/m/Y H:i:s');
             $mensagemFull = <<<HTML
-                Olá, chegou um novo contato<br>
                 - <strong>Nome</strong>: {$nome}<br>
                 - <strong>E-mail</strong>: {$email}<br>
+                - <strong>Assunto</strong>: {$assunto}<br>
                 - <strong>Mensagem</strong>: {$mensagem}<br>
+                <strong>Contato via site</strong> - {$dataMsg}
             HTML;
 
             SendMail::enviar(MAIL_CONTACTNAME, MAIL_CONTACTMAIL, $assunto, $mensagemFull, $nome, $email);
@@ -66,18 +72,19 @@ class ContatoController extends FrontController
             exit;
         }
         
-        redireciona('contato', 'success', 'Mensagem enviada com sucesso');
+        redireciona('/contato', 'success', 'Mensagem enviada com sucesso');
     }
 
     private function formContato()
     {
         $dados = [
-            'btn_label'=>'Enviar mensagem',
-            'btn_class'=>'btn',
+            'btn_div'=>'',
+            'btn_class'=>'btn normal',
             'fields'=>[
-                ['type'=>'text', 'name'=>'nome', 'label'=>'Nome Completo', 'required'=>true],
-                ['type'=>'email', 'name'=>'email', 'label'=>'E-mail', 'required'=>true],
-                ['type'=>'textarea', 'name'=>'mensagem', 'label'=>'Mensagem', 'rows'=>5, 'required'=>true]
+                ['type'=>'text', 'name'=>'nome', 'placeholder'=> 'Nome completo', 'required'=>true],
+                ['type'=>'email', 'name'=>'email', 'placeholder'=> 'E-mail', 'required'=>true],
+                ['type'=>'text', 'name'=>'assunto', 'placeholder'=>'Assunto', 'required'=>true],
+                ['type'=>'textarea', 'name'=>'mensagem', 'placeholder'=>'Mensagem', 'rows'=>5, 'required'=>true]
             ]
         ];
         return Render::block('form', $dados);
