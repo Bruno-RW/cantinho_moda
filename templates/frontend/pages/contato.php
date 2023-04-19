@@ -34,16 +34,6 @@
 </section>
 
 <section id="detalhes-form" class="d-flex justify-content-start">
-    <!-- <form action="" class="d-flex flex-column align-items-start">
-        <span>DEIXE UMA MENSAGEM</span>
-        <h2>Entre em contato conosco</h2>
-        <input type="text" placeholder="Seu nome">
-        <input type="text" placeholder="E-mail">
-        <input type="text" placeholder="Assunto">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
-        <button class="normal">Enviar</button>
-    </form> -->
-
     <div class="row">
         <div class="col">
             <span>DEIXE UMA MENSAGEM</span>
