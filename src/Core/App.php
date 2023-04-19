@@ -33,7 +33,7 @@ class App
         // Registra as rotas possíveis
         self::registraRotasDoFrontend();
         // self::registraRotasDoBackend();
-        // self::registra404Generico();
+        self::registra404Generico();
         
         // Analisa a requisição e escolhe a rota compatível
         self::$router->run();
@@ -52,16 +52,18 @@ class App
         // self::$router->post('/ajax','\CantinhoModa\Controller\AjaxController@loader');
 
         // self::$router->get('/busca','\CantinhoModa\Controller\BuscaController@buscar');
+        
+        self::$router->get('/sobre','\CantinhoModa\Controller\SobreController@sobre');
 
-        // self::$router->get('/login','\CantinhoModa\Controller\LoginController@login');
-        // self::$router->get('/logout','\CantinhoModa\Controller\LoginController@logout');
-        // self::$router->post('/login','\CantinhoModa\Controller\LoginController@postLogin');
+        self::$router->get('/contato','\CantinhoModa\Controller\ContatoController@contato');
+        self::$router->post('/contato','\CantinhoModa\Controller\ContatoController@postContato');
 
-        // self::$router->get('/cadastro','\CantinhoModa\Controller\CadastroController@cadastro');
-        // self::$router->post('/cadastro','\CantinhoModa\Controller\CadastroController@postCadastro');
+        self::$router->get('/login','\CantinhoModa\Controller\LoginController@login');
+        self::$router->get('/logout','\CantinhoModa\Controller\LoginController@logout');
+        self::$router->post('/login','\CantinhoModa\Controller\LoginController@postLogin');
 
-        // self::$router->get('/fale-conosco','\CantinhoModa\Controller\FaleConoscoController@faleConosco');
-        // self::$router->post('/fale-conosco','\CantinhoModa\Controller\FaleConoscoController@postFaleConosco');
+        self::$router->get('/cadastro','\CantinhoModa\Controller\CadastroController@cadastro');
+        self::$router->post('/cadastro','\CantinhoModa\Controller\CadastroController@postCadastro');
 
         // self::$router->get('/meus-dados','\CantinhoModa\Controller\MeusDadosController@meusDados');
         // self::$router->get('/produtos/{id}','\CantinhoModa\Controller\ProdutoController@listar');
@@ -122,14 +124,14 @@ class App
      *
      * @return void
      */
-    // private static function registra404Generico()
-    // {
-    //     self::$router->set404(function() {
-    //         header('HTTP/1.1 404 Not Found');
-    //         $objErro = new ErrorController();
-    //         $objErro->erro404();
-    //     });
-    // }
+    private static function registra404Generico()
+    {
+        self::$router->set404(function() {
+            header('HTTP/1.1 404 Not Found');
+            $objErro = new ErrorController();
+            $objErro->erro404();
+        });
+    }
 
     /**
      * Função que inicia uma nova versão e, posteriormente,
