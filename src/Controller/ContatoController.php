@@ -81,10 +81,39 @@ class ContatoController extends FrontController
             'btn_div'=>'',
             'btn_class'=>'btn normal',
             'fields'=>[
-                ['type'=>'text', 'name'=>'nome', 'placeholder'=> 'Nome completo', 'required'=>true],
-                ['type'=>'email', 'name'=>'email', 'placeholder'=> 'E-mail', 'required'=>true],
-                ['type'=>'text', 'name'=>'assunto', 'placeholder'=>'Assunto', 'required'=>true],
-                ['type'=>'textarea', 'name'=>'mensagem', 'placeholder'=>'Mensagem', 'rows'=>5, 'required'=>true]
+                [
+                    'type'=>'text',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'name'=>'nome',
+                    'placeholder'=> 'Nome completo',
+                    'required'=>true
+                ],
+                [
+                    'type'=>'email',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'name'=>'email',
+                    'placeholder'=> 'E-mail',
+                    'required'=>true
+                ],
+                [
+                    'type'=>'text',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'name'=>'assunto',
+                    'placeholder'=>'Assunto',
+                    'required'=>true
+                ],
+                [
+                    'type'=>'textarea',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'name'=>'mensagem',
+                    'placeholder'=>'Mensagem',
+                    'rows'=>5,
+                    'required'=>true
+                ]
             ]
         ];
         return Render::block('form', $dados);
