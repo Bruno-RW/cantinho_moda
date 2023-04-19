@@ -3,6 +3,7 @@
     $action    = $action    ?? $_SERVER['REQUEST_URI'];
     $enctype   = $enctype   ?? 'application/x-www-form-urlencoded';
     $class     = $class     ?? 'row g-3';
+    $btn_div   = $btn_div   ?? 'text-center';
     $btn_label = $btn_label ?? 'Enviar';
     $btn_class = $btn_class ?? 'btn btn-primary';
 ?>
@@ -26,9 +27,9 @@
             case 'email':
             case 'password':
                 echo <<<HTML
-                        <div class="{$f['class']}">
-                            <label for="{$f['name']}" class="form-label">{$f['label']}{$f['txt_required']}</label>
-                            <input type="{$f['type']}" class="form-control" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" {$f['required']} value="{$postValue}">
+                        <div class="input-box">
+                            <label for="{$f['name']}" class="label">{$f['label']}{$f['txt_required']}</label>
+                            <input type="{$f['type']}" class="" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" {$f['required']} value="{$postValue}">
                         </div>
                     HTML;
                 break;
@@ -38,8 +39,8 @@
                 $checked         = ($f['value'] == $postValue) ? 'checked' : ''; 
                 echo <<<HTML
                         <div class="{$f['class']}">
-                            <label class="form-label">{$f['label']}{$f['txt_required']}</label>
-                            <div class="form-check form-control" style="padding-left:2.2rem">
+                            <label class="check-label">{$f['label']}{$f['txt_required']}</label>
+                            <div class="checkbox">
                                 <input class="form-check-input" type="checkbox" name="{$f['name']}" id="{$f['name']}" value="{$f['value']}" {$f['required']} {$checked}>
                                 <label class="form-check-label" for="{$f['name']}">
                                     {$f['labelcheck']}
@@ -117,7 +118,7 @@
     }
 ?>
 
-    <div class="col-12 text-center">
+    <div class="col-12 <?= $btn_div ?>">
         <button type="submit" class="<?= $btn_class ?>"><?= $btn_label ?></button>
     </div>
 </form>
