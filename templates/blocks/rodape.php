@@ -13,8 +13,8 @@
     <div class="col-4 top d-flex flex-column align-items-start">
         <img src="/assets/img/icones/logos/logo-black-cortado.png" class="logo" alt="">
         <h4>Contato</h4>
-        <p><strong>Horários: </strong> 07:30-11:30 & 13:00-17:00, Segunda á Sexta</p>
         <p><strong>Endereço: </strong> Avenida Tucunduva, 300 - Sala 101</p>
+        <p><strong>Horários: </strong> Segunda á Sexta, 07:30-17:00</p>
         <p><strong>Telefone: </strong> (55) 9 9988-0103</p>
     </div>
 
