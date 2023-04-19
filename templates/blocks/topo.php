@@ -5,8 +5,8 @@
             <ul id="navbar">
                 <li><a href="/" class="<?= ($_SERVER['REQUEST_URI'] == '/') ? 'ativo' : '' ?>">Home</a></li>
                 <li><a href="#" class="<?= ($_SERVER['REQUEST_URI'] == '/loja') ? 'ativo' : '' ?>">Loja</a></li>
-                <li><a href="#" class="<?= ($_SERVER['REQUEST_URI'] == '/sobre') ? 'ativo' : '' ?>">Sobre</a></li>
-                <li><a href="#" class="<?= ($_SERVER['REQUEST_URI'] == '/contato') ? 'ativo' : '' ?>">Contato</a></li>
+                <li><a href="/sobre" class="<?= ($_SERVER['REQUEST_URI'] == '/sobre') ? 'ativo' : '' ?>">Sobre</a></li>
+                <li><a href="/contato" class="<?= ($_SERVER['REQUEST_URI'] == '/contato') ? 'ativo' : '' ?>">Contato</a></li>
                 <li id="li-usuario"><a href="/login" class="<?= ($_SERVER['REQUEST_URI'] == '/login') ? 'ativo' : '' ?>"><i class="fa fa-regular fa-user"></i></a></li>
                 <a href="#" id="fechar"><i class="fa-solid fa-xmark"></i></a>
             </ul>
