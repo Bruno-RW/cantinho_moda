@@ -6,6 +6,7 @@
     $btn_div   = $btn_div   ?? 'text-center';
     $btn_label = $btn_label ?? 'Enviar';
     $btn_class = $btn_class ?? 'btn btn-primary';
+
 ?>
 
 <form class="<?= $class ?>" method="<?= $method ?>" action="<?= $action ?>" enctype="<?= $enctype ?>">
@@ -16,6 +17,8 @@
         }
 
         $f['class']        = $f['class'] ?? 'col-12';
+        $f['label_class']  = $f['label_class'] ?? 'form-label';
+        $f['input_class']  = $f['input_class'] ?? 'form-control';
         $f['placeholder']  = $f['placeholder'] ?? '';
         $f['label']        = $f['label'] ?? ucfirst($f['name']);
         $f['required']     = empty($f['required']) ? '' : 'required';
@@ -28,8 +31,8 @@
             case 'password':
                 echo <<<HTML
                         <div class="input-box">
-                            <label for="{$f['name']}" class="label">{$f['label']}{$f['txt_required']}</label>
-                            <input type="{$f['type']}" class="" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" {$f['required']} value="{$postValue}">
+                            <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
+                            <input type="{$f['type']}" class="{$f['input_class']}" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" {$f['required']} value="{$postValue}">
                         </div>
                     HTML;
                 break;
@@ -57,7 +60,7 @@
                 }
                 echo <<<HTML
                         <div class="{$f['class']}">
-                            <label for="{$f['name']}" class="form-label">{$f['label']}{$f['txt_required']}</label>
+                            <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
                             <select id="{$f['name']}" name="{$f['name']}" class="form-select" {$f['required']}>
                                 <option value="">Selecione...</option>
                                 {$options}
@@ -80,8 +83,8 @@
                 }
                 echo <<<HTML
                         <div class="{$f['class']}">
-                            <label class="form-label">{$f['label']}{$f['txt_required']}</label>
-                            <div class="form-control">
+                            <label class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
+                            <div class="{$f['input_class']}">
                                 {$html}    
                             </div>
                         </div>
@@ -92,16 +95,16 @@
                 $cols = $f['cols'] ?? '';
                 echo <<<HTML
                         <div class="{$f['class']}">
-                            <label for="{$f['name']}" class="form-label">{$f['label']}{$f['txt_required']}</label>
-                            <textarea class="" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" rows="{$rows}" cols="{$cols}" {$f['required']}>{$postValue}</textarea>
+                            <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
+                            <textarea class="{$f['input_class']}" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" rows="{$rows}" cols="{$cols}" {$f['required']}>{$postValue}</textarea>
                         </div>
                     HTML;
                 break;
             case 'readonly':
                 echo <<<HTML
                     <div class="{$f['class']}">
-                        <label class="form-label">{$f['label']}{$f['txt_required']}</label>
-                        <input type="text" class="form-control-plaintext border-bottom bg-light ps-1" value="{$postValue}" readonly>
+                        <label class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
+                        <input type="text" class="{$f['input_class']}-plaintext border-bottom bg-light ps-1" value="{$postValue}" readonly>
                     </div>
                 HTML;
                 break;
@@ -109,8 +112,8 @@
                 $f['accept'] = empty($f['accept']) ? '' : "accept='{$f['accept']}'";
                 echo <<<HTML
                         <div class="{$f['class']}">
-                            <label for="{$f['name']}" class="form-label">{$f['label']}{$f['txt_required']}</label>
-                            <input type="{$f['type']}" class="form-control" id="{$f['name']}" name="{$f['name']}" {$f['required']} {$f['accept']}>
+                            <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
+                            <input type="{$f['type']}" class="{$f['input_class']}" id="{$f['name']}" name="{$f['name']}" {$f['required']} {$f['accept']}>
                         </div>
                     HTML;
                 break;
