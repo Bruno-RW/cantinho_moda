@@ -599,6 +599,82 @@ button.white {
     background-image: url("/assets/img/banners/b8.png");
 }
 
+#detalhes-contato .detalhes {
+    width: 40%;
+}
+#detalhes-contato .detalhes h2,
+#detalhes-form h2 {
+    font-size: 26px;
+    font-weight: 700;
+    
+    margin: 0;
+    padding: 20px 0;
+    line-height: 35px;
+}
+#detalhes-contato .detalhes h3 {
+    font-size: 16px;
+    font-weight: 700;
+
+    margin: 0;
+    padding-bottom: 15px;
+}
+#detalhes-contato .detalhes span,
+#detalhes-form span {
+    font-size: 14px;
+}
+#detalhes-contato .detalhes p {
+    font-size: 14px;
+    margin: 0;
+}
+#detalhes-contato .detalhes li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+#detalhes-contato .detalhes li i {
+    font-size: 14px;
+    padding-right: 22px;
+}
+#detalhes-contato .detalhes li p {
+    font-size: 14px;
+    margin: 0;
+}
+
+#detalhes-contato .mapa {
+    width: 55%;
+    height: 400px;
+}
+#detalhes-contato .mapa iframe {
+    height: 100%;
+    width: 100%;
+}
+
+#detalhes-form {
+    padding: 40px 80px
+}
+#detalhes-form form {
+    width: 65%;
+}
+#detalhes-form label {
+    display: none;
+}
+#detalhes-form input,
+#detalhes-form textarea {
+    width: 100%;
+
+    padding: 12px 15px;
+    margin-bottom: 10px;
+
+    outline: none;
+    border: 1px solid #E1E1E1;
+}
+#detalhes-form button {
+    color: #FFF;
+    font-size: 14px;
+    background-color: #088178;
+    text-align: start;
+}
+
 
 /* ------ LOGAR/CADASTRAR ------ */
 #login .container {
