@@ -18,7 +18,7 @@ function retornaHTMLAlertMensagemSessao()
 
 
     $bootstrapAlert = <<<HTML
-        <div class="alert alert-{$tipo}" role="alert">
+        <div class="alert alert-{$tipo} d-flex flex-column align-items-center justify-content-center text-center" role="alert">
             {$texto}
         </div>
     HTML;
