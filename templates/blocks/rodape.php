@@ -51,7 +51,7 @@
                 <a href="https://www.instagram.com/cantinhodamodahz/" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=555599880103&data=AWBHrFuxGJ0C9sFUac-Lu26ROGuk_XJ7_ppVORczJdORXvysLB0Bi9MFZAwpodxI8bB6r-87wOL_Gd8EBfJb9elrwXQ71AwAPTV_9sUxAaQzCXSKm9XkMVXBwzcKfSAzxQQjMwsneS_TBujYs8y7lP88W9LdwDK9GrQy6QAM-g7KOYa1U6kol0z9ExGRZO9qic-nd2X-QVKBzK11qE1-jaxXQmtTcvwFtWoTWcq9tw8Wpv2ZJcScebRltzB45cnIq3gRJi-P_01NuVaB4StJ3eBMnQVEwuP86AvhlcdpfnpPHomIiaE&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR38Q4fCiTPhXLXkHKGgECGv58MCi82LvXmBKqiyjXRPL9Vf3_Qon-7KjgY">
+                <a href="https://api.whatsapp.com/send?phone=555599880103&data=AWBHrFuxGJ0C9sFUac-Lu26ROGuk_XJ7_ppVORczJdORXvysLB0Bi9MFZAwpodxI8bB6r-87wOL_Gd8EBfJb9elrwXQ71AwAPTV_9sUxAaQzCXSKm9XkMVXBwzcKfSAzxQQjMwsneS_TBujYs8y7lP88W9LdwDK9GrQy6QAM-g7KOYa1U6kol0z9ExGRZO9qic-nd2X-QVKBzK11qE1-jaxXQmtTcvwFtWoTWcq9tw8Wpv2ZJcScebRltzB45cnIq3gRJi-P_01NuVaB4StJ3eBMnQVEwuP86AvhlcdpfnpPHomIiaE&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR38Q4fCiTPhXLXkHKGgECGv58MCi82LvXmBKqiyjXRPL9Vf3_Qon-7KjgY" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
