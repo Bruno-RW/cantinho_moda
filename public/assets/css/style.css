@@ -273,7 +273,6 @@ button.white {
     padding: 20px;
 
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    border: 2px solid rgba(255, 255, 255, .5);
 }
 #erro .container h1 {
     color: #B79130;
@@ -442,6 +441,7 @@ button.white {
 #produtos .pro img {
     width: 100%;
     border-radius: 20px;
+    background-color: #F1F1F1;
 }
 #produtos .pro .des {
     text-align: start;
@@ -482,9 +482,9 @@ button.white {
     border: 1px solid #CCE7D0;
     background-color: #E8F6EA;
 }
-#produtos .pro .fav {
+#produtos .pro .fa-heart {
     position: absolute;
-    color: #088178;
+    color: #222;
     font-size: 20px;
 
     font-weight: 500;
@@ -493,7 +493,7 @@ button.white {
     width: 25px;
     height: 25px;
 
-    top: 20px;
+    top: 10px;
     right: 20px;
 }
 
@@ -668,11 +668,14 @@ button.white {
     outline: none;
     border: 1px solid #E1E1E1;
 }
+#detalhes-form textarea {
+    margin-bottom: 2px;
+}
 #detalhes-form button {
     color: #FFF;
     font-size: 14px;
-    background-color: #088178;
     text-align: start;
+    background-color: #088178;
 }
 
 
@@ -859,6 +862,59 @@ button.white {
 }
 #login .logar-registrar a:hover {
     text-decoration: underline;
+}
+
+
+/* LOGIN ADMIN */
+#login-admin {
+    margin: 80px 0 40px;
+}
+
+#login-admin .container {
+    width: 800px;
+    height: 440px;
+    padding: 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+#login-admin .container .titulo {
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+
+    margin-bottom: 40px;
+    background-color: #041E42;
+}
+#login-admin .container h1 {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+
+    margin: 0;
+    padding-top: 10px;
+}
+
+#login-admin form {
+    padding: 20px 80px;
+    width: 100%;
+}
+#login-admin form label {
+    display: none;
+}
+#login-admin form input {
+    width: 100%;
+
+    padding: 12px 15px;
+    margin-bottom: 10px;
+
+    outline: none;
+    border: 1px solid #E1E1E1;
+}
+#login-admin form button {
+    color: #FFF;
+    font-size: 14px;
+
+    width: 100%;
+    background-color: #041E42;
 }
 
 

@@ -15,7 +15,7 @@ class AdminLoginController
         }
 
         $dados = [];
-        $dados['titulo'] = 'Página de Login | Admin';
+        $dados['titulo'] = 'Login | Admin';
         $dados['formLogin'] = $this->formLogin();
 
         Render::front('admin-login', $dados);
@@ -71,11 +71,22 @@ class AdminLoginController
     {
         $dados = [
             'btn_label'=>'Entrar',
-            'btn_class'=>'btn btn-warning mt-4 w-25',
+            'btn_class'=>'btn normal',
             'fields'=>[
-                ['type'=>'email', 'name'=>'email', 'label'=>'Usuário', 'placeholder'=>'Seu e-mail cadastrado','required'=>true],
-                ['type'=>'password', 'name'=>'senha', 'placeholder'=>'Senha cadastrada','required'=>true]
-            ]
+                    [
+                        'type'=>'text',
+                        'label'=>'Usuário',
+                        'name'=>'nome',
+                        'placeholder'=> 'E-mail',
+                        'required'=>true
+                    ],
+                    [
+                        'type'=>'password',
+                        'name'=>'senha',
+                        'placeholder'=> 'Senha',
+                        'required'=>true
+                    ],
+                ]
         ];
         return Render::block('form', $dados);
     }
