@@ -70,13 +70,14 @@ class AdminLoginController
     private function formLogin()
     {
         $dados = [
+            'class'=> 'row g-2',
             'btn_label'=>'Entrar',
             'btn_class'=>'btn normal',
             'fields'=>[
                     [
                         'type'=>'text',
                         'label'=>'Usuário',
-                        'name'=>'nome',
+                        'name'=>'email',
                         'placeholder'=> 'E-mail',
                         'required'=>true
                     ],
