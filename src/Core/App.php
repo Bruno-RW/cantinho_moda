@@ -32,7 +32,7 @@ class App
         
         // Registra as rotas possíveis
         self::registraRotasDoFrontend();
-        // self::registraRotasDoBackend();
+        self::registraRotasDoBackend();
         self::registra404Generico();
         
         // Analisa a requisição e escolhe a rota compatível
