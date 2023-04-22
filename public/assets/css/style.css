@@ -649,6 +649,13 @@ button.white {
     width: 100%;
 }
 
+#detalhes-form .alert {
+    font-size: 16px;
+    font-weight: 600;
+    height: 50px;
+    width: 64.2%;
+}
+
 #detalhes-form {
     padding: 40px 80px
 }
@@ -674,6 +681,9 @@ button.white {
 #detalhes-form button {
     color: #FFF;
     font-size: 14px;
+
+    height: 50px;
+
     text-align: start;
     background-color: #088178;
 }
