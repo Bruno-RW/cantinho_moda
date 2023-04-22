@@ -1039,6 +1039,12 @@ button.white {
 
 
     /* ---- CONTATO ---- */
+    #detalhes-form {
+        padding: 40px;
+    }
+    #detalhes-form form {
+        width: 100%;
+    }
 
 
     /* ---- LOGIN/CADASTRAR ---- */
@@ -1105,6 +1111,7 @@ button.white {
     /* ---- RODAPÉ ---- */
     #jornal {
         padding: 40px 20px;
+        margin: 20px 0;
     }
     #jornal .form {
         width: 100%;
@@ -1115,7 +1122,6 @@ button.white {
 
     #footer .top {
         padding-right: 20px;
-
     }
     #footer .logo {
         width: 100%;
@@ -1203,6 +1209,9 @@ button.white {
 
 
     /* ---- CONTATO ---- */
+    #header-banner.contato-banner {
+        margin-bottom: 20px;
+    }
     #header-banner.contato-banner h2 {
         font-size: 46px;
     }
@@ -1210,6 +1219,26 @@ button.white {
         font-size: 20px;
     }
 
+    #detalhes-contato {
+        flex-direction: column;
+    }
+    #detalhes-contato .detalhes {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #detalhes-contato .mapa {
+        width: 100%;
+    }
+
+    #detalhes-form {
+        padding: 20px;
+    }
+    #detalhes-form button {
+        font-size: 16px;
+    }
+
+    
     /* ---- LOGIN/CADASTRAR ---- */
 
 
