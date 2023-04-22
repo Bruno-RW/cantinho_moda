@@ -78,6 +78,7 @@ class ContatoController extends FrontController
     private function formContato()
     {
         $dados = [
+            'class'=>'row g-2',
             'btn_div'=>'',
             'btn_class'=>'btn normal',
             'fields'=>[
