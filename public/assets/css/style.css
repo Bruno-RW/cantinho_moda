@@ -588,7 +588,7 @@ button.white {
 }
 
 
-/* ------ LOJA ------ */
+/* ------ CATÁLOGO ------ */
 
 
 /* ------ SOBRE ------ */
@@ -596,12 +596,9 @@ button.white {
     background-image: url("/assets/img/banners/b8.png");
 }
 
-#detalhes-sobre img {
-    width: 50%;
-    height: auto;
+#detalhes-sobre div {
     padding-right: 40px;
 }
-
 #detalhes-sobre h1 {
     color: #222;
     font-size: 50px;
@@ -613,6 +610,11 @@ button.white {
 #detalhes-sobre p {
     font-size: 20px;
     margin-bottom: 20px;
+}
+
+#detalhes-sobre img {
+    width: 45%;
+    height: auto;
 }
 
 #perguntas-frequentes h2 {
@@ -655,11 +657,16 @@ button.white {
     font-weight: 600;
     text-decoration: none;
 }
-#perguntas-frequentes  a:hover {
+#perguntas-frequentes a:hover {
     color: #FFBD27;
     font-weight: 600;
     text-decoration: underline;
 }
+#perguntas-frequentes .conteudo {
+    height: 165px;
+    margin-bottom: 10px;
+}
+
 
 /* ------ CONTATO ------ */
 #header-banner.contato-banner {
@@ -1109,10 +1116,36 @@ button.white {
     }
     
 
-    /* ---- LOJA ---- */
+    /* ---- CATÁLOGO ---- */
 
 
     /* ---- SOBRE ---- */
+    #detalhes-sobre {
+        flex-direction: column;
+    }
+    #detalhes-sobre img {
+        width: 100%;
+    }
+    
+    #detalhes-sobre h1 {
+        margin-bottom: 20px;
+    }
+    #detalhes-sobre p {
+        font-size: 20px;
+    }
+      
+    #perguntas-frequentes .pro {
+        width: 47%;
+    }
+    #perguntas-frequentes .pro h3 {
+        font-size: 28px;
+    }
+    #perguntas-frequentes .pro p {
+        font-size: 21px;
+    }
+    #perguntas-frequentes .conteudo {
+        height: 280px;
+    }
 
 
     /* ---- CONTATO ---- */
@@ -1279,10 +1312,34 @@ button.white {
     }
 
 
-    /* ---- LOJA ---- */
+    /* ---- CATÁLOGO ---- */
 
 
     /* ---- SOBRE ---- */
+    #detalhes-sobre div {
+        padding-right: 0;
+    }
+    
+    #detalhes-sobre h1 {
+        font-size: 43px;
+        margin-bottom: 20px;
+    }
+    #detalhes-sobre p {
+        font-size: 20px;
+    }
+    
+    #perguntas-frequentes h2 {
+        font-size: 39px;
+    }
+    #perguntas-frequentes .pro {
+        width: 90%;
+    }
+    #perguntas-frequentes .pro p {
+        font-size: 20px;
+    }
+    #perguntas-frequentes .conteudo {
+        height: 260px;
+    }
 
 
     /* ---- CONTATO ---- */
