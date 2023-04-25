@@ -28,7 +28,7 @@
         <div class="pro">
             <h3>Que tipos de produtos são vendidos?</h3>
             <div class="conteudo">
-                <p>Na Cantinho da Moda vendemos desde roupas de verão até roupas de inverno. Além disso, também vendemos alguns acessórios, como pulseiras, brincos e colares.</p>
+                <p>Na Cantinho da Moda vendemos desde roupas de verão até roupas de inverno. Além disso, também vendemos alguns acessórios, como bolsas, brincos e colares.</p>
             </div>
             <p>Vá para a nossa página e aproveite: <a href="/catalogo">catálogo</a>.</p>
         </div>
@@ -36,7 +36,7 @@
         <div class="pro">
             <h3>Como faço para utilizar a página "catálogo"?</h3>
             <div class="conteudo">
-                <p>Para utilizar a página basta alterar as personalizações de pesquisa através de categorias predefinidas e ordem de visualização entre preços maiores e menores de produtos.</p>
+                <p>Basta alterar as personalizações de pesquisa, localizadas a esquerda da página, através das categorias e ordens de visualização entre preços  de produtos.</p>
             </div>
             <p>Vá agora e teste novos produtos: <a href="/catalogo">catálogo</a>.</p>
         </div>
@@ -44,7 +44,7 @@
         <div class="pro">
             <h3>Quais são os métodos de pagamento?</h3>
             <div class="conteudo">
-                <p>Ao visitar nossa loja física aceitamos cartões de débito e crédito da Visa, Mastercard e Elo. Ademais, também aceitmos pagamento por Pix.</p>
+                <p>Ao visitar nossa loja física aceitamos cartões de débito e crédito da Visa, Mastercard, Elo e Cabal. Ademais, também aceitmos pagamento por Pix e Banri Compras</p>
             </div>
             <p>Caso tenha dúvidas, visite a página de <a href="/contato">contato</a>.</p>
         </div>
