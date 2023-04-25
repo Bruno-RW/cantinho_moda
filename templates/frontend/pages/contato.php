@@ -15,7 +15,7 @@
             </li>
             <li>
                 <i class="fas fa-envelope"></i>
-                <p>cantinho_moda@hotmail.com</p>
+                <p>mocrili@hotmail.com</p>
             </li>
             <li>
                 <i class="fas fa-phone"></i>
@@ -23,7 +23,7 @@
             </li>
             <li>
                 <i class="fas fa-clock"></i>
-                <p>Segunda á Sexta, 07:30-17:00</p>
+                <p>Segunda á Sexta, 08:30-18:00</p>
             </li>
         </div>
     </div>
