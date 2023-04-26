@@ -12,7 +12,7 @@ class CadastroController extends FrontController
     public function cadastro()
     {
         $dados = [];
-        $dados['titulo'] = 'Faça seu cadastro';
+        $dados['titulo'] = 'Cadastro';
         $dados['topo'] = $this->carregaHTMLTopo();
         $dados['rodape'] = $this->carregaHTMLRodape();
         $dados['formCadastro'] = $this->formCadastro();
@@ -54,10 +54,44 @@ class CadastroController extends FrontController
             'btn_label'=>'Cadastrar',
             'btn_class'=>'btn',
             'fields'=>[
-                ['type'=>'text', 'name'=>'nome', 'required'=>true],
-                ['type'=>'text', 'name'=>'email', 'required'=>true],
-                ['type'=>'password', 'name'=>'senha', 'class'=>'col-6', 'required'=>true],
-                ['type'=>'password', 'name'=>'senha2', 'class'=>'col-6', 'required'=>true]
+                [
+                    'type'=>'text',
+                    'name'=>'nome',
+                    'label'=>'',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'placeholder'=>'Nome',
+                    'class'=>'input-box',
+                    'required'=>true
+                ],
+                [
+                    'type'=>'email',
+                    'name'=>'email',
+                    'label'=>'',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'placeholder'=>'E-mail',
+                    'class'=>'input-box',
+                    'required'=>true
+                ],
+                [
+                    'type'=>'password',
+                    'name'=>'senha',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'placeholder'=>'Senha',
+                    'class'=>'input-box',
+                    'required'=>true
+                ],
+                [
+                    'type'=>'password',
+                    'name'=>'senha2',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'placeholder'=>'Senha',
+                    'class'=>'input-box',
+                    'required'=>true
+                ]
             ]
         ];
         return Render::block('form', $dados);
