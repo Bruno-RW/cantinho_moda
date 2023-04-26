@@ -766,7 +766,7 @@ button.white {
 /* ------ LOGAR/CADASTRAR ------ */
 #login .container {
     width: 500px;
-    height: 430px;
+    height: 440px;
 
     /* overflow: hidden; */
     border-radius: 20px;
@@ -791,7 +791,7 @@ button.white {
 }
 #login .form-box h2 {
     font-weight: 700;
-    font-size: 34px;
+    font-size: 38px;
     color: #162938;
 
     margin-top: 30px;
@@ -827,7 +827,7 @@ button.white {
 }
 
 #login .input-box {
-    margin: 30px 0;
+    margin: 20px 0;
     /* padding: 0; */
 
     width: 100%;
@@ -837,21 +837,7 @@ button.white {
     border-bottom: 2px solid #162938;
 }
 #login .input-box label {
-    position: absolute;
-    color: #162938;
-    font-weight: 500;
-    font-size: 1em;
-
-    top: 50%;
-    left: 0;
-
-    transition: .5s;
-    pointer-events: none;
-    transform: translateY(-50%);
-}
-#login .input-box input:focus~label,
-#login .input-box input:valid~label {
-    top: -5px;
+    display: none;
 }
 #login .input-box input {
     color: #162938;
@@ -866,34 +852,46 @@ button.white {
     outline: none;
     background: transparent;
 }
-#login .input-box i {
-    position: absolute;
-    font-size: 1.2em;
+#login input[placeholder] {
     color: #162938;
+    font-weight: 500;
+    font-size: 1em;
 
-    right: 8px;
+    position: absolute;
+    left: 0;
+}
+#login i {
+    color: #162938;
+    font-size: 1.2em;
     line-height: 40px;
+
+    position: absolute;
+    right: 45px;
+}
+#login .fa-envelope {
+    top: 110px;
+}
+#login .fa-lock {
+    top: 200px;
 }
 
-#login .esqueci-senha {
-    display: flex;
-    justify-content: space-between;
-
+#login .manter-conectado {
     color: #162938;
     font-weight: 500;
     font-size: 14px;
 
-    margin: -10px 0px 40px;
+    padding: 0;
+    margin: -25px 0px 25px;
 }
-#login .esqueci-senha label input {
+#login .manter-conectado label input {
     accent-color: #162938;
     margin-right: 10px;
 }
-#login .esqueci-senha a {
+#login .manter-conectado a {
     color: #162938;
     text-decoration: none;
 }
-#login .esqueci-senha a:hover {
+#login .manter-conectado a:hover {
     text-decoration: underline;
 }
 
@@ -936,7 +934,7 @@ button.white {
     font-weight: 500;
     font-size: 14px;
 
-    margin-top: 25px;
+    margin: 25px 0 30px 0;
     text-align: center;
 }
 #login .logar-registrar a {
