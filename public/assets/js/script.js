@@ -15,17 +15,15 @@ fecharBar.addEventListener('click', () => {
 //     navbar.classList.remove('ativo');
 // });
 
-const container = document.querySelector('#login .container');
-const linkLogar = document.querySelector('#login .link-logar');
-const linkRegistrar = document.querySelector('#login .link-registar');
+const mensagem = document.querySelector('#login .form-box .alert');
+const loginContainer = document.querySelectorAll('#login .container');
+const loginIcone = document.querySelectorAll('#login .form-box i').classList.add('ativo');
 
-linkRegistrar.addEventListener('click', () => {
-    container.classList.add('ativo');
-});
+if (mensagem) {
+    loginContainer.classList.add('ativo');
+    loginIcone.classList.add('ativo');
+}
 
-linkLogar.addEventListener('click', () => {
-    container.classList.remove('ativo');
-});
 
 // ADICIONA COMPORTAMENTO DE CURTIR AO BOTÃO DE CURTIR / FAVORITAR
 document.querySelectorAll('.favoritar').forEach(linkCurtir => {
@@ -54,56 +52,3 @@ document.querySelectorAll('.favoritar').forEach(linkCurtir => {
         });
     });
 });
-
-function ajax(url, dados, callBack) {
-    if (!url, !dados, !callBack) {
-        throw 'Todos os parâmetros devem ser preenchidos';
-    }
-
-    let dadosCallBack = {};
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
-    xhr.onload = function() {
-        if (xhr.readyState == 4) {
-            if (xhr.status != 200) {
-                Swal.fire({
-                    position: 'top-center',
-                    icon: 'warning',
-                    title: 'Falha na comunicação',
-                    text: 'Ocorreu um erro de conexão, por favor, tente novamente. Se o erro persistir, contate o suporte',
-                    showConfirmButton: false,
-                    timer: 3000
-                });
-                return;
-            }
-            try {
-                dadosCallBack = JSON.parse( xhr.responseText );
-            } catch(e) {
-                Swal.fire({
-                    position: 'top-center',
-                    icon: 'warning',
-                    title: 'Falha de processamento',
-                    text: 'A resposta não pôde ser processada, tente novamente ou entre em contato com o suporte',
-                    showConfirmButton: false,
-                    timer: 3000
-                });
-                return;
-            }
-
-            callBack(dadosCallBack);
-        }
-    };
-
-    xhr.onerror = function() {
-        Swal.fire({
-            position: 'top-end',
-            icon: 'error',
-            title: 'Falha na comunicação',
-            text: 'Ocorreu um erro de conexão, por favor, tente novamente',
-            showConfirmButton: false,
-            timer: 3000
-        });
-    };
-
-    xhr.send(dados);
-}
