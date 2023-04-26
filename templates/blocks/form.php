@@ -30,7 +30,7 @@
             case 'email':
             case 'password':
                 echo <<<HTML
-                        <div class="input-box">
+                        <div class="{$f['class']}">
                             <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
                             <input type="{$f['type']}" class="{$f['input_class']}" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" {$f['required']} value="{$postValue}">
                         </div>
