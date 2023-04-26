@@ -16,7 +16,7 @@ class LoginController extends FrontController
         }
 
         $dados = [];
-        $dados['titulo'] = 'Login/Cadastro';
+        $dados['titulo'] = 'Login';
         $dados['topo'] = $this->carregaHTMLTopo();
         $dados['rodape'] = $this->carregaHTMLRodape();
         $dados['formLogin'] = $this->formLogin();
@@ -76,12 +76,36 @@ class LoginController extends FrontController
     private function formLogin()
     {
         $dados = [
+            'class'=>'row',
             'btn_label'=>'Entrar',
             'btn_class'=>'btn',
             'fields'=>[
-                ['type'=>'email', 'name'=>'email', 'label'=>'E-mail', 'required'=>true],
-                ['type'=>'password', 'name'=>'senha', 'required'=>true],
-                ['type'=>'checkbox', 'name'=>'conectado', 'label'=>'', 'labelcheck'=>'Manter conectado']
+                [
+                    'type'=>'email',
+                    'name'=>'email',
+                    'label'=>'',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'placeholder'=>'E-mail',
+                    'class'=>'input-box',
+                    'required'=>true
+                ],
+                [
+                    'type'=>'password',
+                    'name'=>'senha',
+                    'label_class'=>'',
+                    'input_class'=>'',
+                    'placeholder'=>'Senha',
+                    'class'=>'input-box',
+                    'required'=>true
+                ],
+                [
+                    'type'=>'checkbox',
+                    'name'=>'conectado',
+                    'label'=>'',
+                    'labelcheck'=>'Manter conectado',
+                    'class'=>'manter-conectado',
+                ]
             ]
         ];
         return Render::block('form', $dados);
