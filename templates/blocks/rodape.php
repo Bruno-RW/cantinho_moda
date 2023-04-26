@@ -18,23 +18,23 @@
         <p><strong>Telefone: </strong> (55) 9 9988-0103</p>
     </div>
 
-    <div class="col d-flex flex-column align-items-start">
-        <h4>Sobre</h4>
+    <div class="col m-dir d-flex flex-column align-items-start">
+        <h4>Informações</h4>
         <a href="#">Política de Privacidade</a>
         <a href="#">Termos & Condições</a>
-        <a href="#">Informações extras</a>
-        <a href="#">Nosso Contato</a>
-        <a href="#">Sobre Nós</a>
+        <a href="/contato">Nossos contatos</a>
+        <a href="/sobre">Sobre nós</a>
     </div>
 
     <div class="col d-flex flex-column align-items-start">
         <h4>Minha Conta</h4>
-        <a href="#">Inscrever-se</a>
-        <a href="#">Favoritos</a>
-        <a href="#">Ajuda</a>
+        <a href="/login">Entrar na conta</a>
+        <a href="/cadastro">Cadastrar-se</a>
+        <a href="/favoritos">Favoritos</a>
+        <a href="/logout">Sair</a>
     </div>
 
-    <div class="col pad d-flex flex-column align-items-start">
+    <div class="col m-top d-flex flex-column align-items-start">
         <h4>Métodos de Pagamento</h4>
         <div class="pagamentos">
             <img src="/assets/img/icones/pagamentos/visa.png" alt="">
