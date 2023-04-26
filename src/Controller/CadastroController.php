@@ -51,6 +51,7 @@ class CadastroController extends FrontController
     private function formCadastro()
     {
         $dados = [
+            'class'=>'row',
             'btn_label'=>'Cadastrar',
             'btn_class'=>'btn',
             'fields'=>[
@@ -88,7 +89,7 @@ class CadastroController extends FrontController
                     'name'=>'senha2',
                     'label_class'=>'',
                     'input_class'=>'',
-                    'placeholder'=>'Senha',
+                    'placeholder'=>'Confirme senha',
                     'class'=>'input-box',
                     'required'=>true
                 ]
