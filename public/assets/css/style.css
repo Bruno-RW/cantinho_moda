@@ -316,7 +316,7 @@ button.white {
     margin: 0 10px;
     padding: 10px 25px;
 
-    border-radius: 25px;
+    border-radius: 15px;
     border: 2px solid #B79130;
     transition: all .3s ease;
 }
@@ -764,48 +764,30 @@ button.white {
 
 
 /* ------ LOGAR/CADASTRAR ------ */
-#login .container {
+#login .container,
+#cadastro .container {
     width: 500px;
-    height: 440px;
+    height: 460px;
 
-    /* overflow: hidden; */
+    padding: 20px 60px;
+
+    overflow: hidden;
     border-radius: 20px;
-    background: transparent;
 
-    transition: height .2s ease;
-    backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     border: 2px solid rgba(255, 255, 255, .5);
 }
+#cadastro .container {
+    height: 650px;
+}
 #login .container.ativo {
-    height: 520px;
+    height: 510px;
 }
-#login .container.ativo .form-box.logar {
-    transition: none;
-    transform: translateX(-500px);
+#cadastro .container.ativo {
+    height: 700px;
 }
-
-#login .form-box {
-    width: 100%;
-    padding: 40px;
-}
-#login .form-box h2 {
-    font-weight: 700;
-    font-size: 38px;
-    color: #162938;
-
-    margin-top: 30px;
-    text-align: center;
-}
-#login .form-box.logar {
-    /* display: none; */
-}
-#login .form-box.registrar {
-    position: absolute;
-    transform: translateX(500px);
-}
-
-#login .fa-xmark {
+#login .container .fa-xmark,
+#cadastro .container .fa-xmark {
     position: absolute;
     font-size: 24px;
     color: #FFF;
@@ -826,9 +808,78 @@ button.white {
     border-bottom-left-radius: 20px;
 }
 
-#login .input-box {
+#login .alert,
+#cadastro .alert {
+    margin-bottom: 0px;
+}
+
+#login .form-box,
+#cadastro .form-box {
+    width: 100%;
+}
+#login .form-box h2,
+#cadastro .form-box h2 {
+    font-weight: 700;
+    font-size: 38px;
+    
+    color: #162938;
+    margin-top: 20px;
+    text-align: center;
+}
+#login .form-box i,
+#cadastro .form-box i {
+    color: #162938;
+    font-size: 1.2em;
+    line-height: 40px;
+
+    position: absolute;
+    right: 52px;
+}
+#cadastro .form-box .fa-lock-open {
+    right: 48px;
+}
+
+#login .fa-envelope {
+    top: 25.8%;
+}
+#login .fa-envelope.ativo {
+    top: 36.5%;
+}
+#login .fa-lock {
+    top: 45.2%;
+}
+#login .fa-lock.ativo  {
+    top: 54%;
+}
+
+#cadastro .fa-user {
+    top: 18.1%;
+}
+#cadastro .fa-user.ativo {
+    top: 25%;
+}
+#cadastro .fa-envelope {
+    top: 32.3%;
+}
+#cadastro .fa-envelope.ativo {
+    top: 36.5%;
+}
+#cadastro .fa-lock-open {
+    top: 45.9%;
+}
+#cadastro .fa-lock-open.ativo {
+    top: 50%;
+}
+#cadastro .fa-lock {
+    top: 59.8%;
+}
+#cadastro .fa-lock.ativo  {
+    top: 62%;
+}
+
+#login .input-box,
+#cadastro .input-box {
     margin: 20px 0;
-    /* padding: 0; */
 
     width: 100%;
     height: 50px;
@@ -836,23 +887,22 @@ button.white {
     position: relative;
     border-bottom: 2px solid #162938;
 }
-#login .input-box label {
+#login .input-box label,
+#cadastro .input-box label {
     display: none;
 }
-#login .input-box input {
-    color: #162938;
-    font-weight: 600;
-    font-size: 1em;
-
+#login .input-box input,
+#cadastro .input-box input {
     padding-right: 35px;
     width: 100%;
-    height: 100%;
+    height: 120%;
 
     border: none;
     outline: none;
     background: transparent;
 }
-#login input[placeholder] {
+#login .input-box input[placeholder],
+#cadastro .input-box input[placeholder] {
     color: #162938;
     font-weight: 500;
     font-size: 1em;
@@ -860,32 +910,19 @@ button.white {
     position: absolute;
     left: 0;
 }
-#login i {
-    color: #162938;
-    font-size: 1.2em;
-    line-height: 40px;
 
-    position: absolute;
-    right: 45px;
+#login .checkbox {
+    margin:-20px 0 25px;
 }
-#login .fa-envelope {
-    top: 110px;
-}
-#login .fa-lock {
-    top: 200px;
-}
-
-#login .manter-conectado {
+#loginb .manter-conectado {
     color: #162938;
     font-weight: 500;
     font-size: 14px;
-
     padding: 0;
-    margin: -25px 0px 25px;
 }
-#login .manter-conectado label input {
+#login .manter-conectado input {
     accent-color: #162938;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 #login .manter-conectado a {
     color: #162938;
@@ -895,32 +932,35 @@ button.white {
     text-decoration: underline;
 }
 
-#login .termos {
+#cadastro .termos {
     text-align: start;
+    margin: -125px 0 0 -10px;
 }
-#login .termos p {
+#cadastro .termos p {
     color: #162938;
     font-size: 12px;
     font-weight: 500;
-    margin: -15px 0px 15px;
 }
-#login .termos a {
+#cadastro .termos a {
     text-decoration: none;
     font-weight: 700;
     color: #162938;
 }
-#login .termos a:hover {
+#cadastro .termos a:hover {
     text-decoration: underline;
 }
-
-#login .btn {
+#login .col-12 {
+    padding: 0;
+}
+#login .btn,
+#cadastro .btn {
     font-weight: 500;
     font-size: 16px;
     color: #fff;
     
     width: 100%;
     height: 45px;
-    
+
     border: none;
     outline: none;
     
@@ -928,21 +968,30 @@ button.white {
     border-radius: 6px;
     background: #162938;
 }
+#cadastro .btn {
+    margin: 55px 0 20px
+}
 
-#login .logar-registrar {
+#login .logar-registrar,
+#cadastro .logar-registrar {
     color: #162938;
     font-weight: 500;
     font-size: 14px;
 
-    margin: 25px 0 30px 0;
+    margin: 25px 0 20px;
     text-align: center;
 }
-#login .logar-registrar a {
+#cadastro .logar-registrar {
+    margin-top: 100px;
+}
+#login .logar-registrar a,
+#cadastro .logar-registrar a  {
     color: #162938;
     font-weight: 600;
     text-decoration: none;
 }
-#login .logar-registrar a:hover {
+#login .logar-registrar a:hover,
+#cadastro .logar-registrar a:hover {
     text-decoration: underline;
 }
 
@@ -1069,6 +1118,16 @@ button.white {
     /* ---- RODAPÉ ---- */
     #jornal .form {
         width: 70%;
+    }
+
+    #footer .m-dir {
+        margin-right: 20px;
+    }
+
+
+    /* ---- ERROR 404 ---- */
+    #erro .container {
+        height: 550px;
     }
 
 
@@ -1234,7 +1293,7 @@ button.white {
     #footer .logo {
         width: 100%;
     }
-    #footer .pad {
+    #footer .m-top {
         margin-top: 20px;
     }
     #footer .copyright {
