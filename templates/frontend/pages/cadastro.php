@@ -2,8 +2,8 @@
     <div class="container d-flex align-items-center justify-content-center position-relative">
         <i class="fa-solid fa-xmark"></i>
 
-        <div class="form-box registrar">
-            <h2>Registrar</h2>
+        <div class="form-box">
+            <h2>Cadastro</h2>
 
             <?= retornaHTMLAlertMensagemSessao() ?>
 
