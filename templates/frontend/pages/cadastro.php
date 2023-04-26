@@ -17,7 +17,7 @@
             </div>
 
             <div class="logar-registrar">
-                <p>Já tem uma conta? <a href="#" class="link-logar">Entrar</a></p>
+                <p>Já tem uma conta? <a href="/login" class="link-logar">Entrar</a></p>
             </div>
         </div>
     </div>
