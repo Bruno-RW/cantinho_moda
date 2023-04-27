@@ -41,6 +41,9 @@ class Empresa extends DAO
     #[Campo(label: 'Número')]
     protected $numero;
 
+    #[Campo(label: 'Sala')]
+    protected $sala;
+
     #[Campo(label: 'Telefone 1', nn: true)]
     protected $telefone1;
 
@@ -71,7 +74,6 @@ class Empresa extends DAO
     {
         return $this->nomeFantasia;
     }
-
     public function setNomeFantasia(string $nomeFantasia): self
     {
         $nomeFantasia = trim($nomeFantasia);
@@ -89,7 +91,6 @@ class Empresa extends DAO
     {
         return $this->razaoSocial;
     }
-
     public function setRazaoSocial(string $razaoSocial): self
     {
         $this->razaoSocial = $razaoSocial;
@@ -101,7 +102,6 @@ class Empresa extends DAO
     {
         return $this->tipo;
     }
-
     public function setTipo(string $tipo): self
     {
         $tipoValido = in_array($tipo, ['Matriz', 'Filial']);
@@ -118,7 +118,6 @@ class Empresa extends DAO
     {
         return $this->cep;
     }
-
     public function setCep(string $cep): self
     {
         $cepValido = v::postalCode('BR')->validate($cep);
@@ -135,7 +134,6 @@ class Empresa extends DAO
     {
         return $this->cidade;
     }
-
     public function setCidade(string $cidade): self
     {
         $cidade = trim($cidade);
@@ -153,7 +151,6 @@ class Empresa extends DAO
     {
         return $this->estado;
     }
-
     public function setEstado(string $estado): self
     {
         $estado = trim($estado);
@@ -171,7 +168,6 @@ class Empresa extends DAO
     {
         return $this->rua;
     }
-
     public function setRua(string $rua): self
     {
         $this->rua = $rua;
@@ -183,7 +179,6 @@ class Empresa extends DAO
     {
         return $this->bairro;
     }
-
     public function setBairro(string $bairro): self
     {
         $this->bairro = $bairro;
@@ -195,10 +190,20 @@ class Empresa extends DAO
     {
         return $this->numero;
     }
-
     public function setNumero(string $numero): self
     {
         $this->numero = $numero;
+
+        return $this;
+    }
+
+    public function getSala()
+    {
+        return $this->sala;
+    }
+    public function setSala(string $sala): self
+    {
+        $this->sala = $sala;
 
         return $this;
     }
@@ -207,7 +212,6 @@ class Empresa extends DAO
     {
         return $this->telefone1;
     }
-
     public function setTelefone1(string $telefone1): self
     {
         $telefone1 = trim($telefone1);
@@ -225,7 +229,6 @@ class Empresa extends DAO
     {
         return $this->telefone2;
     }
-
     public function setTelefone2(string $telefone2): self
     {
         $telefone2 = trim($telefone2);
@@ -248,7 +251,6 @@ class Empresa extends DAO
     {
         return $this->site;
     }
-
     public function setSite(string $site): self
     {
         $site = trim($site);
@@ -271,7 +273,6 @@ class Empresa extends DAO
     {
         return $this->email;
     }
-
     public function setEmail(string $email): self
     {
         $email = trim($email);
@@ -289,7 +290,6 @@ class Empresa extends DAO
     {
         return $this->cnpj;
     }
-
     public function setCnpj(string $cnpj): self
     {
         $tipoValido = v::cnpj()->validate($cnpj);
@@ -306,7 +306,6 @@ class Empresa extends DAO
     {
         return $this->created_at;
     }
-
     public function getUpdated_At()
     {
         return $this->updated_at;
