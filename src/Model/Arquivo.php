@@ -43,7 +43,6 @@ class Arquivo extends DAO
     {
         return $this->nome;
     }
-
     public function setNome(string $nome): self
     {
         $nome = trim($nome);
@@ -59,7 +58,6 @@ class Arquivo extends DAO
     {
         return $this->tipo;
     }
-
     public function setTipo(string $tipo): self
     {
         $tipo = trim($tipo);
@@ -74,7 +72,6 @@ class Arquivo extends DAO
     {
         return $this->descricao;
     }
-
     public function setDescricao(string $descricao): self
     {
         $descricao = trim($descricao);
@@ -92,7 +89,6 @@ class Arquivo extends DAO
     {
         return $this->tabela;
     }
-
     public function setTabela($tabela): self
     {
         $this->tabela = $tabela;
@@ -104,7 +100,6 @@ class Arquivo extends DAO
     {
         return $this->tabelaId;
     }
-
     public function setTabelaId($tabelaId): self
     {
         $this->tabelaId = $tabelaId;
@@ -116,7 +111,6 @@ class Arquivo extends DAO
     {
         return $this->created_at;
     }
-
     public function getUpdated_At()
     {
         return $this->updated_at;

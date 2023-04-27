@@ -41,7 +41,6 @@ class Usuario extends DAO
     {
         return $this->nome;
     }
-
     public function setNome(string $nome): self
     {
         $this->nome = $nome;
@@ -53,7 +52,6 @@ class Usuario extends DAO
     {
         return $this->email;
     }
-
     public function setEmail(string $email): self
     {
         $email = strtolower(trim($email));
@@ -71,7 +69,6 @@ class Usuario extends DAO
     {
         return $this->senha;
     }
-
     public function setSenha(string $senha): self
     {
         if ($this->senha && !$senha) {
@@ -93,7 +90,6 @@ class Usuario extends DAO
     {
         return $this->tipo;
     }
-
     public function setTipo(string $tipo): self
     {
         $tipo = trim($tipo);
@@ -109,7 +105,6 @@ class Usuario extends DAO
     {
         return $this->created_at;
     }
-
     public function getUpdated_At()
     {
         return $this->updated_at;

@@ -36,7 +36,6 @@ class Favorito extends DAO
     {
         return $this->idProduto;
     }
-
     public function setIdProduto($idProduto): self
     {
         $this->idProduto = $idProduto;
@@ -48,7 +47,6 @@ class Favorito extends DAO
     {
         return $this->idCliente;
     }
-
     public function setIdCliente($idCliente): self
     {
         $this->idCliente = $idCliente;
@@ -60,7 +58,6 @@ class Favorito extends DAO
     {
         return $this->ativo;
     }
-
     public function setAtivo($ativo): self
     {
         $this->ativo = $ativo;
@@ -72,7 +69,6 @@ class Favorito extends DAO
     {
         return $this->created_at;
     }
-
     public function getUpdated_At()
     {
         return $this->updated_at;

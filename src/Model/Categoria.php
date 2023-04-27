@@ -34,7 +34,6 @@ class Categoria extends DAO
     {
         return $this->nome;
     }
-
     public function setNome(string $nome): self
     {
         $nome = trim($nome);
@@ -50,7 +49,6 @@ class Categoria extends DAO
     {
         return $this->descricao;
     }
-
     public function setDescricao(string $descricao): self
     {
         $descricao = trim($descricao);
@@ -68,7 +66,6 @@ class Categoria extends DAO
     {
         return $this->created_at;
     }
-
     public function getUpdatedAt()
     {
         return $this->updated_at;

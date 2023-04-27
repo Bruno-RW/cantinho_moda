@@ -46,7 +46,6 @@ class Produto extends DAO
     {
         return $this->idMarca;
     }
-
     public function setIdMarca(string $idMarca): self
     {
         $objMarca = new Marca;
@@ -62,7 +61,6 @@ class Produto extends DAO
     {
         return $this->nome;
     }
-
     public function setNome(string $nome): self
     {
         $nome = trim($nome);
@@ -78,7 +76,6 @@ class Produto extends DAO
     {
         return $this->tipo;
     }
-
     public function setTipo(string $tipo): self
     {
         $tiposPermitidos = ['Ração', 'Brinquedo', 'Medicamento', 'Higiene', 'Beleza'];
@@ -94,7 +91,6 @@ class Produto extends DAO
     {
         return $this->preco;
     }
-
     public function setPreco(string $preco): self
     {
         if ( !is_numeric($preco) || $preco < 0 ) {
@@ -109,7 +105,6 @@ class Produto extends DAO
     {
         return $this->descricao;
     }
-
     public function setDescricao(string $descricao): self
     {
         $descricao = trim($descricao);
@@ -127,7 +122,6 @@ class Produto extends DAO
     {
         return $this->especificacoes;
     }
-
     public function setEspecificacoes(string $especificacoes): self
     {
         $especificacoes = trim($especificacoes);
@@ -145,7 +139,6 @@ class Produto extends DAO
     {
         return $this->created_at;
     }
-
     public function getUpdated_At()
     {
         return $this->updated_at;

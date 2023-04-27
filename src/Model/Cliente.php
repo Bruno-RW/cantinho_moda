@@ -41,7 +41,6 @@ class Cliente extends DAO
     {
         return $this->nome;
     }
-
     public function setNome(string $nome): self
     {
         $this->nome = $nome;
@@ -53,7 +52,6 @@ class Cliente extends DAO
     {
         return $this->email;
     }
-
     public function setEmail(string $email): self
     {
         $email = strtolower(trim($email));
@@ -71,7 +69,6 @@ class Cliente extends DAO
     {
         return $this->senha;
     }
-
     public function setSenha(string $senha): self
     {
         if ($this->senha && !$senha) {
@@ -93,7 +90,6 @@ class Cliente extends DAO
     {
         return $this->senha;
     }
-
     public function setJornal(string $jornal): self
     {
         $this->jornal = $jornal;
@@ -105,7 +101,6 @@ class Cliente extends DAO
     {
         return $this->created_at;
     }
-
     public function getUpdated_At()
     {
         return $this->updated_at;

@@ -34,7 +34,6 @@ class Marca extends DAO
     {
         return $this->marca;
     }
-
     public function setMarca(string $marca): self
     {
         $marca = trim($marca);
@@ -50,7 +49,6 @@ class Marca extends DAO
     {
         return $this->fabricante;
     }
-
     public function setFabricante(string $fabricante): self
     {
         $fabricante = trim($fabricante);
@@ -67,7 +65,6 @@ class Marca extends DAO
     {
         return $this->created_at;
     }
-
     public function getUpdated_At()
     {
         return $this->updated_at;
