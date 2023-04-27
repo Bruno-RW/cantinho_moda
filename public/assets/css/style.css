@@ -880,6 +880,7 @@ button.white {
 #login .input-box,
 #cadastro .input-box {
     margin: 20px 0;
+    padding: 0;
 
     width: 100%;
     height: 50px;
@@ -914,7 +915,11 @@ button.white {
 #login .checkbox {
     margin:-20px 0 25px;
 }
-#loginb .manter-conectado {
+#login .checkbox .form-check-label {
+    position: absolute;
+    bottom: 34.5%;
+}
+#login .manter-conectado {
     color: #162938;
     font-weight: 500;
     font-size: 14px;
@@ -1214,7 +1219,7 @@ button.white {
     }
 
 
-    /* ---- LOGIN/CADASTRAR ---- */
+    /* ---- LOGAR/CADASTRAR ---- */
 
 
     /* ---- ADMIN LOGIN ---- */    
@@ -1430,7 +1435,89 @@ button.white {
     }
 
     
-    /* ---- LOGIN/CADASTRAR ---- */
+    /* ---- LOGAR/CADASTRAR ---- */
+    #login .container,
+    #cadastro .container {
+        width: 330px;
+        padding: 20px 40px;
+    }
+    
+    #login .form-box i,
+    #cadastro .form-box i {
+        font-size: 1em;
+        right: 32px;
+    }
+    #cadastro .form-box .fa-lock-open {
+        right: 28px;
+    }
+    
+    #login .fa-envelope {
+        top: 23.7%;
+    }
+    #login .fa-envelope.ativo {
+        top: 36.5%;
+    }
+    #login .fa-lock {
+        top: 43.1%;
+    }
+    #login .fa-lock.ativo  {
+        top: 54%;
+    }
+    
+    #cadastro .fa-user {
+        top: 17.6%;
+    }
+    #cadastro .fa-user.ativo {
+        top: 25%;
+    }
+    #cadastro .fa-envelope {
+        top: 31.8%;
+    }
+    #cadastro .fa-envelope.ativo {
+        top: 36.5%;
+    }
+    #cadastro .fa-lock-open {
+        top: 45.5%;
+    }
+    #cadastro .fa-lock-open.ativo {
+        top: 50%;
+    }
+    #cadastro .fa-lock {
+        top: 59.4%;
+    }
+    #cadastro .fa-lock.ativo  {
+        top: 62%;
+    }
+    
+    #login .input-box input[placeholder],
+    #cadastro .input-box input[placeholder] {
+        font-size: 18px;
+    }
+    
+    #login .checkbox .form-check-label {
+        font-size: 16px;
+        bottom: 36.7%;
+    }
+    #login .checkbox input {
+        height: 16px;
+        width: 16px;
+    }
+    
+    #cadastro .termos p {
+        font-size: 14px;
+    }
+
+    #login .btn,
+    #cadastro .btn {
+        font-size: 18px;
+    }
+    #cadastro .btn {
+        margin: 70px 0 5px
+    }
+    
+    #cadastro .logar-registrar {
+        margin-top: 80px;
+    }
 
 
     /* ADMIN LOGIN */
