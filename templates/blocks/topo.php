@@ -8,13 +8,22 @@
     ];
 
     if (empty($cliente)) {
-        $opcaoLogin = "<li id='li-usuario'><a href='/login' class='{$testaPagAtual[4]}'><i class='fa fa-regular fa-user'></i></a></li>";
+        $opcaoLogin = <<<HTML
+            <li id="li-usuario">
+                <a href="/login" class="{$testaPagAtual[4]}"><i class="fa fa-regular fa-user"></i></a>
+            </li>
+        HTML;
+        $opcaoLoginCelular = <<<HTML
+            <a href="/login" class="d-flex">
+                <i class="fa fa-regular fa-user"></i>
+            </a>
+        HTML;
     } else {
         $opcaoLogin = <<<HTML
-            <li id='li-usuario'>
+            <li id="li-usuario">
                 <div class="dropdown">
-                    <a href='#' class='dropdown-toggle {$testaPagAtual[4]}' data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class='fa fa-regular fa-user'></i>
+                    <a href='#' class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-regular fa-user"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/minha-conta">Minha conta</a></li>
@@ -24,6 +33,22 @@
                     </ul>
                 </div>
             </li>
+        HTML;
+
+        $opcaoLoginCelular = <<<HTML
+            <div class="usuario-celular">
+                <div class="dropdown">
+                    <a href='#' id="icon-cel" class='dropdown-toggle' data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class='fa fa-regular fa-user'></i>
+                    </a>
+                    <ul id="drop-cel" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/minha-conta">Minha conta</a></li>
+                        <li><a class="dropdown-item" href="/favoritos">Favoritos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/logout">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
         HTML;
     }
 ?>
@@ -43,7 +68,7 @@
         </div>
 
         <div id="celular">
-            <a href="#"><i class="fa fa-regular fa-user"></i></a>
+            <?= $opcaoLoginCelular ?>
             <i id="bar" class="fa fa-solid fa-bars"></i>
         </div>
 </section>
