@@ -85,37 +85,27 @@ button.white {
     background-color: #E3E6F3;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
-
-.logo {
+#header .logo {
     max-width: 10em;
 }
 
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-#navbar li {
+#header li {
     position: relative;
     list-style: none;
     padding: 0 20px;
 }
-#navbar li a {
+#header li a {
     font-size: 16px;
     font-weight: 600;
     color: #1A1A1A;
     text-decoration: none;
 }
-#navbar .fa {
-    font-size: 24px;
-}
-#navbar li a:hover,
-#navbar li a.ativo {
+#header li a:hover,
+#header li a.ativo {
     color: #B79130;
     transition: .3s ease;
 }
-#navbar li a.ativo::after {
+#header li a.ativo::after {
     position: absolute;
     content: "";
 
@@ -134,6 +124,7 @@ button.white {
     border: 1px solid #DCDFEB;
     box-shadow: 18px 18px 30px -10px rgba(0, 0, 0, .5);
 }
+
 #header #icon-cel {
     text-decoration: none;
     color: #1A1A1A;
@@ -141,8 +132,22 @@ button.white {
 #header #icon-cel::after {
     color: #1A1A1A;
 }
+
 #header .dropdown-toggle {
     text-decoration: none;
+}
+#header a.dropdown-item:hover  {
+    background-color: transparent;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+#navbar .fa {
+    font-size: 24px;
 }
 
 #fechar,
@@ -1125,9 +1130,6 @@ button.white {
         position: absolute;
         top: 45px;
         right: 130px;
-    }
-    .usuario-celular .dropdown-menu {
-        padding: 8px 20px;
     }
 
     #fechar {
