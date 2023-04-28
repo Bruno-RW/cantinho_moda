@@ -128,25 +128,21 @@ button.white {
     background-color: #B79130;
 }
 
-#navbar .dropdown-menu {
+#header .dropdown-menu {
     inset: 0px -25px auto auto !important;
     background-color: #E3E6F3;
     border: 1px solid #DCDFEB;
     box-shadow: 18px 18px 30px -10px rgba(0, 0, 0, .5);
 }
-#navbar #icon-cel {
+#header #icon-cel {
     text-decoration: none;
     color: #1A1A1A;
 }
-a#icon-cel.dropdown-toggle {
-    text-decoration: none;
-}
-#icon-cel::after {
+#header #icon-cel::after {
     color: #1A1A1A;
 }
-#navbar #drop-cel {
+#header .dropdown-toggle {
     text-decoration: none;
-    color: #1A1A1A;
 }
 
 #fechar,
@@ -1125,6 +1121,15 @@ a#icon-cel.dropdown-toggle {
         font-size: 27px;
     }
 
+    .usuario-celular .dropdown {
+        position: absolute;
+        top: 45px;
+        right: 130px;
+    }
+    .usuario-celular .dropdown-menu {
+        padding: 8px 20px;
+    }
+
     #fechar {
         display: initial;
         position: absolute;
@@ -1295,6 +1300,11 @@ a#icon-cel.dropdown-toggle {
 
     #navbar {
         max-width: 200px;
+    }
+
+    .usuario-celular .dropdown {
+        top: 35.5px;
+        right: 80px;
     }
 
 

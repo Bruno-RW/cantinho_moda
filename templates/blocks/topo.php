@@ -14,7 +14,7 @@
             </li>
         HTML;
         $opcaoLoginCelular = <<<HTML
-            <a href="/login" class="d-flex">
+            <a href="/login">
                 <i class="fa fa-regular fa-user"></i>
             </a>
         HTML;
@@ -56,16 +56,14 @@
 <section id="header" class="d-flex align-items-center justify-content-between position-sticky">
         <a href="/"><img src="/assets/img/icones/logos/logo-black.png" class="logo" alt=""></a>
 
-        <div>
-            <ul id="navbar">
-                <li><a href="/"         class="<?= $testaPagAtual[0] ?>">Home</a></li>
-                <li><a href="/catalogo" class="<?= $testaPagAtual[1] ?>">Catálogo</a></li>
-                <li><a href="/sobre"    class="<?= $testaPagAtual[2] ?>">Sobre</a></li>
-                <li><a href="/contato"  class="<?= $testaPagAtual[3] ?>">Contato</a></li>
-                <?= $opcaoLogin ?>
-                <a href="#" id="fechar"><i class="fa-solid fa-xmark"></i></a>
-            </ul>
-        </div>
+        <ul id="navbar">
+            <li><a href="/"         class="<?= $testaPagAtual[0] ?>">Home</a></li>
+            <li><a href="/catalogo" class="<?= $testaPagAtual[1] ?>">Catálogo</a></li>
+            <li><a href="/sobre"    class="<?= $testaPagAtual[2] ?>">Sobre</a></li>
+            <li><a href="/contato"  class="<?= $testaPagAtual[3] ?>">Contato</a></li>
+            <?= $opcaoLogin ?>
+            <a href="#" id="fechar"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
 
         <div id="celular">
             <?= $opcaoLoginCelular ?>
