@@ -24,7 +24,7 @@ class AdminCategoriaController
 
         // Alimentando os dados para a página de listagem
         $dados = [];
-        $dados['titulo'] = 'Categorias - Listagem';
+        $dados['titulo'] = 'Categorias';
         $dados['usuario'] = $_SESSION['usuario'];
         $dados['tabela'] = $htmlTabela;
 
