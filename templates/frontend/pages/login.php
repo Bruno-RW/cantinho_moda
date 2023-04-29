@@ -10,7 +10,7 @@
             <?= $formLogin ?>
 
             <div class="logar-registrar">
-                <p>Não tem uma conta? <a href="/cadastro" class="link-registrar">Registrar</a></p>
+                <p>Não tem uma conta? <a href="/cadastro" class="link-registrar">Cadastrar</a></p>
             </div>
         </div>
     </div>
