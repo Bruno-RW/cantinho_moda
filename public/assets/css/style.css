@@ -95,9 +95,9 @@ button.white {
     padding: 0 20px;
 }
 #header li a {
+    color: #1A1A1A;
     font-size: 16px;
     font-weight: 600;
-    color: #1A1A1A;
     text-decoration: none;
 }
 #header li a:hover,
@@ -785,7 +785,7 @@ button.white {
 #login .container,
 #cadastro .container {
     width: 500px;
-    height: 460px;
+    min-height: 460px;
 
     padding: 20px 60px;
 
@@ -796,13 +796,7 @@ button.white {
     border: 2px solid rgba(255, 255, 255, .5);
 }
 #cadastro .container {
-    height: 650px;
-}
-#login .container.ativo {
-    height: 510px;
-}
-#cadastro .container.ativo {
-    height: 700px;
+    min-height: 650px;
 }
 #login .container .fa-xmark,
 #cadastro .container .fa-xmark {
@@ -851,48 +845,31 @@ button.white {
     line-height: 40px;
 
     position: absolute;
-    right: 52px;
+    right: 1%;
+    z-index: 1;
 }
 #cadastro .form-box .fa-lock-open {
-    right: 48px;
+    right: -0.25%;
 }
 
 #login .fa-envelope {
-    top: 25.8%;
-}
-#login .fa-envelope.ativo {
-    top: 36.5%;
+    top: 12.7%;
 }
 #login .fa-lock {
-    top: 45.2%;
-}
-#login .fa-lock.ativo  {
-    top: 54%;
+    top: 11.2%;
 }
 
 #cadastro .fa-user {
-    top: 18.1%;
-}
-#cadastro .fa-user.ativo {
-    top: 25%;
+    top: 8.6%;
 }
 #cadastro .fa-envelope {
-    top: 32.3%;
-}
-#cadastro .fa-envelope.ativo {
-    top: 36.5%;
+    top: 12%;
 }
 #cadastro .fa-lock-open {
-    top: 45.9%;
-}
-#cadastro .fa-lock-open.ativo {
-    top: 50%;
+    top: 9%;
 }
 #cadastro .fa-lock {
-    top: 59.8%;
-}
-#cadastro .fa-lock.ativo  {
-    top: 62%;
+    top: 8.8%;
 }
 
 #login .input-box,
@@ -933,10 +910,7 @@ button.white {
 #login .checkbox {
     margin:-20px 0 25px;
 }
-#login .checkbox .form-check-label {
-    position: absolute;
-    bottom: 34.5%;
-}
+
 #login .manter-conectado {
     color: #162938;
     font-weight: 500;
@@ -945,7 +919,8 @@ button.white {
 }
 #login .manter-conectado input {
     accent-color: #162938;
-    margin-right: 5px;
+    margin-right: 1px;
+    margin-top: 1px;
 }
 #login .manter-conectado a {
     color: #162938;
@@ -1016,6 +991,62 @@ button.white {
 #login .logar-registrar a:hover,
 #cadastro .logar-registrar a:hover {
     text-decoration: underline;
+}
+
+
+/* MINHA-CONTA */
+#header-banner.minha-conta-banner {
+    background-image: url("/assets/img/banners/b8.png");
+}
+
+#info-conta h2 {
+    color: #222;
+    font-size: 46px;
+    line-height: 54px;
+    font-weight: 600;
+}
+
+#info-conta .pro-container {
+    padding-top: 20px;
+}
+#info-conta .pro {
+    position: relative;
+
+    margin: 10px;
+    padding: 20px;
+
+    width: 100%;
+    min-width: 260px;
+
+    transition: .2s ease;
+    border: 1px solid #CCE7D0;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
+}
+#info-conta .pro:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .06);
+}
+#info-conta .pro h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#info-conta .pro p {
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+#info-conta  a {
+    color: #FFBD27;
+    font-weight: 600;
+    text-decoration: none;
+}
+#info-conta a:hover {
+    color: #FFBD27;
+    font-weight: 600;
+    text-decoration: underline;
+}
+#info-conta .conteudo {
+    height: 165px;
+    margin-bottom: 10px;
 }
 
 
@@ -1126,7 +1157,8 @@ button.white {
         font-size: 27px;
     }
 
-    .usuario-celular .dropdown {
+    .usuario-celular .dropdown,
+    #celular .iconeUser {
         position: absolute;
         top: 45px;
         right: 130px;
@@ -1304,7 +1336,8 @@ button.white {
         max-width: 200px;
     }
 
-    .usuario-celular .dropdown {
+    .usuario-celular .dropdown,
+    #celular .iconeUser {
         top: 35.5px;
         right: 80px;
     }
@@ -1474,57 +1507,11 @@ button.white {
         width: 330px;
         padding: 20px 40px;
     }
-    
-    #login .form-box i,
-    #cadastro .form-box i {
-        font-size: 1em;
-        right: 32px;
-    }
-    #cadastro .form-box .fa-lock-open {
-        right: 28px;
-    }
-    
-    #login .fa-envelope {
-        top: 23.7%;
-    }
-    #login .fa-envelope.ativo {
-        top: 36.5%;
-    }
-    #login .fa-lock {
-        top: 43.1%;
-    }
-    #login .fa-lock.ativo  {
-        top: 54%;
-    }
-    
-    #cadastro .fa-user {
-        top: 17.6%;
-    }
-    #cadastro .fa-user.ativo {
-        top: 25%;
-    }
-    #cadastro .fa-envelope {
-        top: 31.8%;
-    }
-    #cadastro .fa-envelope.ativo {
-        top: 36.5%;
-    }
-    #cadastro .fa-lock-open {
-        top: 45.5%;
-    }
-    #cadastro .fa-lock-open.ativo {
-        top: 50%;
-    }
-    #cadastro .fa-lock {
-        top: 59.4%;
-    }
-    #cadastro .fa-lock.ativo  {
-        top: 62%;
-    }
-    
+       
     #login .input-box input[placeholder],
     #cadastro .input-box input[placeholder] {
         font-size: 18px;
+        padding-right: 25px;
     }
     
     #login .checkbox .form-check-label {
