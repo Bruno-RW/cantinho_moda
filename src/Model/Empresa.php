@@ -137,7 +137,7 @@ class Empresa extends DAO
     public function setCidade(string $cidade): self
     {
         $cidade = trim($cidade);
-        $tamanhoValido = v::stringType()->length(2, 35)->validate($cidade);
+        $tamanhoValido = v::stringType()->length(3, 35)->validate($cidade);
 
         if (!$tamanhoValido) {
             throw new Exception('O tamanho do valor no campo Cidade é inválido');
@@ -154,7 +154,7 @@ class Empresa extends DAO
     public function setEstado(string $estado): self
     {
         $estado = trim($estado);
-        $tamanhoValido = v::stringType()->length(4, 20)->validate($estado);
+        $tamanhoValido = v::stringType()->length(2, 3)->validate($estado);
 
         if (!$tamanhoValido) {
             throw new Exception('O tamanho do valor no campo Estado é inválido');
