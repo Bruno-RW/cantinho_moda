@@ -16,6 +16,9 @@ class Produto extends DAO
     #[Campo(label: 'Marca', nn: true)]
     protected $idMarca;
 
+    #[Campo(label: 'Categoria', nn: true)]
+    protected $idCategoria;
+
     #[Campo(label: 'Nome', nn: true, order: true)]
     protected $nome;
 
@@ -54,6 +57,21 @@ class Produto extends DAO
         }
 
         $this->idMarca = $idMarca;
+        return $this;
+    }
+
+    public function getIdCategoria()
+    {
+        return $this->idCategoria;
+    }
+    public function setIdCategoria(string $idCategoria): self
+    {
+        $objCategoria = new Categoria;
+        if ( !$objCategoria->loadById($idCategoria) ) {
+            throw new Exception('A categoria informada é inválida');
+        }
+
+        $this->idCategoria = $idCategoria;
         return $this;
     }
 
