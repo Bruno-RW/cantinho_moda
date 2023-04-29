@@ -4,7 +4,7 @@
         ($_SERVER['REQUEST_URI'] == '/catalogo') ? 'ativo' : '', 
         ($_SERVER['REQUEST_URI'] == '/sobre')    ? 'ativo' : '',
         ($_SERVER['REQUEST_URI'] == '/contato')  ? 'ativo' : '',
-        ($_SERVER['REQUEST_URI'] == '/login') ? 'ativo' : ''
+        ($_SERVER['REQUEST_URI'] == '/login')    ? 'ativo' : ''
     ];
 
     if (empty($cliente)) {
@@ -14,7 +14,7 @@
             </li>
         HTML;
         $opcaoLoginCelular = <<<HTML
-            <a href="/login">
+            <a href="/login" class="iconeUser">
                 <i class="fa fa-regular fa-user"></i>
             </a>
         HTML;
@@ -41,6 +41,7 @@
                     <a href='#' id="icon-cel" class='dropdown-toggle' data-bs-toggle="dropdown" aria-expanded="false">
                         <i class='fa fa-regular fa-user'></i>
                     </a>
+
                     <ul id="drop-cel" class="dropdown-menu">
                         <li><a class="dropdown-item" href="/minha-conta">Minha conta</a></li>
                         <li><a class="dropdown-item" href="/favoritos">Favoritos</a></li>
