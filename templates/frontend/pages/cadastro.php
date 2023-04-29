@@ -7,11 +7,6 @@
 
             <?= retornaHTMLAlertMensagemSessao() ?>
 
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-envelope"></i>
-            <i class="fa-solid fa-lock-open"></i>
-            <i class="fa-solid fa-lock"></i>
-
             <?= $formCadastro ?>
 
             <div class="termos">

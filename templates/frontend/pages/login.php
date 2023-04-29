@@ -7,9 +7,6 @@
 
             <?= retornaHTMLAlertMensagemSessao() ?>
 
-            <i class="fa-solid fa-envelope"></i>
-            <i class="fa-solid fa-lock"></i>
-
             <?= $formLogin ?>
 
             <div class="logar-registrar">
