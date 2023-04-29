@@ -17,6 +17,7 @@
         }
 
         $f['class']        = $f['class'] ?? 'col-12';
+        $f['pre_html']     = $f['pre_html'] ?? '';
         $f['label_class']  = $f['label_class'] ?? 'form-label';
         $f['input_class']  = $f['input_class'] ?? 'form-control';
         $f['placeholder']  = $f['placeholder'] ?? '';
@@ -31,6 +32,7 @@
             case 'password':
                 echo <<<HTML
                         <div class="{$f['class']}">
+                            {$f['pre_html']}
                             <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
                             <input type="{$f['type']}" class="{$f['input_class']}" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" {$f['required']} value="{$postValue}">
                         </div>
@@ -42,6 +44,7 @@
                 $checked         = ($f['value'] == $postValue) ? 'checked' : ''; 
                 echo <<<HTML
                         <div class="{$f['class']}">
+                            {$f['pre_html']}
                             <label class="check-label">{$f['label']}{$f['txt_required']}</label>
                             <div class="checkbox">
                                 <input class="form-check-input" type="checkbox" name="{$f['name']}" id="{$f['name']}" value="{$f['value']}" {$f['required']} {$checked}>
@@ -59,6 +62,7 @@
                     $options .= sprintf('<option value="%s" %s>%s</option>', $o['value'], $selected, $o['label']);
                 }
                 echo <<<HTML
+                        {$f['pre_html']}
                         <div class="{$f['class']}">
                             <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
                             <select id="{$f['name']}" name="{$f['name']}" class="form-select" {$f['required']}>
@@ -83,6 +87,7 @@
                 }
                 echo <<<HTML
                         <div class="{$f['class']}">
+                            {$f['pre_html']}
                             <label class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
                             <div class="{$f['input_class']}">
                                 {$html}    
@@ -95,6 +100,7 @@
                 $cols = $f['cols'] ?? '';
                 echo <<<HTML
                         <div class="{$f['class']}">
+                            {$f['pre_html']}
                             <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
                             <textarea class="{$f['input_class']}" id="{$f['name']}" name="{$f['name']}" placeholder="{$f['placeholder']}" rows="{$rows}" cols="{$cols}" {$f['required']}>{$postValue}</textarea>
                         </div>
@@ -103,6 +109,7 @@
             case 'readonly':
                 echo <<<HTML
                     <div class="{$f['class']}">
+                        {$f['pre_html']}
                         <label class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
                         <input type="text" class="{$f['input_class']}-plaintext border-bottom bg-light ps-1" value="{$postValue}" readonly>
                     </div>
@@ -112,6 +119,7 @@
                 $f['accept'] = empty($f['accept']) ? '' : "accept='{$f['accept']}'";
                 echo <<<HTML
                         <div class="{$f['class']}">
+                            {$f['pre_html']}
                             <label for="{$f['name']}" class="{$f['label_class']}">{$f['label']}{$f['txt_required']}</label>
                             <input type="{$f['type']}" class="{$f['input_class']}" id="{$f['name']}" name="{$f['name']}" {$f['required']} {$f['accept']}>
                         </div>
