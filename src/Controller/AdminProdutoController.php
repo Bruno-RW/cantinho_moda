@@ -13,7 +13,7 @@ class AdminProdutoController
 {
     public function listar()
     {
-        $sql = 'SELECT p.idproduto, p.nome, m.marca idmarca, c.nome idcategoria,
+        $sql = 'SELECT p.idproduto, p.nome, p.tamanho, m.marca idmarca, c.nome idcategoria,
                        FORMAT(p.preco, 2, "pt_BR") preco 
                 FROM produtos p
                 INNER JOIN marcas m on m.idmarca = p.idmarca
@@ -28,11 +28,11 @@ class AdminProdutoController
         $dadosListagem['imagens'] = true;
         $dadosListagem['colunas'] = [
             ['campo'=>'idproduto',   'class'=>'text-center align-middle'],
-            ['campo'=>'idmarca',     'class'=>'text-center align-middle'],
-            ['campo'=>'idcategoria', 'class'=>'text-center align-middle'],
             ['campo'=>'nome',        'class'=>'text-center align-middle'],
-            ['campo'=>'preco',       'class'=>'text-center align-middle'],
+            ['campo'=>'idcategoria', 'class'=>'text-center align-middle'],
+            ['campo'=>'idmarca',     'class'=>'text-center align-middle'],
             ['campo'=>'tamanho',     'class'=>'text-center align-middle'],
+            ['campo'=>'preco',       'class'=>'text-center align-middle'],
         ];
         $htmlTabela = Render::block('tabela-admin', $dadosListagem);
 
@@ -126,15 +126,11 @@ class AdminProdutoController
             'btn_class' => 'btn btn-primary px-5 mt-3',
             'btn_label' => ($novo ? 'Adicionar' : 'Atualizar'),
             'fields' => [
-                ['type'=>'readonly', 'name'=>'idproduto', 'class'=>'col-2', 'label'=>'Id. Produto'],
-                ['type'=>'text', 'name'=>'nome', 'class'=>'col-4', 'label'=>'Nome completo', 'required'=>true],
+                ['type'=>'readonly', 'name'=>'idproduto',   'class'=>'col-1', 'label'=>'Id. Produto'],
+                ['type'=>'text',     'name'=>'nome',        'class'=>'col-3', 'label'=>'Nome',      'required'=>true],
+                ['type'=>'select',   'name'=>'idcategoria', 'class'=>'col-2', 'label'=>'Categoria', 'required'=>true, 'options'=>$optionsCategoria],
                 ['type'=>'select', 'name'=>'idmarca', 'class'=>'col-2', 'label'=>'Marca', 'required'=>true, 'options'=>$optionsMarca],
-
-                ['type'=>'select', 'name'=>'idcategoria', 'class'=>'col-2', 'label'=>'Categoria', 'required'=>true, 'options'=>$optionsCategoria],
-                
-                ['type'=>'text', 'name'=>'preco', 'class'=>'col-2', 'label'=>'Preço', 'required'=>true],
-
-                ['type'=>'select', 'name'=>'tamanho', 'class'=>'col-3', 'required'=>true,
+                ['type'=>'select', 'name'=>'tamanho', 'class'=>'col-2', 'required'=>true,
                     'options'=>[
                         ['value'=>'PP',      'label'=>'PP'],
                         ['value'=>'P',       'label'=>'P'],
@@ -159,6 +155,7 @@ class AdminProdutoController
                         ['value'=>'54',      'label'=>'54']
                     ]
                 ],
+                ['type'=>'text',   'name'=>'preco',   'class'=>'col-2', 'label'=>'Preço', 'required'=>true],
 
                 ['type'=>'textarea', 'name'=>'descricao', 'class'=>'col-12', 'label'=>'Descrição', 'rows'=>5],
                 ['type'=>'textarea', 'name'=>'especificacoes', 'class'=>'col-12', 'label'=>'Especificações', 'rows'=>5],
