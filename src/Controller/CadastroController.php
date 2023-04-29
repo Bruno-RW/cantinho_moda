@@ -56,6 +56,7 @@ class CadastroController extends FrontController
             'btn_class'=>'btn',
             'fields'=>[
                 [
+                    'pre_html'=>'<i class="fa-solid fa-user"></i>',
                     'type'=>'text',
                     'name'=>'nome',
                     'label'=>'',
@@ -66,6 +67,7 @@ class CadastroController extends FrontController
                     'required'=>true
                 ],
                 [
+                    'pre_html'=>'<i class="fa-solid fa-envelope"></i>',
                     'type'=>'email',
                     'name'=>'email',
                     'label'=>'',
@@ -76,6 +78,7 @@ class CadastroController extends FrontController
                     'required'=>true
                 ],
                 [
+                    'pre_html'=>'<i class="fa-solid fa-lock-open"></i>',
                     'type'=>'password',
                     'name'=>'senha',
                     'label_class'=>'',
@@ -85,6 +88,7 @@ class CadastroController extends FrontController
                     'required'=>true
                 ],
                 [
+                    'pre_html'=>'<i class="fa-solid fa-lock"></i>',
                     'type'=>'password',
                     'name'=>'senha2',
                     'label_class'=>'',

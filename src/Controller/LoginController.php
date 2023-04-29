@@ -12,7 +12,7 @@ class LoginController extends FrontController
     public function login()
     {
         if ( !empty($_SESSION['cliente']) ) {
-            redireciona('/meus-dados');
+            redireciona('/');
         }
 
         $dados = [];
@@ -62,7 +62,7 @@ class LoginController extends FrontController
             $nome =  $_SESSION['cliente']['nome'];
             $_SESSION['cliente']['prinome'] = substr($nome , 0, strpos($nome, ' '));
     
-            redireciona('/meus-dados');
+            redireciona('/');
         } catch(Exception $e) {
             $_SESSION['mensagem'] = [
                 'tipo'  => 'warning',
@@ -81,6 +81,7 @@ class LoginController extends FrontController
             'btn_class'=>'btn',
             'fields'=>[
                 [
+                    'pre_html'=>'<i class="fa-solid fa-envelope"></i>',
                     'type'=>'email',
                     'name'=>'email',
                     'label'=>'',
@@ -91,6 +92,7 @@ class LoginController extends FrontController
                     'required'=>true
                 ],
                 [
+                    'pre_html'=>'<i class="fa-solid fa-lock"></i>',
                     'type'=>'password',
                     'name'=>'senha',
                     'label_class'=>'',
