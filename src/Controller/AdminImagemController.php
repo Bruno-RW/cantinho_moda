@@ -36,7 +36,7 @@ class AdminImagemController
 
         // Alimentando os dados para a página de listagem
         $dados = [];
-        $dados['titulo'] = 'Imagens - Listagem';
+        $dados['titulo'] = 'Imagens';
         $campoOrdenacao = $objetoComFiguras->getOrderByField();
         $dados['registroAlvo'] = $model . ': <u>' . $objetoComFiguras->$campoOrdenacao . '</u>';
         $dados['usuario'] = $_SESSION['usuario'];
@@ -154,13 +154,13 @@ class AdminImagemController
             'btn_label' => ($novo ? 'Adicionar' : 'Atualizar'),
             'enctype' => 'multipart/form-data',
             'fields' => [
-                ['type'=>'readonly', 'name'=>'idarquivo', 'class'=>'col-2', 'label'=>'Id. Arquivo'],
-                ['type'=>'readonly', 'name'=>'nome', 'class'=>'col-4', 'label'=>'Nome do arquivo (automático)'],
-                ['type'=>'file', 'name'=>'arquivo', 'class'=>'col-4', 'label'=>'Arquivo (escolha...)', 'accept'=>'image/*'],
-                ['type'=>'readonly', 'name'=>'tipo', 'class'=>'col-2'],
-                ['type'=>'textarea', 'name'=>'descricao', 'class'=>'col-12', 'label'=>'Descrição', 'rows'=>5],
-                ['type'=>'readonly', 'name'=>'created_at', 'class'=>'col-3', 'label'=>'Criado em:'],
-                ['type'=>'readonly', 'name'=>'updated_at', 'class'=>'col-3', 'label'=>'Atualizado em:']
+                ['type'=>'readonly', 'name'=>'idarquivo',  'class'=>'col-1',  'label'=>'Id. Arquivo'],
+                ['type'=>'readonly', 'name'=>'nome',       'class'=>'col-4',  'label'=>'Nome'],
+                ['type'=>'readonly', 'name'=>'tipo',       'class'=>'col-2'],
+                ['type'=>'file',     'name'=>'arquivo',    'class'=>'col-5',  'label'=>'Arquivo', 'accept'=>'image/*'],
+                ['type'=>'textarea', 'name'=>'descricao',  'class'=>'col-12', 'label'=>'Descrição', 'rows'=>5],
+                ['type'=>'readonly', 'name'=>'created_at', 'class'=>'col-3',  'label'=>'Criado em:'],
+                ['type'=>'readonly', 'name'=>'updated_at', 'class'=>'col-3',  'label'=>'Atualizado em:']
             ]
         ];
         return Render::block('form', $dados);
