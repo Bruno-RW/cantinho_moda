@@ -131,18 +131,7 @@ class AdminProdutoController
                 ['type'=>'select', 'name'=>'idmarca', 'class'=>'col-2', 'label'=>'Marca', 'required'=>true, 'options'=>$optionsMarca],
 
                 ['type'=>'select', 'name'=>'idcategoria', 'class'=>'col-2', 'label'=>'Categoria', 'required'=>true, 'options'=>$optionsCategoria],
-                ['type'=>'select', 'name'=>'tipo', 'class'=>'col-2', 'required'=>true,
-                    'options'=>[
-                        ['value'=>'Blusa',    'label'=>'Blusa'],
-                        ['value'=>'Calça',    'label'=>'Calça'],
-                        ['value'=>'Casaco',   'label'=>'Casaco'],
-                        ['value'=>'Conjunto', 'label'=>'Conjunto'],
-                        ['value'=>'Saia',     'label'=>'Saia'],
-                        ['value'=>'Short',    'label'=>'Short'],
-                        ['value'=>'Tricot',   'label'=>'Tricot'],
-                        ['value'=>'Vestido',  'label'=>'Vestido']
-                    ]
-                ],
+                
                 ['type'=>'text', 'name'=>'preco', 'class'=>'col-2', 'label'=>'Preço', 'required'=>true],
 
                 ['type'=>'select', 'name'=>'tamanho', 'class'=>'col-3', 'required'=>true,
