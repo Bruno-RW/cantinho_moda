@@ -21,6 +21,7 @@
     "require": {
         "bramus/router": "^1.6",
         "respect/validation": "^2.2",
-        "phpmailer/phpmailer": "^6.8"
+        "phpmailer/phpmailer": "^6.8",
+        "gumlet/php-image-resize": "^2.0"
     }
 }
