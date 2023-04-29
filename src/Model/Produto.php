@@ -19,11 +19,11 @@ class Produto extends DAO
     #[Campo(label: 'Nome', nn: true, order: true)]
     protected $nome;
 
-    #[Campo(label: 'Tipo', nn: true)]
-    protected $tipo;
-
     #[Campo(label: 'Preço', nn: true)]
     protected $preco;
+
+    #[Campo(label: 'Tamanho', nn: true)]
+    protected $tamanho;
 
     #[Campo(label: 'Descrição')]
     protected $descricao;
@@ -72,21 +72,6 @@ class Produto extends DAO
         return $this;
     }
 
-    public function getTipo()
-    {
-        return $this->tipo;
-    }
-    public function setTipo(string $tipo): self
-    {
-        $tiposPermitidos = ['Ração', 'Brinquedo', 'Medicamento', 'Higiene', 'Beleza'];
-        if ( !in_array($tipo, $tiposPermitidos) ) {
-            throw new Exception('Tipo inválido para o produto');
-        }
-        
-        $this->tipo = $tipo;
-        return $this;
-    }
-
     public function getPreco()
     {
         return $this->preco;
@@ -98,6 +83,21 @@ class Produto extends DAO
         }
 
         $this->preco = $preco;
+        return $this;
+    }
+
+    public function getTamanho()
+    {
+        return $this->tamanho;
+    }
+    public function setTamanho(string $tamanho): self
+    {
+        $tamanhosPermitidos = ['PP', 'P', 'M', 'G', 'GG', 'XGG', '34', '36', '36-38', '38', '40', '40-42', '42', '44', '44-46', '46', '48', '48-50', '50', '52', '54'];
+        if ( !in_array($tamanho, $tamanhosPermitidos) ) {
+            throw new Exception('Tamanho inválido para o produto');
+        }
+        
+        $this->tamanho = $tamanho;
         return $this;
     }
 
