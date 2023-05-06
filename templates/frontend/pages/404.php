@@ -9,7 +9,7 @@
         <p>Desculpe, a página <span><?=$link?></span> não existe. Caso tenha algo de errado, entre em contado.</p>
 
         <div class="btn">
-            <a href="/">Voltar a home</a>
+            <a href="/">Voltar à home</a>
             <a href="/contato">Reportar problema</a>
         </div>
     </div>
