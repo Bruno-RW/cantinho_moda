@@ -28,19 +28,7 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <ul class="navbar-nav ms-auto me-3 me-lg-4">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-user fa-fw"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/admin/config">Configurações</a></li>
-                    <li><a href="/admin/log" class="dropdown-item" href="/admin/log">Exibir log</a></li>
-                    <li class="px-2"><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/logout">Sair</a></li>
-                </ul>
-            </li>
-        </ul>
+
     </nav>
 
     <div id="layoutSidenav">
@@ -50,9 +38,9 @@
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Menu</div>
 
-                        <a class="nav-link" href="/admin/dashboard">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Dashboard
+                        <a class="nav-link" href="/admin/home">
+                            <div class="sb-nav-link-icon"><i class="bi bi-house-fill"></i></div>
+                            Home
                         </a>
 
                         <a class="nav-link" href="/admin/categorias">
@@ -78,14 +66,30 @@
                         </a>
 
                         <a class="nav-link" href="/admin/empresas">
-                            <div class="sb-nav-link-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div class="sb-nav-link-icon"><i class="bi bi-building-fill"></i></div>
                             Empresas
                         </a>
                     </div>
                 </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Logado como:</div>
-                    <?= $usuario['nome']??'' ?>
+                <div class="sb-sidenav-footer d-flex align-item-center justify-content-between">
+                    <div class="usuario">
+                        <div class="small">Logado como:</div>
+                        <?= $usuario['nome']??'' ?>
+                    </div>
+
+                    <ul class="navbar-nav ms-auto me-3 me-lg-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user fa-fw"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/admin/config">Configurações</a></li>
+                                <li><a href="/admin/log" class="dropdown-item" href="/admin/log">Exibir log</a></li>
+                                <li class="px-2"><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/logout">Sair</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
