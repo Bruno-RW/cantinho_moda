@@ -10,89 +10,57 @@
 </section>
 
 <section id="produtos" class="section-p1 text-center">
-    <h2>Produtos em Destaque</h2>
-    <p>Coleção de Verão - Novos Modelos</p>
+    <h2>Coleção de Inverno</h2>
+    <p>Produtos em Destaque</p>
+    
     <div class="pro-container d-flex flex-wrap">
-        <div class="pro">
-            <img src="/img/img/products/f1.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/f2.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/f3.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/f4.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/f5.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/f6.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/f7.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/f8.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
+        <?php
+            $tempTricot = 0;
+            $tempCasaco = 0;
+            foreach($produtos as $p) {
+                $nome = strlen($p['nome']) <= 60 ? $p['nome']  : substr($p['nome'], 0, 57) . '...';
+                $precoTotal = number_format($p['preco'], 2, ',', '.');
+                $favoritar = ($p['ativo'] == 'S') ? 'solid' : 'regular';
+
+                if($p['idcategoria'] == 7) {
+                    if ($tempTricot < 4) {
+                        echo <<<HTML
+                            <div class="pro">
+                                <img src="{$p['imagens'][0]['url']}" alt="">
+                                <div class="des">
+                                    <span>{$p['marca']}</span>
+                                    <h5>{$nome}</h5>
+                                    <h4>R\${$precoTotal}</h4>
+                                </div>
+                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar este produto">
+                                    <i class="fa-{$favoritar} fa-heart"></i>
+                                </a>
+                            </div>
+                        HTML;
+                    }
+                    $tempTricot++;
+                }
+                
+                if($p['idcategoria'] == 3) {
+                    if ($tempCasaco < 4) {
+                        echo <<<HTML
+                            <div class="pro">
+                                <img src="{$p['imagens'][0]['url']}" alt="">
+                                <div class="des">
+                                    <span>{$p['marca']}</span>
+                                    <h5>{$nome}</h5>
+                                    <h4>R\${$precoTotal}</h4>
+                                </div>
+                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar este produto">
+                                    <i class="fa-{$favoritar} fa-heart"></i>
+                                </a>
+                            </div>
+                        HTML;
+                    }
+                    $tempCasaco++;
+                }
+            }
+        ?>
     </div>
 </section>
 
@@ -103,89 +71,37 @@
 </section>
 
 <section id="produtos" class="section-p1 text-center">
-    <h2>Novos Produtos</h2>
-    <p>Coleção de Verão - Modelo Novo</p>
+    <h2>Coleção de Verão</h2>
+    <p>Produtos em Destaque</p>
+
     <div class="pro-container d-flex flex-wrap">
-        <div class="pro">
-            <img src="/img/img/products/n1.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/n2.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/n3.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/n4.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/n5.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/n6.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-        <div class="pro">
-            <img src="/img/img/products/n7.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
-                    <div class="pro">
-            <img src="/img/img/products/n8.jpg" alt="">
-            <div class="des">
-                <span>MARCA</span>
-                <h5>NOME DO PRODUTO</h5>
-                <h4>PREÇO</h4>
-            </div>
-            <a href="#"><i class="bi bi-cart3 cart"></i></a>
-            <a href="#"><i class="bi bi-heart fav"></i></a>
-        </div>
+        <?php
+            $tempShort = 0;
+            foreach($produtos as $p) {
+                $nome = strlen($p['nome']) <= 60 ? $p['nome']  : substr($p['nome'], 0, 57) . '...';
+                $precoTotal = number_format($p['preco'], 2, ',', '.');
+                $favoritar = ($p['ativo'] == 'S') ? 'solid' : 'regular';
+
+                if($p['idcategoria'] == 6) {
+                    if ($tempShort < 4) {
+                        echo <<<HTML
+                            <div class="pro">
+                                <img src="{$p['imagens'][1]['url']}" alt="">
+                                <div class="des">
+                                    <span>{$p['marca']}</span>
+                                    <h5>{$nome}</h5>
+                                    <h4>R\${$precoTotal}</h4>
+                                </div>
+                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar este produto">
+                                    <i class="fa-{$favoritar} fa-heart"></i>
+                                </a>
+                            </div>
+                        HTML;
+                    }
+                    $tempShort++;
+                }
+            }
+        ?>
     </div>
 </section>
 
