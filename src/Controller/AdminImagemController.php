@@ -13,7 +13,7 @@ class AdminImagemController
     {
         $modelPath = "CantinhoModa\\Model\\{$model}";
         if ( !class_exists($modelPath) ) {
-            redireciona('/admin/dashboard', 'danger', 'Página não localizada, Classe de dados destino não definida');
+            redireciona('/admin/home', 'danger', 'Página não localizada, Classe de dados destino não definida');
         }
 
         $objetoComFiguras = new $modelPath;
@@ -26,10 +26,9 @@ class AdminImagemController
         $dadosListagem['remover'] = true;
         $dadosListagem['colunas'] = [
             ['campo'=>'idarquivo',  'class'=>'text-center align-middle'],
-            ['campo'=>'tipo',       'class'=>'text-center align-middle'],
             ['campo'=>'nome',       'class'=>'text-center align-middle'],
-            ['campo'=>'tabela',     'class'=>'text-center align-middle'],
-            ['campo'=>'tabelaid',   'class'=>'text-center align-middle'],
+            ['campo'=>'tipo',       'class'=>'text-center align-middle'],
+            ['campo'=>'descricao',  'class'=>'text-center align-middle'],
             ['campo'=>'created_at', 'class'=>'text-center align-middle'],
         ];
         $htmlTabela = Render::block('tabela-admin', $dadosListagem);
@@ -49,7 +48,7 @@ class AdminImagemController
     {
         $modelPath = "CantinhoModa\\Model\\{$model}";
         if ( !class_exists($modelPath) ) {
-            redireciona('/admin/dashboard', 'danger', 'Página não localizada, Classe de dados destino não definida');
+            redireciona('/admin/home', 'danger', 'Página não localizada, Classe de dados destino não definida');
         }
 
         $objetoComFiguras = new $modelPath;
@@ -96,7 +95,7 @@ class AdminImagemController
 
             $modelPath = "CantinhoModa\\Model\\{$model}";
             if ( !class_exists($modelPath) ) {
-                redireciona('/admin/dashboard', 'danger', 'Página não localizada, Classe de dados destino não definida');
+                redireciona('/admin/home', 'danger', 'Página não localizada, Classe de dados destino não definida');
             }
             
             // Pega as informações do objeto dono do arquivo, como nome

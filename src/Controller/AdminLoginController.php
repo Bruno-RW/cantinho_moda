@@ -11,7 +11,7 @@ class AdminLoginController
     public function login()
     {
         if ( !empty($_SESSION['usuario']) ) {
-            redireciona('/admin/dashboard');
+            redireciona('/admin/home');
         }
 
         $dados = [];
@@ -56,7 +56,7 @@ class AdminLoginController
             $usuarioLogado->qtdAcessos++;
             $usuarioLogado->save();
     
-            redireciona('/admin/dashboard');
+            redireciona('/admin/home');
         } catch(Exception $e) {
             $_SESSION['mensagem'] = [
                 'tipo'  => 'warning',

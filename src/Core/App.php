@@ -91,7 +91,7 @@ class App
             self::$router->get ('/','\CantinhoModa\Controller\AdminLoginController@login');
             self::$router->post('/','\CantinhoModa\Controller\AdminLoginController@postLogin');
 
-            self::$router->get('/dashboard','\CantinhoModa\Controller\AdminDashboardController@index');
+            self::$router->get('/home','\CantinhoModa\Controller\AdminHomeController@index');
 
             self::$router->get('/log','\CantinhoModa\Controller\AdminLogController@listar');
 
