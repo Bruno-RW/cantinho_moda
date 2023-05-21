@@ -568,7 +568,7 @@ button.white {
     min-height: 460px;
     padding: 20px;
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     border: 2px solid rgba(255, 255, 255, .5);
 }
 
@@ -594,7 +594,7 @@ button.white {
     inset: 10px auto auto -34px !important;
     
     border: 1px solid #DCDFEB;
-    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, .3);
 }
 #catalogo a.dropdown-item {
     padding: 8px 12px;
@@ -620,10 +620,45 @@ button.white {
     font-weight: 700;
 } 
 
+#catalogo .filtro .accordion {
+    color: #222;
+}
+#catalogo .filtro #acordeaoFiltro {
+    padding-right: 20px;
+}
+#catalogo .filtro .accordion-button {
+    padding: 10px 10px 10px 0;
+}
+#catalogo .filtro .accordion-button:focus {
+    color: #222 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+/* #catalogo .filtro button.accordion-button::after {
+    color: #222 !important;
+} */
+
+#catalogo .filtro .accordion-body {
+    padding: 10px 0px 10px 15px;
+}
+#catalogo .filtro .form-check {
+    text-align: start;
+    width: 88%;
+    padding: 5px 0;
+} 
+#catalogo .filtro .form-check:hover  {
+    color: #B79130;
+    font-weight: 500;
+}
+#catalogo .filtro .form-check:hover input  {
+    border: 1px solid #B79130;
+}
+
 
 #catalogo .pro-container {
     justify-content: space-between;
     margin-top: 12px;
+    width: 78%;
 }
 #catalogo .pro {
     position: relative;
@@ -633,7 +668,6 @@ button.white {
     margin: 8px 0;
 
     width: 23%;
-    min-width: 250px;
 
     border-radius: 25px;
     transition: .2s ease;
@@ -870,7 +904,7 @@ button.white {
     overflow: hidden;
     border-radius: 20px;
 
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
     border: 2px solid rgba(255, 255, 255, .5);
 }
 #cadastro .container {
@@ -1138,7 +1172,7 @@ button.white {
     width: 800px;
     height: 430px;
     padding: 0;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
 }
 
 #login-admin .titulo {
