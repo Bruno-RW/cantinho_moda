@@ -1,0 +1,37 @@
+/* VARIÁVEIS */
+:root {
+    --txtBrancoMenu: #757679;
+    --txtBranco : #a3a5a8;
+    --bgGeral: #1a1a1a;
+    --bgFooter: #222;
+}
+
+
+/* BACKGROUND */
+.sb-nav-fixed .sb-topnav.navbar,
+#layoutSidenav .sb-sidenav {
+    background-color: var(--bgGeral) !important;
+}
+.sb-sidenav .sb-sidenav-footer {
+    background-color: var(--bgFooter) !important;
+}
+
+
+/* TEXTO */
+#layoutSidenav_nav .sb-sidenav-menu-heading {
+    color: var(--txtBrancoMenu);
+}
+#layoutSidenav_nav .nav-link,
+#layoutSidenav_nav .sb-nav-link-icon,
+.sb-sidenav-footer .usuario {
+    color: var(--txtBranco);
+}
+
+/* GERAL */
+.sb-topnav .navbar-brand {
+    margin-right: 38px;
+}
+
+.sb-sidenav-footer .navbar-nav .dropdown-menu {
+    inset: -95px -15px auto auto !important;
+}
