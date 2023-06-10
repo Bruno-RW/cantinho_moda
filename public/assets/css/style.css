@@ -121,8 +121,8 @@ button.white {
 #header .dropdown-menu {
     inset: 0px -25px auto auto !important;
     background-color: #E3E6F3;
-    border: 1px solid #DCDFEB;
-    box-shadow: 18px 18px 30px -10px rgba(0, 0, 0, .5);
+    border: 1px solid #CECACA;
+    box-shadow: 18px 18px 20px -10px rgba(0, 0, 0, .25);
 }
 
 #header #icon-cel {
@@ -241,12 +241,15 @@ button.white {
 }
 #footer p {
     font-size: 13px;
+    color: #222;
     font-weight: 500;
     margin: 0 0 8px 0;
 }
 #footer a {
     color: #222;
     font-size: 13px;
+    font-weight: 500;
+
     margin-bottom: 10px;
     text-decoration: none;
 }
@@ -290,7 +293,8 @@ button.white {
 
     padding: 20px;
 
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    border: 2px solid rgba(255, 255, 255, .5);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .35);
 }
 #erro h1 {
     color: #B79130;
@@ -404,16 +408,16 @@ button.white {
 
     border-radius: 25px;
     transition: .2s ease;
-    border: 1px solid #DCDFEB;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
+    border: 1px solid #CECACA;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .1);
 }
 #produtos .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, .06);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .14);
 }
 #produtos .pro img {
     width: 100%;
     border-radius: 20px;
-    background-color: #F1F1F1;
+    background-color: #F0E8E8;
 }
 #produtos .pro .des {
     text-align: start;
@@ -569,12 +573,12 @@ button.white {
     padding: 20px;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    border: 2px solid rgba(255, 255, 255, .5);
+    border: 1px solid #CAC7C7C0;
 }
 
 #catalogo .ordenar {
     padding: 10px 0 30px 0;
-    border-bottom: 1px solid #DCDFEB;
+    border-bottom: 1px solid #CAC7C7C0;
 }
 
 #catalogo .drop-ordem {
@@ -582,7 +586,7 @@ button.white {
     padding: 5px;
 
     border-radius: 10px;
-    border: 1px solid #DCDFEB;
+    border: 1px solid #CAC7C7C0;
 }
 #catalogo .dropdown-toggle {
     text-decoration: none;
@@ -593,14 +597,14 @@ button.white {
     padding: 0;
     inset: 10px auto auto -34px !important;
     
-    border: 1px solid #DCDFEB;
+    border: 1px solid #CAC7C7C0;
     box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, .3);
 }
 #catalogo a.dropdown-item {
     padding: 8px 12px;
 }
 #catalogo a.dropdown-item:hover  {
-    background-color: #bdbbbb27;
+    background-color: #bdbbbb57;
 }
 #catalogo i.bi.bi-arrow-down-up::before {
     font-size: 16px;
@@ -609,14 +613,14 @@ button.white {
 #catalogo .filtro {
     width: 20%;
     margin: 0px 20px 0 0;
-    border-right: 1px solid #DCDFEB;
+    border-right: 1px solid #CAC7C7C0;
 }
 #catalogo .filtro .titulo {
     margin-top: 20px;
     text-align: start;
 }                     
 #catalogo .filtro .titulo span {
-    color: #8a8a8b;
+    color: #8A8A8B;
     font-weight: 700;
 } 
 
@@ -634,7 +638,14 @@ button.white {
     box-shadow: none !important;
     background-color: transparent !important;
 }
-/* #catalogo .filtro button.accordion-button::after {
+
+#catalogo .filtro .accordion-button .accordion-body:focus {
+    color: #222 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    outline: none;
+}
+/* #catalogo button.accordion-button::after {
     color: #222 !important;
 } */
 
@@ -653,7 +664,15 @@ button.white {
 #catalogo .filtro .form-check:hover input  {
     border: 1px solid #B79130;
 }
-
+.form-check-input:checked {
+    background-color: #B79130 !important;
+    border-color: #B79130 !important;
+}
+.form-check-input:focus {
+    border-color: #B79130 !important;
+    box-shadow: none !important;
+    outline: 0;
+}
 
 #catalogo .pro-container {
     justify-content: space-between;
@@ -671,16 +690,16 @@ button.white {
 
     border-radius: 25px;
     transition: .2s ease;
-    border: 1px solid #DCDFEB;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
+    border: 1px solid #CECACA;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .1);
 }
 #catalogo .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, .06);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .14);
 }
 #catalogo .pro img {
     width: 100%;
     border-radius: 20px;
-    background-color: #F1F1F1;
+    background-color: #F0E8E8;
 }
 #catalogo .pro .des {
     text-align: start;
@@ -766,11 +785,11 @@ button.white {
     min-width: 260px;
 
     transition: .2s ease;
-    border: 1px solid #DCDFEB;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
+    border: 1px solid #CECACA;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .14);
 }
 #perguntas-frequentes .pro:hover {
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, .06);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .22);
 }
 #perguntas-frequentes .pro h3 {
     font-size: 20px;
@@ -827,6 +846,7 @@ button.white {
 }
 #detalhes-contato .detalhes p {
     font-size: 14px;
+    font-weight: 500;
     margin: 0;
 }
 #detalhes-contato .detalhes li {
@@ -876,7 +896,7 @@ button.white {
     margin-bottom: 10px;
 
     outline: none;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #CECACA;
 }
 #detalhes-form textarea {
     margin-bottom: 2px;
@@ -904,7 +924,7 @@ button.white {
     overflow: hidden;
     border-radius: 20px;
 
-    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .3);
     border: 2px solid rgba(255, 255, 255, .5);
 }
 #cadastro .container {
@@ -1172,7 +1192,7 @@ button.white {
     width: 800px;
     height: 430px;
     padding: 0;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .4);
 }
 
 #login-admin .titulo {
@@ -1219,10 +1239,6 @@ button.white {
     width: 100%;
     background-color: #041E42;
 }
-
-
-/* ------ ADMIN GERAL ------ */
-
 
 
 /* ------ MEDIA ------ */
