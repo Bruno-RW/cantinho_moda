@@ -4,6 +4,8 @@ namespace CantinhoModa\Controller;
 
 use CantinhoModa\Core\DB;
 use CantinhoModa\Core\FrontController;
+use CantinhoModa\Model\Categoria;
+use CantinhoModa\Model\Marca;
 use CantinhoModa\Model\Produto;
 use CantinhoModa\View\Render;
 
@@ -34,7 +36,21 @@ class CatalogoController extends FrontController
             $p['precodesconto'] = $p['preco'] * (1 -  $p['desconto']);
         }
         
+        $categoria = new Categoria;
+        $rowsCategorias = $categoria->find();
+        foreach ($rowsCategorias as &$c) {
+            $categoria->loadById($c['idcategoria']);
+        }
+
+        $marca = new Marca;
+        $rowsMarcas = $marca->find();
+        foreach ($rowsMarcas as &$m) {
+            $marca->loadById($m['idmarca']);
+        }
+
         $dados['produtos'] = $rowsProdutos;
+        $dados['categorias'] = $rowsCategorias;
+        $dados['marcas'] = $rowsMarcas;
         
         Render::front('catalogo', $dados);
     }
