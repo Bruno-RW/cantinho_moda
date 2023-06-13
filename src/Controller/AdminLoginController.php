@@ -53,7 +53,6 @@ class AdminLoginController
 
             $usuarioLogado = new Usuario();
             $usuarioLogado->loadById( $dadosUsuario[0]['idusuario']);
-            $usuarioLogado->qtdAcessos++;
             $usuarioLogado->save();
     
             redireciona('/admin/home');
