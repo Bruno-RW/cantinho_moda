@@ -30,69 +30,19 @@
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#acordeaoFiltro">
                             <div class="accordion-body">
-                                
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Acessórios
-                                    </label>
-                                </label>
-
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Blusas
-                                    </label>
-                                </label>
-
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Calças
-                                    </label>
-                                </label>
-
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Casacos
-                                    </label>
-                                </label>
-
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Conjuntos
-                                    </label>
-                                </label>
-
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Saias
-                                    </label>
-                                </label>
-
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Shorts
-                                    </label>
-                                </label>
-
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Tricots
-                                    </label>
-                                </label>
-
-                                <label class="form-check form-check-reverse">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkCategoria">
-                                    <label class="form-check-label" for="checkCategoria">
-                                        Vestidos
-                                    </label>
-                                </label>
+                                <?php
+                                    foreach($dados['categorias'] as $d) {
+                                        $idCategoria = "checkCate"."{$d['idcategoria']}";
+                                        echo(
+                                            <<<HTML
+                                                <label class="form-check form-check-reverse">
+                                                    <input class="form-check-input" type="checkbox" name="categoria[]" value="{$d['idcategoria']}" id="{$idCategoria}">
+                                                    <label class="form-check-label" for="{$idCategoria}">{$d['nome']}</label>
+                                                </label>
+                                            HTML
+                                        );
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -105,8 +55,20 @@
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#acordeaoFiltro">
                             <div class="accordion-body">
-                                SS
-                        </div>
+                                <?php
+                                    foreach($dados['marcas'] as $m) {
+                                        $idMarca = "checkMarca"."{$m['idmarca']}";
+                                        echo(
+                                            <<<HTML
+                                                <label class="form-check form-check-reverse">
+                                                    <input class="form-check-input" type="checkbox" name="marca[]" value="{$m['idmarca']}" id="{$idMarca}">
+                                                    <label class="form-check-label" for="{$idMarca}">{$m['marca']}</label>
+                                                </label>
+                                            HTML
+                                        );
+                                    }
+                                ?>
+                            </div>
                         </div>
                     </div>
 
