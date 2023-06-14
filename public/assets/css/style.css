@@ -632,29 +632,17 @@ button.white {
 #catalogo .filtro #acordeaoFiltro {
     padding-right: 20px;
 }
-
 #catalogo .filtro .accordion-button {
     padding: 10px 10px 10px 0;
 }
-
 .filtro .accordion-button:not(.collapsed) {
     background-color: transparent;
 }
 .filtro .accordion-button:not(.collapsed)::after {
     background-image: var(--bs-accordion-btn-icon);
-    
 }
 #catalogo .filtro .accordion-button:focus {
-    color: #222 !important;
     box-shadow: none !important;
-    background-color: transparent !important;
-}
-
-#catalogo .filtro .accordion-button .accordion-body:focus {
-    color: #222 !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
-    outline: none;
 }
 
 #catalogo .filtro .accordion-body {
