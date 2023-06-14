@@ -7,6 +7,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
+
+    --bs-accordion-active-color: #222;
 }
 
 body {
@@ -34,7 +36,7 @@ h6 {
 
 p {
     font-size: 16px;
-    color: #456B52;
+    color: #4D4D4D;
     margin: 15px 0 20px 0;
 }
 
@@ -630,8 +632,17 @@ button.white {
 #catalogo .filtro #acordeaoFiltro {
     padding-right: 20px;
 }
+
 #catalogo .filtro .accordion-button {
     padding: 10px 10px 10px 0;
+}
+
+.filtro .accordion-button:not(.collapsed) {
+    background-color: transparent;
+}
+.filtro .accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon);
+    
 }
 #catalogo .filtro .accordion-button:focus {
     color: #222 !important;
@@ -645,9 +656,6 @@ button.white {
     background-color: transparent !important;
     outline: none;
 }
-/* #catalogo button.accordion-button::after {
-    color: #222 !important;
-} */
 
 #catalogo .filtro .accordion-body {
     padding: 10px 0px 10px 15px;
@@ -684,17 +692,17 @@ button.white {
     cursor: pointer;
 
     padding: 10px 12px;
-    margin: 8px 0;
+    margin: 8px 0 20px;
 
     width: 23%;
 
     border-radius: 25px;
     transition: .2s ease;
     border: 1px solid #CECACA;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, .1);
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, .05);
 }
 #catalogo .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, .14);
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, .12);
 }
 #catalogo .pro img {
     width: 100%;
