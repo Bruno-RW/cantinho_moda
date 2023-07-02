@@ -2,18 +2,13 @@
     <div class="container">
         <div class="ordenar d-flex flex-wrap align-items-center justify-content-end w-100">
             <span>Ordenar por:</span>
-            <div class="drop-ordem">
-                <a href='#' class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-arrow-down-up"></i>
-                    De A a Z
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">De A a Z</a></li>
-                    <li><a class="dropdown-item" href="#">De Z a A</a></li>
-                    <li><a class="dropdown-item" href="#">Maior preço</a></li>
-                    <li><a class="dropdown-item" href="#">Menor preço</a></li>
-                </ul>
-            </div>
+            <select  name="filtro" id="filtroOrdenacao" class="selectOrdenar">
+                <?php $ordem = $GET['filtro'] ?? 'De A a Z'; ?>
+                <option <?= $ordem == 'De A a Z'    ? 'selected' : '';?>>De A a Z</option>
+                <option <?= $ordem == 'De Z a A'    ? 'selected' : '';?>>De Z a A</option>
+                <option <?= $ordem == 'Maior preço' ? 'selected' : '';?>>Maior preço</option>
+                <option <?= $ordem == 'Menor preço' ? 'selected' : '';?>>Menor preço</option>
+            </select>
         </div>
 
         <div class="conteudo d-flex flex-wrap">
@@ -32,11 +27,17 @@
                             <div class="accordion-body">
                                 <?php
                                     foreach($dados['categorias'] as $d) {
+                                        $checked = '';
+                                        foreach($_GET['categoria']??[] as $cat) {
+                                            if ($d['idcategoria'] == $cat) {
+                                                $checked = 'checked';
+                                            }
+                                        }
                                         $idCategoria = "checkCate"."{$d['idcategoria']}";
                                         echo(
                                             <<<HTML
                                                 <label class="form-check form-check-reverse">
-                                                    <input class="form-check-input" type="checkbox" name="categoria[]" value="{$d['idcategoria']}" id="{$idCategoria}">
+                                                    <input class="form-check-input checkCategoria" type="checkbox" name="categoria[]" value="{$d['idcategoria']}" id="{$idCategoria}" $checked>
                                                     <label class="form-check-label" for="{$idCategoria}">{$d['nome']}</label>
                                                 </label>
                                             HTML
@@ -61,7 +62,7 @@
                                         echo(
                                             <<<HTML
                                                 <label class="form-check form-check-reverse">
-                                                    <input class="form-check-input" type="checkbox" name="marca[]" value="{$m['idmarca']}" id="{$idMarca}">
+                                                    <input class="form-check-input checkMarca" type="checkbox" name="marca[]" value="{$m['idmarca']}" id="{$idMarca}">
                                                     <label class="form-check-label" for="{$idMarca}">{$m['marca']}</label>
                                                 </label>
                                             HTML
