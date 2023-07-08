@@ -369,13 +369,14 @@ button.white {
 #hero h4 {
     padding-bottom: 15px;
 }
-#hero button {
+#hero .veja {
     color: #B79130;
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
-
+    
     border: 0;
+    text-decoration: none;
     padding: 14px 60px 14px 65px;
     
     background-repeat: no-repeat;
@@ -581,9 +582,10 @@ button.white {
 #catalogo .ordenar {
     padding: 10px 0 30px 0;
     border-bottom: 1px solid #CAC7C7C0;
+    justify-content: end;
 }
 
-#catalogo .drop-ordem {
+#catalogo .selectOrdenar {
     margin-left: 10px;
     padding: 5px;
 
@@ -595,14 +597,14 @@ button.white {
     color: #222;
     padding: 5px
 }
-#catalogo .dropdown-menu {
+#catalogo .selectOrdenar div {
     padding: 0;
     inset: 10px auto auto -34px !important;
     
     border: 1px solid #CAC7C7C0;
     box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, .3);
 }
-#catalogo a.dropdown-item {
+#catalogo .selectOrdenar option {
     padding: 8px 12px;
 }
 #catalogo a.dropdown-item:hover  {
@@ -668,6 +670,70 @@ button.white {
     border-color: #B79130 !important;
     box-shadow: none !important;
     outline: 0;
+}
+
+#catalogo .preco-input {
+    margin: 30px 0 35px;
+}
+#catalogo .preco-input .campo {
+    height: 45px;
+}
+#catalogo .preco-input .campo span {
+    font-size: 14px;
+}
+#catalogo .preco-input .campo input {
+    margin-left: 12px;
+    
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #8A8A8B;
+}
+#catalogo .preco-input .campo input[type="number"]::-webkit-outer-spin-button,
+#catalogo .preco-input .campo input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+#catalogo .preco-container .separador {
+    font-size: 16px;
+    width: 80px;
+}
+#catalogo .preco-container .slider {
+    position: relative;
+    border-radius: 5px;
+    height: 5px;
+    background: #B79130;
+}
+#catalogo .preco-container .progresso {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+
+    height: 5px;
+    border-radius: 5px;
+    background: #B79130
+}
+#catalogo .faixa-input {
+    position: relative;
+}
+#catalogo .faixa-input input {
+    position: absolute;
+    top: 40px;
+    height: 5px;
+    
+    border-radius: 5px;
+    background: none;
+
+    pointer-events: none;
+    -webkit-appearance: none;
+}
+#catalogo .preco-container input[type="range"]::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+
+    border-radius: 50%;
+    pointer-events: auto;
+
+    background: #B79130;
+    -webkit-appearance: none;
 }
 
 #catalogo .pro-container {
@@ -1368,7 +1434,52 @@ button.white {
     
 
     /* ---- CATÁLOGO ---- */
+    #catalogo .ordenar {
+        padding: 5px 0 20px 0;
+    }
+    #catalogo .filtro {
+        width: 27%;
+    }
+    #catalogo .filtro .accordion-button {
+        font-size: 14px;
+    }
+    #catalogo .filtro .form-check {
+        width: 73%;
+        padding: 4px 0;
+    }
+    #catalogo .filtro .form-check-label {
+        font-size: 12px;
+    }
 
+    #catalogo .pro-container {
+        width: 69%;
+    }
+    #catalogo .pro {
+        padding: 6px 8px;
+        margin: 6px 0 16px;
+        border-radius: 15px;
+    }
+    #catalogo .pro img {
+        border-radius: 10px;
+    }
+    #catalogo .pro .fa-heart {
+        font-size: 16px;
+        width: 18px;
+        height: 18px;
+    }
+    #catalogo .pro .des {
+        max-width: 80px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #catalogo .pro .des h5 {
+        font-size: 10px;
+    }
+    #catalogo .pro .des h4 {
+        font-size: 12px;
+        padding-top: 7px;
+    }
+    
 
     /* ---- SOBRE ---- */
     #detalhes-sobre {
@@ -1570,6 +1681,66 @@ button.white {
 
 
     /* ---- CATÁLOGO ---- */
+    #catalogo span {
+        font-size: 18px;
+    }
+    #catalogo .ordenar {
+        padding: 5px 0 20px 0;
+        justify-content: start;
+    }
+    #catalogo .conteudo {
+        flex-direction: column;
+    }
+    #catalogo .filtro {
+        width: 103%;
+        border-right: 0;
+        margin-right: 0;
+    }
+    #catalogo .filtro #acordeaoFiltro{
+        padding-right: 0;
+    }
+    #catalogo .filtro .accordion-button {
+        font-size: 16px;
+    }
+    #catalogo .filtro .form-check {
+        width: 80%;
+        padding: 8px 0;
+    }
+    #catalogo .filtro .form-check-label {
+        font-size: 14px;
+    }
+
+    #catalogo .pro-container {
+        width: 100%;
+    }
+    #catalogo .pro {
+        width: 48%;
+
+        padding: 6px 8px;
+        margin: 6px 0 16px;
+        
+        border-radius: 15px;
+    }
+    #catalogo .pro img {
+        border-radius: 10px;
+    }
+    #catalogo .pro .fa-heart {
+        font-size: 16px;
+        width: 18px;
+        height: 18px;
+    }
+    #catalogo .pro .des {
+        max-width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #catalogo .pro .des h5 {
+        font-size: 14px;
+    }
+    #catalogo .pro .des h4 {
+        font-size: 15px;
+        padding-top: 7px;
+    }
 
 
     /* ---- SOBRE ---- */
