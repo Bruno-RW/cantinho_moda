@@ -29,12 +29,12 @@ define('DB_PASSWORD', '');
 /**
  * DEFINIÇÕES DE ENVIO DE E-MAIL
  */
-define('MAIL_HOST', 'smtp.gmail.com');
+define('MAIL_HOST', 'smtp.office365.com');
 define('MAIL_PORT', 587);
 
 define('MAIL_NAME', 'Cantinho da Moda');
-define('MAIL_USER', 'bw004862@cfjl.com.br');
+define('MAIL_USER', 'cantinhomodahz@gmail.com');
 define('MAIL_PASS', '');
 
 define('MAIL_CONTACTNAME', 'Cantinho da Moda');
-define('MAIL_CONTACTMAIL', 'mocrili@hotmail.com');
+define('MAIL_CONTACTMAIL', 'cantinhomodahz@gmail.com');

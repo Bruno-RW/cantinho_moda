@@ -15,7 +15,7 @@
             </li>
             <li>
                 <i class="fas fa-envelope"></i>
-                <p>mocrili@hotmail.com</p>
+                <p>cantinhomodahz@gmail.com</p>
             </li>
             <li>
                 <i class="fas fa-phone"></i>
