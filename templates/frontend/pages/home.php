@@ -1,12 +1,9 @@
-<?= retornaHTMLAlertMensagemSessao() ?>
-
 <section id="hero" class="d-flex flex-column align-items-start justify-content-center w-100">
     <h4>Novidades em moda</h4>
     <h2>Ofertas com valores excelentes</h2>
     <h1>Em todos os produtos</h1>
     <p>Sempre atualizando o inventário</p>
-    <!-- <p>Compras a vista com 15% de desconto</p> -->
-    <button>Veja agora</button>
+    <a href="/catalogo" class="veja">Veja agora</a>
 </section>
 
 <section id="produtos" class="section-p1 text-center">
@@ -32,7 +29,7 @@
                                     <h5>{$nome}</h5>
                                     <h4>R\${$precoTotal}</h4>
                                 </div>
-                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar este produto">
+                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar produto">
                                     <i class="fa-{$favoritar} fa-heart"></i>
                                 </a>
                             </div>
@@ -51,7 +48,7 @@
                                     <h5>{$nome}</h5>
                                     <h4>R\${$precoTotal}</h4>
                                 </div>
-                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar este produto">
+                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar produto">
                                     <i class="fa-{$favoritar} fa-heart"></i>
                                 </a>
                             </div>
@@ -92,7 +89,7 @@
                                     <h5>{$nome}</h5>
                                     <h4>R\${$precoTotal}</h4>
                                 </div>
-                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar este produto">
+                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar produto">
                                     <i class="fa-{$favoritar} fa-heart"></i>
                                 </a>
                             </div>
