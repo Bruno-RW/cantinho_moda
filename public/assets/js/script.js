@@ -1,7 +1,7 @@
 const bar = document.querySelector('#header #bar');
 const fecharBar = document.querySelector('#header #fechar');
 const navbar = document.querySelector('#header #navbar');
-// const secao = document.querySelector('section :not(#header)');
+// const secao = document.querySelectorAll('section :not(#header)');
 
 bar.addEventListener('click', () => {
     navbar.classList.add('ativo');
@@ -15,15 +15,46 @@ fecharBar.addEventListener('click', () => {
 //     navbar.classList.remove('ativo');
 // });
 
-const mensagem = document.querySelector('#login .form-box .alert');
-const loginContainer = document.querySelectorAll('#login .container');
-const loginIcone = document.querySelectorAll('#login .form-box i').classList.add('ativo');
+let categoriaFiltroOrdenacao = document.querySelector('#catalogo #filtroOrdenacao');
+let categoriaFiltroCategoria = document.querySelectorAll('#catalogo .checkCategoria');
+let categoriaFiltroMarcas = document.querySelectorAll('#catalogo .checkMarca');
 
-if (mensagem) {
-    loginContainer.classList.add('ativo');
-    loginIcone.classList.add('ativo');
+categoriaFiltroOrdenacao.addEventListener('change', pesquisaPorFiltros);
+
+categoriaFiltroCategoria.forEach(check=>{
+    check.addEventListener('change', pesquisaPorFiltros);
+});
+
+categoriaFiltroMarcas.forEach(check=>{
+    check.addEventListener('change', pesquisaPorFiltros);
+});
+
+function pesquisaPorFiltros() {
+    let filtro = 'filtro=' + categoriaFiltroOrdenacao.value;
+
+    let categorias = [];
+    categoriaFiltroCategoria.forEach(check=>{
+        if (check.checked) {
+            categorias.push('categoria[]='+check.value);
+        }
+    });
+    let paramCategorias = categorias.length ? '&' + categorias.join('&') : '';
+
+    let marcas = [];
+    categoriaFiltroMarcas.forEach(check=>{
+        if (check.checked) {
+            marcas.push('marca[]='+check.value);
+        }
+    });
+    let paramMarcas = marcas.length ? '&' + marcas.join('&') : '';
+
+    window.location.href = window.location.pathname + `?${filtro}${paramCategorias}${paramMarcas}`;
 }
 
+// if (window.location.pathname == '/catalogo' && window.location.href.indexOf('catalogo') > 0) {
+//     //Teste para iniciar a pág com dropdowns abertos
+//     document.querySelectorAll('#catalogo .accordion-collapse').classList.add('show');
+// }
 
 // ADICIONA COMPORTAMENTO DE CURTIR AO BOTÃO DE CURTIR / FAVORITAR
 document.querySelectorAll('.favoritar').forEach(linkCurtir => {
@@ -52,3 +83,57 @@ document.querySelectorAll('.favoritar').forEach(linkCurtir => {
         });
     });
 });
+
+
+function ajax(url, dados, callBack) {
+    if (!url, !dados, !callBack) {
+        throw 'Todos os parâmetros devem ser preenchidos';
+    }
+
+    let dadosCallBack = {};
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    xhr.onload = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status != 200) {
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'warning',
+                    title: 'Falha na comunicação',
+                    text: 'Ocorreu um erro de conexão, por favor, tente novamente. Se o erro persistir, contate o suporte',
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+                return;
+            }
+            try {
+                dadosCallBack = JSON.parse( xhr.responseText );
+            } catch(e) {
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'warning',
+                    title: 'Falha de processamento',
+                    text: 'A resposta não pôde ser processada, tente novamente ou entre em contato com o suporte',
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+                return;
+            }
+
+            callBack(dadosCallBack);
+        }
+    };
+
+    xhr.onerror = function() {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Falha na comunicação',
+            text: 'Ocorreu um erro de conexão, por favor, tente novamente',
+            showConfirmButton: false,
+            timer: 3000
+        });
+    };
+
+    xhr.send(dados);
+}
