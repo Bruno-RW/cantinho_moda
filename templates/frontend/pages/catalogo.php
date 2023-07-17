@@ -11,7 +11,7 @@
             </select>
         </div>
 
-        <div class="conteudo d-flex flex-wrap justify-content-center">
+        <div class="conteudo d-flex justify-content-center">
             <div class="filtro">
                 <div class="titulo">
                     <span>Filtrar</span>
@@ -91,16 +91,17 @@
                 </div>
             </div>
 
-            <div class="pro-container d-flex flex-wrap justify-content-between">
-                <?php
-                    foreach ($produtos as $p) {
-                        $imagem =     ( array_key_exists(1, $p['imagens']) ) ? $p['imagens'][1]['url'] : $p['imagens'][0]['url'];
-                        $nome =       ( strlen($p['nome']) <= 60 ) ? $p['nome'] : substr($p['nome'], 0, 57) . '...';
-                        $favoritar =  ( $p['ativo'] == 'S' ) ? 'solid' : 'regular';
-                        $precoTotal = number_format($p['preco'], 2, ',', '.');
+            <div class="pro-container d-flex justify-content-center">
+                <div class="produtos d-flex justify-content-center row">
+                    <?php
+                        foreach ($produtos as $p) {
+                            $imagem =     ( array_key_exists(1, $p['imagens']) ) ? $p['imagens'][1]['url'] : $p['imagens'][0]['url'];
+                            $nome =       ( strlen($p['nome']) <= 60 ) ? $p['nome'] : substr($p['nome'], 0, 57) . '...';
+                            $favoritar =  ( $p['ativo'] == 'S' ) ? 'solid' : 'regular';
+                            $precoTotal = number_format($p['preco'], 2, ',', '.');
 
-                        echo <<<HTML
-                                <div class="pro">
+                            echo <<<HTML
+                                <div class="pro col-1" data-idproduto="{$p['idproduto']}">
                                     <img src="{$imagem}" alt="">
                                     <div class="des">
                                         <span>{$p['marca']}</span>
@@ -112,8 +113,9 @@
                                     </a>
                                 </div>
                             HTML;
-                    }
-                ?>
+                        }
+                    ?>
+                </div>
             </div>
         </div>
 </section>

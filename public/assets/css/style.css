@@ -403,7 +403,7 @@ button.white {
     position: relative;
     cursor: pointer;
 
-    padding: 10px 12px;
+    padding: 10px 10px;
     margin: 15px 0;
 
     width: 23%;
@@ -447,7 +447,7 @@ button.white {
 #produtos .pro .fa-heart {
     position: absolute;
     color: #222;
-    font-size: 20px;
+    font-size: 25px;
 
     font-weight: 500;
     line-height: 40px;
@@ -737,7 +737,6 @@ button.white {
 }
 
 #catalogo .pro-container {
-    justify-content: space-between;
     margin-top: 12px;
     width: 78%;
 }
@@ -745,10 +744,11 @@ button.white {
     position: relative;
     cursor: pointer;
 
-    padding: 10px 12px;
-    margin: 8px 0 20px;
+    padding: 10px 10px;
+    margin: 8px 9px 20px;
 
     width: 23%;
+    max-height: 411px;
 
     border-radius: 25px;
     transition: .2s ease;
@@ -797,9 +797,12 @@ button.white {
     height: 25px;
 
     top: 10px;
-    right: 20px;
+    right: 18px;
 }
 
+#catalogo .pro .ativo {
+
+}
 
 /* ------ SOBRE ------ */
 #header-banner.sobre-banner {
@@ -1455,8 +1458,8 @@ button.white {
         width: 69%;
     }
     #catalogo .pro {
-        padding: 6px 8px;
-        margin: 6px 0 16px;
+        padding: 6px 6px;
+        margin: 6px 4px 16px;
         border-radius: 15px;
     }
     #catalogo .pro img {
@@ -1466,6 +1469,8 @@ button.white {
         font-size: 16px;
         width: 18px;
         height: 18px;
+        top: -2px;
+        right: 10px;
     }
     #catalogo .pro .des {
         max-width: 80px;
@@ -1714,20 +1719,20 @@ button.white {
         width: 100%;
     }
     #catalogo .pro {
-        width: 48%;
-
-        padding: 6px 8px;
-        margin: 6px 0 16px;
-        
+        width: 45%;
+        margin: 6px 7px 16px;
         border-radius: 15px;
     }
     #catalogo .pro img {
         border-radius: 10px;
     }
     #catalogo .pro .fa-heart {
-        font-size: 16px;
-        width: 18px;
-        height: 18px;
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+
+        top: 0px;
+        right: 10px;
     }
     #catalogo .pro .des {
         max-width: 130px;
