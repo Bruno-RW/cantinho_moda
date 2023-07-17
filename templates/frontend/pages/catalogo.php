@@ -91,8 +91,7 @@
                 </div>
             </div>
 
-            <div class="pro-container d-flex justify-content-center">
-                <div class="produtos d-flex justify-content-center row">
+            <div class="pro-container d-flex flex-wrap justify-content-center">
                     <?php
                         foreach ($produtos as $p) {
                             $imagem =     ( array_key_exists(1, $p['imagens']) ) ? $p['imagens'][1]['url'] : $p['imagens'][0]['url'];
@@ -115,7 +114,6 @@
                             HTML;
                         }
                     ?>
-                </div>
             </div>
         </div>
 </section>
