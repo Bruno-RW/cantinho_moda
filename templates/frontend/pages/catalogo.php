@@ -11,20 +11,19 @@
             </select>
         </div>
 
-        <div class="conteudo d-flex justify-content-center">
+        <div class="conteudo d-flex justify-content-center align-items-start">
             <div class="filtro">
                 <div class="titulo">
                     <span>Filtrar</span>
                 </div>
-                <div class="accordion accordion-flush" id="acordeaoFiltro">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Categorias
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#acordeaoFiltro">
-                            <div class="accordion-body">
+                <div class="accordion accordion-flush" id="acordeaoFiltro">                   
+                    <div class="categorias accordion-item">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCate" aria-expanded="false" aria-controls="collapseCate">
+                            Categorias
+                        </button>
+                        
+                        <div class="collapse" id="collapseCate">
+                            <div class="card card-body">
                                 <?php
                                     foreach($dados['categorias'] as $d) {
                                         $checked = '';
@@ -45,15 +44,14 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                Marcas
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#acordeaoFiltro">
-                            <div class="accordion-body">
+
+                    <div class="marcas accordion-item">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMarc" aria-expanded="false" aria-controls="collapseMarc">
+                            Marcas
+                        </button>
+                        
+                        <div class="collapse" id="collapseMarc">
+                            <div class="card card-body">
                                 <?php
                                     foreach($dados['marcas'] as $m) {
                                         $checked = '';
@@ -75,19 +73,17 @@
                         </div>
                     </div>
 
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                Faixa de preços
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#acordeaoFiltro">
-                            <div class="accordion-body">
-
+                    <div class="faixa-preco accordion-item">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaix" aria-expanded="false" aria-controls="collapseFaix">
+                            Faixa de preços
+                        </button>
+                        
+                        <div class="collapse" id="collapseFaix">
+                            <div class="card card-body">
+                                    
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
 

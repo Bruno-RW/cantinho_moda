@@ -628,6 +628,9 @@ button.white {
     font-weight: 700;
 } 
 
+#catalogo .filtro .accordion-item {
+    padding: 15px 10px;
+}
 #catalogo .filtro .accordion {
     color: #222;
 }
@@ -635,7 +638,8 @@ button.white {
     padding-right: 20px;
 }
 #catalogo .filtro .accordion-button {
-    padding: 10px 10px 10px 0;
+    padding: 10px 0;
+    box-shadow: none !important;
 }
 .filtro .accordion-button:not(.collapsed) {
     background-color: transparent;
@@ -647,9 +651,11 @@ button.white {
     box-shadow: none !important;
 }
 
-#catalogo .filtro .accordion-body {
-    padding: 10px 0px 10px 15px;
+#catalogo .filtro .card-body {
+    border: none;
+    padding: 0 10px;
 }
+
 #catalogo .filtro .form-check {
     text-align: start;
     width: 88%;
@@ -670,70 +676,6 @@ button.white {
     border-color: #B79130 !important;
     box-shadow: none !important;
     outline: 0;
-}
-
-#catalogo .preco-input {
-    margin: 30px 0 35px;
-}
-#catalogo .preco-input .campo {
-    height: 45px;
-}
-#catalogo .preco-input .campo span {
-    font-size: 14px;
-}
-#catalogo .preco-input .campo input {
-    margin-left: 12px;
-    
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #8A8A8B;
-}
-#catalogo .preco-input .campo input[type="number"]::-webkit-outer-spin-button,
-#catalogo .preco-input .campo input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-#catalogo .preco-container .separador {
-    font-size: 16px;
-    width: 80px;
-}
-#catalogo .preco-container .slider {
-    position: relative;
-    border-radius: 5px;
-    height: 5px;
-    background: #B79130;
-}
-#catalogo .preco-container .progresso {
-    position: absolute;
-    left: 25%;
-    right: 25%;
-
-    height: 5px;
-    border-radius: 5px;
-    background: #B79130
-}
-#catalogo .faixa-input {
-    position: relative;
-}
-#catalogo .faixa-input input {
-    position: absolute;
-    top: 40px;
-    height: 5px;
-    
-    border-radius: 5px;
-    background: none;
-
-    pointer-events: none;
-    -webkit-appearance: none;
-}
-#catalogo .preco-container input[type="range"]::-webkit-slider-thumb {
-    height: 17px;
-    width: 17px;
-
-    border-radius: 50%;
-    pointer-events: auto;
-
-    background: #B79130;
-    -webkit-appearance: none;
 }
 
 #catalogo .pro-container {
@@ -801,7 +743,7 @@ button.white {
 }
 
 #catalogo .pro .ativo {
-    
+
 }
 
 /* ------ SOBRE ------ */
