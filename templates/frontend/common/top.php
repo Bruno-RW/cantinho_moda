@@ -23,6 +23,8 @@
     <script>
         FontAwesomeConfig = { autoReplaceSvg: false }
     </script>
+
+    <link rel="icon" href="/assets/img/icones/logos/coroa.ico" type="image/x-icon"/>
 </head>
 <body>
     <?= $topo??'' ?>

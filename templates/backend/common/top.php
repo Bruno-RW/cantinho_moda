@@ -19,6 +19,8 @@
     
     <!-- SWEET ALERT -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="icon" href="/assets/img/icones/logos/coroa-admin.ico" type="image/x-icon"/>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark d-flex align-items-center justify-content-between ">
