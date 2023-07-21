@@ -53,9 +53,9 @@ class CatalogoController extends FrontController
             }
             if ($marcasFiltradas) {
                 if (!$where) {
-                    $where = 'WHERE c.idcategoria IN ('.implode(',', $marcasFiltradas).') ';
+                    $where = 'WHERE m.idmarca IN ('.implode(',', $marcasFiltradas).') ';
                 } else {
-                    $where .= 'AND m.marca IN ('.implode(',', $marcasFiltradas).') ';
+                    $where .= 'AND m.idmarca IN ('.implode(',', $marcasFiltradas).') ';
                 }
             }
         }
@@ -79,8 +79,6 @@ class CatalogoController extends FrontController
             $produto->loadById($p['idproduto']);
 
             $p['imagens'] = $produto->getFiles();
-            $p['desconto'] ??= 0.15;
-            $p['precodesconto'] = $p['preco'] * (1 -  $p['desconto']);
         }
         
         $categoria = new Categoria;
