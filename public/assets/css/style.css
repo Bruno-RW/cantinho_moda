@@ -1691,6 +1691,15 @@ button.white {
     #modalProduto .prod-preco-parcela span {
         font-size: 12px;
     }
+
+    #modalProduto .extra div {
+        margin: 10px 0 5px !important;
+        font-size: 14px;
+    }
+    #modalProduto .extra h3 {
+        font-size: 20px;
+    }
+
      
 
     /* ---- BANNER-CABEÇALHO ---- */
