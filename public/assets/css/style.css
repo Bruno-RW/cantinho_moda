@@ -171,6 +171,19 @@ button.white {
     border-bottom: none;
 }
 
+#modalProduto .modal-header p {
+    margin-bottom: 1rem;
+    margin-top: -6px;
+}
+
+#modalProduto .modal-header .btn-close {
+    margin-bottom: 1rem;
+    margin-top: -8px;
+}
+#modalProduto .modal-header .btn-close:focus {
+    box-shadow: none;
+}
+
 #modalProduto h2 {
     color: #222;
     font-size: 42px;
@@ -194,6 +207,7 @@ button.white {
 
 #modalProduto .img {
     width: 40%;
+    margin-right: 10px;
 }
 
 #modalProduto .info {
@@ -202,6 +216,10 @@ button.white {
 
 #modalProduto .info p {
     font-size: 20px;
+}
+
+#modalProduto .prod-info {
+    flex-direction: column;
 }
 
 #modalProduto .prod-id p {
@@ -234,12 +252,12 @@ button.white {
     margin-left: 10px;
 }
 
-#modalProduto .prod-parcela {
+#modalProduto .prod-preco-parcela {
     color: #222;
     font-size: 18px;
     font-weight: 600;
 }
-#modalProduto .prod-parcela span {
+#modalProduto .prod-preco-parcela span {
     color: #B79130;
     font-size: 18px;
     font-weight: 600;
@@ -830,9 +848,6 @@ button.white {
     right: 18px;
 }
 
-#catalogo .pro .ativo {
-
-}
 
 /* ------ SOBRE ------ */
 #header-banner.sobre-banner {
@@ -1464,7 +1479,7 @@ button.white {
     #banner3 .banner-box {
         width: 28%;
     }
-    
+
 
     /* ---- CATÁLOGO ---- */
     #catalogo .ordenar {
@@ -1617,6 +1632,66 @@ button.white {
         right: 80px;
     }
 
+    #modalProduto .modal-header{
+        padding-bottom: 0;
+    }
+
+    #modalProduto .modal-body{
+        padding-top: 0;
+    }
+
+    #modalProduto .modal-content {
+        min-width: 300px;
+        width: 350px;
+    }
+
+    #modalProduto .modal-body h2 {
+        font-size: 28px;
+        word-break: break-all;
+    }
+
+    #modalProduto .prod-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #modalProduto .info p {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    #modalProduto .info span {
+        font-size: 15px;
+    }
+
+    #modalProduto .prod-id {
+        margin-right: 10px;
+    }
+
+    #modalProduto .prod-id p {
+        font-size: 15px;
+        margin-bottom: 0
+    }
+
+    #modalProduto .prod-preco-full {
+        font-size: 14px;
+    }
+
+    #modalProduto .prod-preco-off .preco {
+        font-size: 20px;
+    }
+    #modalProduto .prod-preco-off .off {
+        font-size: 18px;
+        margin-left: 6px;
+    }
+
+    #modalProduto .prod-preco-parcela {
+        font-size: 12px;
+    }
+    #modalProduto .prod-preco-parcela span {
+        font-size: 12px;
+    }
+     
 
     /* ---- BANNER-CABEÇALHO ---- */
 
