@@ -698,6 +698,9 @@ button.white {
     border-radius: 10px;
     border: 1px solid #CAC7C7C0;
 }
+#catalogo .selectOrdenar:focus-visible {
+    outline: none;
+}
 #catalogo .dropdown-toggle {
     text-decoration: none;
     color: #222;
