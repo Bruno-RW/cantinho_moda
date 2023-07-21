@@ -124,6 +124,10 @@ class AjaxController
             }
         }
 
+        $desconto = 0.15;
+        $precoDesconto = round( $produto->getPreco() * (1 - $desconto), 2 );
+        $precoParcela = round( $produto->getPreco() / 4, 2 );
+
         $produtoData = [
             'id'             => $produto->getIdProduto(),
             'imagens'        => $produto->getFiles(),
@@ -131,6 +135,8 @@ class AjaxController
             'categoria'      => $produtoCategoria,
             'nome'           => $produto->getNome(),
             'preco'          => $produto->getPreco(),
+            'precodesconto'  => $precoDesconto,
+            'precoparcela'  => $precoParcela,
             'tamanho'        => $produto->getTamanho(),
             'descricao'      => $produto->getDescricao(),
             'especificacoes' => $produto->getEspecificacoes(),
