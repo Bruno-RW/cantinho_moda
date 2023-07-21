@@ -23,9 +23,6 @@ class Cliente extends DAO
     #[Campo(label: 'Senha', nn: true)]
     protected $senha;
 
-    #[Campo(label: 'Jornal', nn: true)]
-    protected $jornal;
-
     #[Campo(label: 'Dt. Criação', nn: true, auto: true)]
     protected $created_at;
 
@@ -83,17 +80,6 @@ class Cliente extends DAO
         $senha = password_hash($hashDaSenha, PASSWORD_DEFAULT);
 
         $this->senha = $senha;
-        return $this;
-    }
-
-    public function getJornal()
-    {
-        return $this->senha;
-    }
-    public function setJornal(string $jornal): self
-    {
-        $this->jornal = $jornal;
-
         return $this;
     }
 
