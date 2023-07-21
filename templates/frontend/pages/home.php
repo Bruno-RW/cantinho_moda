@@ -1,3 +1,20 @@
+<section id="modalProduto" class="modal fade" tabindex="-1" aria-labelledby="modalProdutoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalProdutoLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body d-flex flex-column">
+        Corpo
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="hero" class="d-flex flex-column align-items-start justify-content-center w-100">
     <h4>Novidades em moda</h4>
     <h2>Ofertas com valores excelentes</h2>
@@ -22,7 +39,7 @@
                 if($p['idcategoria'] == 7) {
                     if ($tempTricot < 4) {
                         echo <<<HTML
-                            <div class="pro">
+                            <div class="pro" data-idproduto="{$p['idproduto']}">
                                 <img src="{$p['imagens'][0]['url']}" alt="">
                                 <div class="des">
                                     <span>{$p['marca']}</span>
@@ -82,7 +99,7 @@
                 if($p['idcategoria'] == 6) {
                     if ($tempShort < 4) {
                         echo <<<HTML
-                            <div class="pro">
+                            <div class="pro" data-idproduto="{$p['idproduto']}">
                                 <img src="{$p['imagens'][1]['url']}" alt="">
                                 <div class="des">
                                     <span>{$p['marca']}</span>

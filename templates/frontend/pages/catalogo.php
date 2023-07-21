@@ -1,3 +1,20 @@
+<section id="modalProduto" class="modal fade" tabindex="-1" aria-labelledby="modalProdutoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalProdutoLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body d-flex flex-column">
+        Corpo
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="catalogo" class="section-p1 text-center">
     <div class="container">
         <div class="ordenar d-flex flex-wrap align-items-center w-100">

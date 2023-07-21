@@ -158,6 +158,93 @@ button.white {
     align-items: center;
 }
 
+#modalProduto {
+    backdrop-filter: blur(4px);
+}
+
+#modalProduto .modal-content {
+    border: none;
+    min-width: 600px;
+}
+
+#modalProduto .modal-header {
+    border-bottom: none;
+}
+
+#modalProduto h2 {
+    color: #222;
+    font-size: 42px;
+    font-weight: 700;
+}
+#modalProduto h3 {
+    color: #222;
+    font-size: 32px;
+    font-weight: 600;
+}
+#modalProduto .modal-body p {
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+}
+#modalProduto .modal-body span {
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#modalProduto .img {
+    width: 40%;
+}
+
+#modalProduto .info {
+    width: 60%;
+}
+
+#modalProduto .info p {
+    font-size: 20px;
+}
+
+#modalProduto .prod-id p {
+    color: #222;
+    font-size: 14px;
+    margin-bottom: 15px;    
+}
+#modalProduto .prod-id span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#modalProduto .prod-preco-full {
+    text-decoration: line-through;
+    color: #727274;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#modalProduto .prod-preco-off .preco {
+    color: #222;
+    font-size: 32px;
+    font-weight: 800;
+}
+#modalProduto .prod-preco-off .off {
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-left: 10px;
+}
+
+#modalProduto .prod-parcela {
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+}
+#modalProduto .prod-parcela span {
+    color: #B79130;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 
 /* ------ BANNER CABEÇALHO ------ */
 #header-banner {
@@ -444,8 +531,12 @@ button.white {
     font-weight: 700;
     padding-top: 7px;
 }
-#produtos .pro .fa-heart {
+#produtos .pro .favoritar {
     position: absolute;
+    top: 10px;
+    right: 20px;
+}
+#produtos .pro .fa-heart {
     color: #222;
     font-size: 25px;
 
@@ -454,9 +545,6 @@ button.white {
     
     width: 25px;
     height: 25px;
-
-    top: 10px;
-    right: 20px;
 }
 
 #banner {
