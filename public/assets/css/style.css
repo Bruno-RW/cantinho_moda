@@ -755,26 +755,8 @@ button.white {
 #catalogo .selectOrdenar:focus-visible {
     outline: none;
 }
-#catalogo .dropdown-toggle {
-    text-decoration: none;
-    color: #222;
-    padding: 5px
-}
-#catalogo .selectOrdenar div {
-    padding: 0;
-    inset: 10px auto auto -34px !important;
-    
-    border: 1px solid #CAC7C7C0;
-    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, .3);
-}
 #catalogo .selectOrdenar option {
     padding: 8px 12px;
-}
-#catalogo a.dropdown-item:hover  {
-    background-color: #bdbbbb57;
-}
-#catalogo i.bi.bi-arrow-down-up::before {
-    font-size: 16px;
 }
 
 #catalogo .filtro {
@@ -802,7 +784,7 @@ button.white {
 }
 #catalogo .filtro .accordion-button {
     padding: 10px 0;
-    box-shadow: none !important;
+    box-shadow: none;
 }
 .filtro .accordion-button:not(.collapsed) {
     background-color: transparent;
@@ -811,7 +793,7 @@ button.white {
     background-image: var(--bs-accordion-btn-icon);
 }
 #catalogo .filtro .accordion-button:focus {
-    box-shadow: none !important;
+    box-shadow: none;
 }
 
 #catalogo .filtro .card-body {
@@ -831,13 +813,13 @@ button.white {
 #catalogo .filtro .form-check:hover input  {
     border: 1px solid #B79130;
 }
-.form-check-input:checked {
-    background-color: #B79130 !important;
-    border-color: #B79130 !important;
+#catalogo .form-check-input:checked {
+    background-color: #B79130;
+    border-color: #B79130;
 }
-.form-check-input:focus {
-    border-color: #B79130 !important;
-    box-shadow: none !important;
+#catalogo .form-check-input:focus {
+    border-color: #B79130;
+    box-shadow: none;
     outline: 0;
 }
 
@@ -1228,6 +1210,18 @@ button.white {
 }
 #login .manter-conectado a:hover {
     text-decoration: underline;
+}
+#login .form-check-input{
+    border-color: #162938;
+}
+#login .form-check-input:checked {
+    background-color: #162938;
+    border-color: #162938;
+}
+#login .form-check-input:focus {
+    border-color: #162938;
+    box-shadow: none;
+    outline: 0;
 }
 
 #cadastro .termos {
