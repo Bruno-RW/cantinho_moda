@@ -1,7 +1,7 @@
+// COMPORTAMENTO DE NAVBAR PARA CELULARES
 const bar = document.querySelector('#header #bar');
 const fecharBar = document.querySelector('#header #fechar');
 const navbar = document.querySelector('#header #navbar');
-// const secao = document.querySelectorAll('section :not(#header)');
 
 bar.addEventListener('click', () => {
     navbar.classList.add('ativo');
@@ -11,10 +11,8 @@ fecharBar.addEventListener('click', () => {
     navbar.classList.remove('ativo');
 });
 
-// secao.addEventListener('click', () => {
-//     navbar.classList.remove('ativo');
-// });
 
+// SISTEMA DE FILTROS DA PÁGINA DE CATÁLOGO
 let categoriaFiltroOrdenacao = document.querySelector('#catalogo #filtroOrdenacao');
 let categoriaFiltroCategoria = document.querySelectorAll('#catalogo .checkCategoria');
 let categoriaFiltroMarcas = document.querySelectorAll('#catalogo .checkMarca');
@@ -31,6 +29,7 @@ categoriaFiltroMarcas.forEach(check=>{
     check.addEventListener('change', pesquisaPorFiltros);
 });
 
+// CONFIGURA QUAIS FILTROS ESTÃO APLICADOS E ADICIONA AO _GET DA PÁGINA
 function pesquisaPorFiltros() {
     let filtro = 'filtro=' + categoriaFiltroOrdenacao.value;
 
@@ -53,14 +52,42 @@ function pesquisaPorFiltros() {
     window.location.href = window.location.pathname + `?${filtro}${paramCategorias}${paramMarcas}`;
 }
 
-// if (window.location.pathname == '/catalogo' && window.location.href.indexOf('catalogo') > 0) {
-//     //Teste para iniciar a pág com dropdowns abertos
-//     document.querySelectorAll('#catalogo .accordion-button').classList.add('collapsed');
-//     document.querySelectorAll('#catalogo .collapse').classList.add('show');
-// }
+
+// PEGA INFORMAÇÕES DE UM ELEMENTO _GET DA PÁGINA
+const getUrlVars = (nome) => {
+    let vars = {};
+    let partes = window.location.href.split('?');
+
+    if (partes.length > 1) {
+        let query = partes[1];
+        let pares = query.split('&');
+
+        for (let i = 0; i < pares.length; i++) {
+            let par = pares[i].split('=');
+
+            vars[par[0]] = par[1];
+        }
+    };
+
+    return vars[nome];
+};
+
+// TESTA QUAIS FILTROS ESTÃO APLICADOS PARA CARREGAR A PÁGINA COM OS ELEMENTOS ABERTOS
+const categoriaCollapse = getUrlVars('categoria%5B%5D'); // categoria%5B%5D == categoria[]
+const marcaCollapse = getUrlVars('marca%5B%5D'); // marca%5B%5D == marca[]
+
+if (categoriaCollapse) {
+    const collapseCate = document.querySelectorAll('#catalogo #collapseCate');
+    const collapseCateAtivo = [...collapseCate].map(collapseEl => new bootstrap.Collapse(collapseEl));
+}
+
+if (marcaCollapse) {
+    const collapeMarc = document.querySelectorAll('#catalogo #collapseMarc');
+    const collapeMarcAtivo = [...collapeMarc].map(collapseEl => new bootstrap.Collapse(collapseEl));
+}
 
 // ADICIONA COMPORTAMENTO DE CURTIR AO BOTÃO DE CURTIR / FAVORITAR
-document.querySelectorAll('.favoritar').forEach(linkCurtir => {
+document.querySelectorAll('#modalProduto .favoritar').forEach(linkCurtir => {
     linkCurtir.addEventListener('click', e => {
         e.preventDefault();
 
@@ -89,6 +116,7 @@ document.querySelectorAll('.favoritar').forEach(linkCurtir => {
     });
 });
 
+
 // ADICIONA COMPORTAMENTO DE MOSTRAR PRODUTO COM MODAL
 document.querySelectorAll('.pro').forEach(produto => {
     produto.addEventListener('click', e => {
@@ -111,9 +139,16 @@ document.querySelectorAll('.pro').forEach(produto => {
             let produto = resposta.dados.produto;
             const modalProduto = new bootstrap.Modal('#modalProduto');
 
+            let favorito = (produto['favorito'] == 'S') ? "style= 'font-weight: 600; color: #FF2B1C'" : "style='font-weight: 500'";
+
             document.querySelector('#modalProduto .modal-header').innerHTML = `
                 <p class="d-flex">Categoria > ${produto.categoria}</p>
-                <button type="button" class="btn-close d-flex" data-bs-dismiss="modal" aria-label="Close"></button>
+                
+                <a href="#" class="favoritar" data-idproduto="${produto.id}" title="Favoritar produto">
+                    <i class="fa-regular fa-heart" ${favorito}></i>
+                </a>
+
+                <button type="button" class="btn-close d-flex" data-bs-dismiss="modal" aria-label="Close" title="Fechar produto"></button>
             `;
 
             let prodImg = ( 1 in produto['imagens'] ) ? produto['imagens'][1]['url'] : produto['imagens'][0]['url'];
@@ -211,6 +246,7 @@ document.querySelectorAll('#jornal .form button').forEach(btn => {
 });
 
 
+// FUNÇÃO AJAX DO PROJETO
 function ajax(url, dados, callBack) {
     if (!url, !dados, !callBack) {
         throw 'Todos os parâmetros devem ser preenchidos';
