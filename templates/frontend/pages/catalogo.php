@@ -109,7 +109,7 @@
                         foreach ($produtos as $p) {
                             $imagem =     ( array_key_exists(1, $p['imagens']) ) ? $p['imagens'][1]['url'] : $p['imagens'][0]['url'];
                             $nome =       ( strlen($p['nome']) <= 60 ) ? $p['nome'] : substr($p['nome'], 0, 57) . '...';
-                            $favoritar =  ( $p['ativo'] == 'S' ) ? 'solid' : 'regular';
+                            $favorito = ($p['ativo'] == 'S') ? "style= 'font-weight: 600; color: #FF2B1C'" : "style='font-weight: 500'";
                             $precoTotal = number_format($p['preco'], 2, ',', '.');
 
                             echo <<<HTML
@@ -120,8 +120,8 @@
                                         <h5>{$nome}</h5>
                                         <h4>R\${$precoTotal}</h4>
                                     </div>
-                                    <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar este produto">
-                                        <i class="fa-{$favoritar} fa-heart"></i>
+                                    <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar produto">
+                                        <i class="fa-regular fa-heart" $favorito></i>
                                     </a>
                                 </div>
                             HTML;
