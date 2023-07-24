@@ -187,6 +187,7 @@ button.white {
 #modalProduto .modal-header .fa-heart {
     color: #4D4D4D;
     font-size: 22px;
+    font-weight: 500;
 
     padding: 8px;
     line-height: 40px;
@@ -196,6 +197,13 @@ button.white {
 }
 #modalProduto .modal-header .fa-heart:hover {
     color: #000;
+}
+#modalProduto .modal-header .fa-heart.ativo {
+    color: #FF2B1C;
+    font-weight: 600;
+}
+#modalProduto .modal-header .fa-heart.ativo:hover {
+    color: #DB1100;
 }
 
 #modalProduto .modal-header .btn-close {
@@ -1187,41 +1195,6 @@ button.white {
 
     position: absolute;
     left: 0;
-}
-
-#login .checkbox {
-    margin:-20px 0 25px;
-}
-
-#login .manter-conectado {
-    color: #162938;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 0;
-}
-#login .manter-conectado input {
-    accent-color: #162938;
-    margin-right: 1px;
-    margin-top: 1px;
-}
-#login .manter-conectado a {
-    color: #162938;
-    text-decoration: none;
-}
-#login .manter-conectado a:hover {
-    text-decoration: underline;
-}
-#login .form-check-input{
-    border-color: #162938;
-}
-#login .form-check-input:checked {
-    background-color: #162938;
-    border-color: #162938;
-}
-#login .form-check-input:focus {
-    border-color: #162938;
-    box-shadow: none;
-    outline: 0;
 }
 
 #cadastro .termos {

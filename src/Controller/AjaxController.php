@@ -3,9 +3,8 @@
 namespace CantinhoModa\Controller;
 
 use CantinhoModa\Core\DB;
-use CantinhoModa\Model\Categoria;
 use CantinhoModa\Model\ClienteJornal;
-use CantinhoModa\Model\Marca;
+use CantinhoModa\Model\Favorito;
 use CantinhoModa\Model\Produto;
 
 class AjaxController
@@ -14,7 +13,7 @@ class AjaxController
      * Função que recebe as ações solicitadas e escolhe método que deve ser executado
      *
      * @return void
-     */
+    */
     public function loader()
     {
         if ( empty($_POST['acao']) ) {
@@ -37,7 +36,7 @@ class AjaxController
      * @param string $mensagem
      * @param array $dados
      * @return void
-     */
+    */
     public function retorno(string $status, string $mensagem, array $dados=[])
     {
         $resposta = [
@@ -59,7 +58,7 @@ class AjaxController
      *
      * @param array $dados Espera no mínimo: idproduto
      * @return void
-     */
+    */
     public function curtir(array $dados)
     {
         if ( empty($_SESSION['cliente']) ) {
@@ -95,10 +94,16 @@ class AjaxController
         if ( $st->rowCount() ) {
             $this->retorno('success', 'Ação registrada com sucesso', ['curtiu'=>$curtiu]);
         }
-
+        
         $this->retorno('error', 'Falha ao registrar ação, nehnum registro alterado');
     }
 
+    /**
+     * Método responsável por passar informações do produto para o modal
+     *
+     * @param array $dados Espera no mínimo: idproduto
+     * @return void
+    */
     public function detalhaProduto(array $dados)
     {
         $produto = new Produto();
@@ -124,6 +129,9 @@ class AjaxController
             }
         }
 
+        $favorito = new Favorito;
+        $produtoFavorito = $favorito->find( ["idproduto ="=>"{$produto->getIdProduto()}"], [], "ativo" );
+
         $desconto = 0.15;
         $precoDesconto = round( $produto->getPreco() * (1 - $desconto), 2 );
         $precoParcela = round( $produto->getPreco() / 4, 2 );
@@ -134,9 +142,10 @@ class AjaxController
             'marca'          => $produtoMarca,
             'categoria'      => $produtoCategoria,
             'nome'           => $produto->getNome(),
+            'favorito'       => $produtoFavorito,
             'preco'          => $produto->getPreco(),
             'precodesconto'  => $precoDesconto,
-            'precoparcela'  => $precoParcela,
+            'precoparcela'   => $precoParcela,
             'tamanho'        => $produto->getTamanho(),
             'descricao'      => $produto->getDescricao(),
             'especificacoes' => $produto->getEspecificacoes(),
@@ -145,6 +154,13 @@ class AjaxController
         $this->retorno('success', 'Ação registrada com sucesso', ['produto'=>$produtoData]);
     }
 
+    /**
+     * Método responsável por cadastrar e-mail para receber
+     * notificações da loja através do jornal eletrônico
+     *
+     * @param array $dados Espera o e-mail informado
+     * @return void
+    */
     public function cadastraNews(array $dados) : void
     {
         if ( !filter_var($dados['email'], FILTER_VALIDATE_EMAIL) ) {
