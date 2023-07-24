@@ -47,6 +47,7 @@ class AdminMarcaController
         // Cria e exibe o formulário
         $dados = [];
         $dados['titulo'] = 'Marcas - Manutenção';
+        $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         
         Render::back('marcas', $dados);

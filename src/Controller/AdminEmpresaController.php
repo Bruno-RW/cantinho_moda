@@ -52,6 +52,7 @@ class AdminEmpresaController
         // Cria e exibe o formulário
         $dados = [];
         $dados['titulo'] = 'Empresas - Manutenção';
+        $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         
         Render::back('empresas', $dados);

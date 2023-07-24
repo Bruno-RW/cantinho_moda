@@ -63,6 +63,7 @@ class AdminProdutoController
         // Cria e exibe o formulário
         $dados = [];
         $dados['titulo'] = 'Produtos - Manutenção';
+        $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         
         Render::back('produtos', $dados);

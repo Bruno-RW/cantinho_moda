@@ -69,6 +69,7 @@ class AdminImagemController
         // Cria e exibe o formulário
         $dados = [];
         $dados['titulo'] = 'Imagens - Manutenção';
+        $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         $campoOrdenacao = $objetoComFiguras->getOrderByField();
         $dados['registroAlvo'] = $model . ': <u class="d-inline-block mb-3">' . $objetoComFiguras->$campoOrdenacao . '</u>';

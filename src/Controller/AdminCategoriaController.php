@@ -48,6 +48,7 @@ class AdminCategoriaController
         // Cria e exibe o formulário
         $dados = [];
         $dados['titulo'] = 'Categorias - Manutenção';
+        $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         
         Render::back('categorias', $dados);

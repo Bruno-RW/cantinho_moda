@@ -48,6 +48,7 @@ class AdminUsuarioController
         // Cria e exibe o formulário
         $dados = [];
         $dados['titulo'] = 'Usuários - Manutenção';
+        $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         
         Render::back('usuarios', $dados);

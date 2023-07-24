@@ -48,6 +48,7 @@ class AdminNoticiaController
         // Cria e exibe o formulário
         $dados = [];
         $dados['titulo'] = 'Notícias - Manutenção';
+        $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         
         Render::back('noticias', $dados);
