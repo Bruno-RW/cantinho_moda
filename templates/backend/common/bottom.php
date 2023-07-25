@@ -6,7 +6,7 @@
                         <div class="text-muted"> © <?= $nomesite ?>, <?= date('Y') ?></div>
                         <div>
                             <!-- ADD PÁG SUPORTE -->
-                            <a href="/admin/suporte">Contatar suporte</a>
+                            <a href="https://linktr.ee/BrunoWunsch">Contatar suporte</a>
                             -
                             <a href="/">Visualizar site publicado</a>
                         </div>
