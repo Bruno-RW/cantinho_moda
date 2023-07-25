@@ -89,18 +89,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="faixa-preco accordion-item">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaix" aria-expanded="false" aria-controls="collapseFaix">
-                            Faixa de preços
-                        </button>
-                        
-                        <div class="collapse" id="collapseFaix">
-                            <div class="card card-body">
-                                    
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 

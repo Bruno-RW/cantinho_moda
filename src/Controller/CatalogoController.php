@@ -60,9 +60,6 @@ class CatalogoController extends FrontController
             }
         }
 
-        //p.preco between menorpreco and maiorpreco
-        //if ($where)
-
         $sql = "SELECT p.idproduto, p.idmarca, p.idcategoria, p.nome, p.preco, p.tamanho, f.ativo, m.marca
                 FROM produtos p
                 INNER JOIN categorias c ON c.idcategoria = p.idcategoria
