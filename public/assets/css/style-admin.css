@@ -50,6 +50,7 @@
 
     transition: .2s ease;
     border: 1px solid #CECACA;
+    border-bottom: 12px solid #162938;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, .14);
 }
 .conteudo .info h3 {
