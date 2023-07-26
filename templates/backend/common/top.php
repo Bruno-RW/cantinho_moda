@@ -91,8 +91,7 @@
                                 <i class="fas fa-user fa-fw"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/admin/config">Configurações</a></li>
-                                <li><a href="/admin/log" class="dropdown-item" href="/admin/log">Exibir log</a></li>
+                                <li><a class="dropdown-item" href="/admin/config">Modo: <span class="tema">Claro</span></a></li>
                                 <li class="px-2"><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="/logout">Sair</a></li>
                             </ul>
