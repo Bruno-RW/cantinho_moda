@@ -145,16 +145,18 @@
                     });
                     return;
                 }
+                
                 // Se deu tudo certo, executa o código abaixo
                 let produto = resposta.dados.produto;
                 const modalProduto = new bootstrap.Modal('#modalProduto');
 
                 let favorito = (produto['favorito'].length > 0) ? "ativo" : "";
+                let title = (produto['favorito'].length > 0) ? "title='Desfavoritar produto'" : "title='Favoritar produto'";
 
                 document.querySelector('#modalProduto .modal-header').innerHTML = `
                     <p class="d-flex">Categoria > ${produto.categoria}</p>
                     
-                    <a href="#" class="favoritar" data-idproduto="${produto.id}" title="Favoritar produto">
+                    <a href="#" class="favoritar" data-idproduto="${produto.id}" ${title}>
                         <i class="fa-regular fa-heart ${favorito}"></i>
                     </a>
 
