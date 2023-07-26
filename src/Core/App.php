@@ -67,10 +67,7 @@ class App
         self::$router->get('/favoritos','\CantinhoModa\Controller\FavoritosController@favoritos');
         self::$router->get('/minha-conta','\CantinhoModa\Controller\MinhaContaController@minhaConta');
 
-        // self::$router->get('/produtos/{id}','\CantinhoModa\Controller\ProdutoController@listar');
-
         self::$router->post('/ajax','\CantinhoModa\Controller\AjaxController@loader');
-        self::$router->get('/busca','\CantinhoModa\Controller\BuscaController@buscar');
     }
 
     /**
@@ -92,8 +89,6 @@ class App
             self::$router->post('/','\CantinhoModa\Controller\AdminLoginController@postLogin');
 
             self::$router->get('/home','\CantinhoModa\Controller\AdminHomeController@index');
-
-            self::$router->get('/log','\CantinhoModa\Controller\AdminLogController@listar');
 
             self::$router->get('/remover/(\w+)/(\d+)','\CantinhoModa\Controller\AdminRemoveController@acao');
 
