@@ -185,7 +185,7 @@ button.white {
     right: 60px;
 }
 #modalProduto .modal-header .fa-heart {
-    color: #4D4D4D;
+    color: #D39804;
     font-size: 22px;
     font-weight: 500;
 
@@ -196,14 +196,10 @@ button.white {
     height: 25px;
 }
 #modalProduto .modal-header .fa-heart:hover {
-    color: #000;
+    color: #A87903;
 }
 #modalProduto .modal-header .fa-heart.ativo {
-    color: #FF2B1C;
     font-weight: 600;
-}
-#modalProduto .modal-header .fa-heart.ativo:hover {
-    color: #DB1100;
 }
 
 #modalProduto .modal-header .btn-close {
@@ -585,7 +581,7 @@ button.white {
     right: 20px;
 }
 #produtos .pro .fa-heart {
-    color: #222;
+    color: #D39804;
     font-size: 25px;
 
     font-weight: 500;
@@ -882,7 +878,7 @@ button.white {
 }
 #catalogo .pro .fa-heart {
     position: absolute;
-    color: #222;
+    color: #D39804;
     font-size: 20px;
 
     font-weight: 500;
@@ -1273,10 +1269,10 @@ button.white {
     font-weight: 600;
 }
 
-#info-conta .pro-container {
+#info-conta .dados {
     padding-top: 20px;
 }
-#info-conta .pro {
+#info-conta .conteudo {
     position: relative;
 
     margin: 10px;
@@ -1289,15 +1285,15 @@ button.white {
     border: 1px solid #CCE7D0;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
 }
-#info-conta .pro:hover {
+#info-conta .conteudo:hover {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .06);
 }
-#info-conta .pro h3 {
+#info-conta .conteudo h3 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-#info-conta .pro p {
+#info-conta .conteudo p {
     padding: 10px 0;
     margin-bottom: 0;
 }
@@ -1310,10 +1306,6 @@ button.white {
     color: #FFBD27;
     font-weight: 600;
     text-decoration: underline;
-}
-#info-conta .conteudo {
-    height: 165px;
-    margin-bottom: 10px;
 }
 
 

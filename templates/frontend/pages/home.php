@@ -33,7 +33,8 @@
             foreach($produtos as $p) {
                 $nome = strlen($p['nome']) <= 60 ? $p['nome']  : substr($p['nome'], 0, 57) . '...';
                 $precoTotal = number_format($p['preco'], 2, ',', '.');
-                $favorito = ($p['ativo'] == 'S') ? "style= 'font-weight: 600; color: #FF2B1C'" : "style='font-weight: 500'";
+                $favorito = ($p['ativo'] == 'S') ? "style= 'font-weight: 600;'" : "style='font-weight: 500'";
+                $title = ($p['ativo'] == 'S') ? "title='Produto favorito'" : "title='Produto não favorito'";
 
                 if($p['idcategoria'] == 7) {
                     if ($tempTricot < 4) {
@@ -45,7 +46,7 @@
                                     <h5>{$nome}</h5>
                                     <h4>R\${$precoTotal}</h4>
                                 </div>
-                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar produto">
+                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" $title>
                                     <i class="fa-regular fa-heart" $favorito></i>
                                 </a>
                             </div>
@@ -75,7 +76,8 @@
             foreach($produtos as $p) {
                 $nome = strlen($p['nome']) <= 60 ? $p['nome']  : substr($p['nome'], 0, 57) . '...';
                 $precoTotal = number_format($p['preco'], 2, ',', '.');
-                $favorito = ($p['ativo'] == 'S') ? "style= 'font-weight: 600; color: #FF2B1C'" : "style='font-weight: 500'";
+                $favorito = ($p['ativo'] == 'S') ? "style= 'font-weight: 600;'" : "style='font-weight: 500'";
+                $title = ($p['ativo'] == 'S') ? "title='Produto favorito'" : "title='Produto não favorito'";
 
                 if($p['idcategoria'] == 6) {
                     if ($tempShort < 4) {
@@ -87,7 +89,7 @@
                                     <h5>{$nome}</h5>
                                     <h4>R\${$precoTotal}</h4>
                                 </div>
-                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" title="Favoritar produto">
+                                <a href="#" class="favoritar" data-idproduto="{$p['idproduto']}" $title>
                                     <i class="fa-regular fa-heart" $favorito></i>
                                 </a>
                             </div>
