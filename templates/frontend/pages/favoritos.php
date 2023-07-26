@@ -17,7 +17,7 @@
 
 <section id="header-banner" class="favoritos-banner">
     <h2>#Favoritos</h2>
-    <p>Veja seus produtos favoritos!</p>
+    <p>Veja seus produtos favoritos</p>
 </section>
 
 <section id="favoritos" class="section-p1 d-flex flex-column">
