@@ -100,13 +100,6 @@ class LoginController extends FrontController
                     'placeholder'=>'Senha',
                     'class'=>'input-box',
                     'required'=>true
-                ],
-                [
-                    'type'=>'checkbox',
-                    'name'=>'conectado',
-                    'label'=>'',
-                    'labelcheck'=>'Manter conectado',
-                    'class'=>'manter-conectado',
                 ]
             ]
         ];
