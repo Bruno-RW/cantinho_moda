@@ -1257,7 +1257,7 @@ button.white {
 }
 
 
-/* MINHA-CONTA */
+/* ------ MINHA CONTA ------ */
 #header-banner.minha-conta-banner {
     background-image: url("/assets/img/banners/b8.png");
 }
@@ -1275,7 +1275,7 @@ button.white {
 #info-conta .conteudo {
     position: relative;
 
-    margin: 10px;
+    margin: 10px 0;
     padding: 20px;
 
     width: 100%;
@@ -1306,6 +1306,86 @@ button.white {
     color: #FFBD27;
     font-weight: 600;
     text-decoration: underline;
+}
+
+
+/* ------ FAVORITOS ------ */
+#header-banner.favoritos-banner {
+    background-image: url("/assets/img/banners/b8.png");
+}
+
+#favoritos h1 {
+    color: #222;
+    font-size: 50px;
+    font-weight: 700;
+
+    line-height: 64px;
+    margin-bottom: 0;
+}
+
+#favoritos .pro-container {
+    padding-top: 20px;
+    justify-content: space-between;
+}
+#favoritos .pro {
+    position: relative;
+    cursor: pointer;
+
+    padding: 10px 10px;
+    margin: 8px 20px 20px 0;
+
+    width: 23%;
+    min-width: 250px;
+
+    border-radius: 25px;
+    transition: .2s ease;
+    border: 1px solid #CECACA;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .1);
+}
+#favoritos .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .14);
+}
+#favoritos .pro img {
+    width: 100%;
+    border-radius: 20px;
+    background-color: #F0E8E8;
+}
+#favoritos .pro .des {
+    text-align: start;
+    padding-top: 10px;
+}
+#favoritos .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+#favoritos .pro .des h5{
+    color: #1A1A1A;
+    font-size: 14px;
+    padding-top: 7px;
+}
+#favoritos .pro .des i {
+    font-size: 12px;
+}
+#favoritos .pro .des h4 {
+    color: #B79130;
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 7px;
+}
+#favoritos .pro .favoritar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+#favoritos .pro .fa-heart {
+    color: #D39804;
+    font-size: 25px;
+
+    font-weight: 500;
+    line-height: 40px;
+    
+    width: 25px;
+    height: 25px;
 }
 
 
