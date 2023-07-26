@@ -9,32 +9,29 @@ use CantinhoModa\View\Render;
 
 class FavoritosController extends FrontController
 {
-    public function listar()
+    public function favoritos()
     {
         $dados = [];
         $dados['titulo'] = 'Página inicial';
         $dados['topo'] = $this->carregaHTMLTopo();
         $dados['rodape'] = $this->carregaHTMLRodape();
 
-        $sql = 'SELECT p.*
+        $sql = "SELECT p.idproduto, p.idmarca, p.idcategoria, p.nome, p.preco, p.tamanho, f.ativo, m.marca
                 FROM produtos p
-                INNER JOIN favoritos f ON f.idproduto = p.idproduto
-                WHERE f.idcliente = ?
-                ORDER BY p.nome';
-        
-        $idCliente = $_SESSION['cliente']['idcliente'] ?? 0;
-        $rowsProdutos = DB::select($sql, [$idCliente]);
+                INNER JOIN categorias c ON c.idcategoria = p.idcategoria
+                INNER JOIN marcas m ON m.idmarca = p.idmarca
+                LEFT JOIN favoritos f ON f.idproduto = p.idproduto
+                            AND f.idcliente = ?";
+        $parametros = [ $_SESSION['cliente']['idcliente'] ?? 0];
+        $rowsProdutos = DB::select($sql, $parametros);
 
         $produto = new Produto();
-
         foreach ($rowsProdutos as &$p) {
             $produto->loadById($p['idproduto']);
 
             $p['imagens'] = $produto->getFiles();
-            $p['desconto'] ??= 0.15;
-            $p['precodesconto'] = $p['preco'] * (1 -  $p['desconto']);
         }
-        
+
         $dados['produtos'] = $rowsProdutos;
         
         Render::front('favoritos', $dados);
