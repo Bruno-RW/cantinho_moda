@@ -112,6 +112,10 @@ class App
             self::$router->get ('/noticias/{valor}','\CantinhoModa\Controller\AdminNoticiaController@form');
             self::$router->post('/noticias/{valor}','\CantinhoModa\Controller\AdminNoticiaController@postForm');
 
+            self::$router->get ('/notificados',        '\CantinhoModa\Controller\AdminNotificadoController@listar');
+            self::$router->get ('/notificados/{valor}','\CantinhoModa\Controller\AdminNotificadoController@form');
+            self::$router->post('/notificados/{valor}','\CantinhoModa\Controller\AdminNotificadoController@postForm');
+
             self::$router->get ('/produtos',        '\CantinhoModa\Controller\AdminProdutoController@listar');
             self::$router->get ('/produtos/{valor}','\CantinhoModa\Controller\AdminProdutoController@form');
             self::$router->post('/produtos/{valor}','\CantinhoModa\Controller\AdminProdutoController@postForm');

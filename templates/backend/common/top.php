@@ -77,6 +77,10 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-envelope-paper-fill"></i></div>
                             Notícias
                         </a>
+                        <a class="nav-link" href="/admin/notificados">
+                            <div class="sb-nav-link-icon"><i class="bi bi-bell-fill"></i></div>
+                            Notificados
+                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer d-flex align-item-center justify-content-between">
