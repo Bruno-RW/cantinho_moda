@@ -2098,9 +2098,6 @@ button.white {
     #info-conta h1 {
         text-align: center;
     }
-    #info-conta .conteudo {
-        /* padding: 15px; */
-    }
     #info-conta .conteudo .topico {
         flex-direction: column;
     }
