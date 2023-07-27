@@ -11,6 +11,8 @@ class FavoritosController extends FrontController
 {
     public function favoritos()
     {
+        acessoRestrito();
+
         $dados = [];
         $dados['titulo'] = 'Página inicial';
         $dados['topo'] = $this->carregaHTMLTopo();
