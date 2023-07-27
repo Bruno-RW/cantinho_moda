@@ -101,7 +101,7 @@ class AdminCategoriaController
                 [
                     'type'=>'text',
                     'name'=>'nome',
-                    'class'=>'col-4',
+                    'class'=>'col-10',
                     'label'=>'Nome da categoria',
                     'required'=>true],
                 [
