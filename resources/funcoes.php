@@ -5,7 +5,7 @@
  * presa na sessão e elimina o seu conteúdo
  *
  * @return void
- */
+*/
 function retornaHTMLAlertMensagemSessao()
 {
 
@@ -37,7 +37,7 @@ function retornaHTMLAlertMensagemSessao()
  *                         warning, info, light, dark
  * @param string $mensagem
  * @return void
- */
+*/
 function redireciona(string $destino, string $tipoMsg = '', string $mensagem = '')
 {
     if ($tipoMsg && $mensagem) {
@@ -55,10 +55,28 @@ function redireciona(string $destino, string $tipoMsg = '', string $mensagem = '
  * redireciona para a página de login e exibe uma mensagem
  *
  * @return void
- */
+*/
 function acessoRestrito()
 {
     if ( empty($_SESSION['cliente']) ) {
         redireciona('/login', 'danger', 'Faça logon para continuar');
     }
+}
+
+/**
+ * Método para esconder caractéres de um e-mail
+ *
+ * @param string $email
+ * @return string
+*/
+function escondeCaracteres (string $email) {
+
+    $posArroba = strpos($email, "@");
+
+    $texto = substr($email, 1, $posArroba-2);
+    $tamanhoTexto = strlen($texto);
+
+    $email = str_replace($texto, str_repeat("*", $tamanhoTexto), $email);
+
+return $email;
 }
