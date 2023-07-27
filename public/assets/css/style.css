@@ -591,7 +591,6 @@ button.white {
     height: 25px;
 }
 
-
 #banner {
     width: 100%;
     height: 40vh;
@@ -680,7 +679,6 @@ button.white {
 #sm-banner .banner-box2 {
     background-image: url("/assets/img/banners/b3.jpg");
 }
-
 
 #banner3 {
     padding: 0 80px;
@@ -1262,6 +1260,14 @@ button.white {
     background-image: url("/assets/img/banners/b8.png");
 }
 
+#info-conta h1 {
+    color: #222;
+    font-size: 50px;
+    font-weight: 700;
+
+    line-height: 64px;
+    margin-bottom: 0;
+}
 #info-conta h2 {
     color: #222;
     font-size: 46px;
@@ -1269,20 +1275,15 @@ button.white {
     font-weight: 600;
 }
 
-#info-conta .dados {
-    padding-top: 20px;
-}
 #info-conta .conteudo {
-    position: relative;
-
     margin: 10px 0;
     padding: 20px;
 
-    width: 100%;
+    width: 50%;
     min-width: 260px;
 
     transition: .2s ease;
-    border: 1px solid #CCE7D0;
+    border: 1px solid #CECACA;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
 }
 #info-conta .conteudo:hover {
@@ -1294,18 +1295,38 @@ button.white {
     margin-bottom: 10px;
 }
 #info-conta .conteudo p {
+    font-size: 18px;
+    font-weight: 700;
+
     padding: 10px 0;
     margin-bottom: 0;
 }
-#info-conta  a {
-    color: #FFBD27;
+#info-conta .conteudo span {
+    font-weight: 500;
+}
+
+#info-conta .botoes {
+    margin-top: 15px;
+}
+#info-conta a {
+    color: #fff;
+    font-size: 14px;
     font-weight: 600;
     text-decoration: none;
+
+    margin-right: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    
+    outline: none;
+    border: none;
+
+    transition: .2s;
+    border-radius: 4px;
+    background-color: #041E42;
 }
 #info-conta a:hover {
-    color: #FFBD27;
-    font-weight: 600;
-    text-decoration: underline;
+    background: #011530;
 }
 
 
