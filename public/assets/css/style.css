@@ -1284,10 +1284,7 @@ button.white {
 
     transition: .2s ease;
     border: 1px solid #CECACA;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, .02);
-}
-#info-conta .conteudo:hover {
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, .06);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
 }
 #info-conta .conteudo h3 {
     font-size: 20px;
