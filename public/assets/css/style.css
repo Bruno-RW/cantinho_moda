@@ -1267,7 +1267,7 @@ button.white {
     font-weight: 700;
 
     line-height: 64px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 #info-conta h2 {
     color: #222;
@@ -1306,7 +1306,7 @@ button.white {
 }
 
 #info-conta .botoes {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 #info-conta .botoes a:first-child {
     margin-right: 15px;
