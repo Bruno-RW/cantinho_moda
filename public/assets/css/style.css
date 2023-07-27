@@ -874,8 +874,12 @@ button.white {
     font-weight: 700;
     padding-top: 7px;
 }
-#catalogo .pro .fa-heart {
+#catalogo .pro .favoritar {
     position: absolute;
+    top: 10px;
+    right: 18px;
+}
+#catalogo .pro .fa-heart {
     color: #D39804;
     font-size: 20px;
 
@@ -884,9 +888,6 @@ button.white {
     
     width: 25px;
     height: 25px;
-
-    top: 10px;
-    right: 18px;
 }
 
 
@@ -1291,7 +1292,8 @@ button.white {
     font-weight: 600;
     margin-bottom: 10px;
 }
-#info-conta .conteudo p {
+#info-conta .conteudo p,
+#info-conta .conteudo span {
     font-size: 18px;
     font-weight: 700;
 
@@ -1299,11 +1301,15 @@ button.white {
     margin-bottom: 0;
 }
 #info-conta .conteudo span {
+    margin-left: 5px;
     font-weight: 500;
 }
 
 #info-conta .botoes {
     margin-top: 15px;
+}
+#info-conta .botoes a:first-child {
+    margin-right: 15px;
 }
 #info-conta a {
     color: #fff;
@@ -1311,7 +1317,6 @@ button.white {
     font-weight: 600;
     text-decoration: none;
 
-    margin-right: 10px;
     padding: 15px 30px;
     cursor: pointer;
     
@@ -1343,7 +1348,6 @@ button.white {
 
 #favoritos .pro-container {
     padding-top: 20px;
-    justify-content: space-between;
 }
 #favoritos .pro {
     position: relative;
@@ -1624,12 +1628,14 @@ button.white {
     #catalogo .pro img {
         border-radius: 10px;
     }
+    #catalogo .pro .favoritar {
+        top: -2px;
+        right: 10px;
+    }
     #catalogo .pro .fa-heart {
         font-size: 16px;
         width: 18px;
         height: 18px;
-        top: -2px;
-        right: 10px;
     }
     #catalogo .pro .des {
         max-width: 80px;
@@ -1685,6 +1691,18 @@ button.white {
 
     /* ---- LOGAR/CADASTRAR ---- */
 
+
+    /* ---- MINHA CONTA ---- */
+    #info-conta .conteudo {
+        width: 100%;
+    }
+
+
+    /* ---- FAVORITOS ---- */
+    #favoritos .pro {
+        width: 30%;
+        min-width: 200px;
+    }
 
     /* ---- ADMIN LOGIN ---- */    
     #login-admin .container {
@@ -1814,7 +1832,6 @@ button.white {
         font-size: 20px;
     }
 
-     
 
     /* ---- BANNER-CABEÇALHO ---- */
 
@@ -1954,13 +1971,14 @@ button.white {
     #catalogo .pro img {
         border-radius: 10px;
     }
+    #catalogo .pro .favoritar {
+        top: 1px;
+        right: 10px;
+    }
     #catalogo .pro .fa-heart {
         font-size: 20px;
         width: 25px;
         height: 25px;
-
-        top: 0px;
-        right: 10px;
     }
     #catalogo .pro .des {
         max-width: 130px;
@@ -2070,6 +2088,73 @@ button.white {
     
     #cadastro .logar-registrar {
         margin-top: 80px;
+    }
+
+
+    /* ---- MINHA CONTA ---- */
+    #info-conta .conteudo {
+        width: 100%;
+    }
+    #info-conta h1 {
+        text-align: center;
+    }
+    #info-conta .conteudo {
+        /* padding: 15px; */
+    }
+    #info-conta .conteudo .topico {
+        flex-direction: column;
+    }
+    #info-conta .conteudo p,
+    #info-conta .conteudo span {
+        font-size: 20px;
+    }
+    #info-conta .conteudo .topico:first-child p:first-child {
+        padding-top: 0;
+    }
+    #info-conta .conteudo span {
+        margin-left: 0px;
+        padding: 0;
+    }
+
+    #info-conta .botoes {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    #info-conta .botoes a {
+        padding: 15px 25px;
+    }
+    #info-conta .botoes a:first-child {
+        margin-right: 0;
+    }
+
+
+    /* ---- FAVORITOS ---- */
+    #favoritos {
+        align-items: center;
+        padding: 20px 10px;
+    }
+    #favoritos h1 {
+        text-align: center;
+    }
+
+    #favoritos .pro {
+        width: 46%;
+        margin: 6px 7px 16px;
+        min-width: 100px;
+    }
+    #favoritos .pro .des {
+        max-width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #favoritos .pro .favoritar {
+        right: 15px;
+    }
+    #favoritos .pro .fa-heart {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
     }
 
 
