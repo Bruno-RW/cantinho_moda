@@ -168,8 +168,19 @@ class AjaxController
         }
 
         $news = new ClienteJornal();
+
+        $clienteJornalLocalizado = $news->find(['email='=>$dados['email']]);
+        if ($clienteJornalLocalizado) {
+            $news->loadById($clienteJornalLocalizado[0]['idclientejornal']);
+        }
+        
         $news->email = $dados['email'];
         $news->ativo = 'S';
+
+        if (!$clienteJornalLocalizado) {
+            $news->recebidos = 0;
+        }
+
         $news->save();
 
         $this->retorno('success', 'O e-mail foi cadastrado com sucesso');
