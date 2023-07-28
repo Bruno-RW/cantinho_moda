@@ -101,21 +101,21 @@ class AdminClienteController
                 [
                     'type'=>'text',
                     'name'=>'nome',
-                    'class'=>'col-4',
+                    'class'=>'col-5',
                     'label'=>'Nome completo',
                     'required'=>true
                 ],
                 [
                     'type'=>'email',
                     'name'=>'email',
-                    'class'=>'col-3',
+                    'class'=>'col-5',
                     'label'=>'E-mail',
                     'required'=>true
                 ],
                 [
                     'type'=>'password',
                     'name'=>'senha',
-                    'class'=>'col-3',
+                    'class'=>'col-4',
                     'label'=>'Senha'
                 ],
                 [
