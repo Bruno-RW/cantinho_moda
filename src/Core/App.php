@@ -108,13 +108,13 @@ class App
             self::$router->get ('/marcas/{valor}','\CantinhoModa\Controller\AdminMarcaController@form');
             self::$router->post('/marcas/{valor}','\CantinhoModa\Controller\AdminMarcaController@postForm');
 
-            self::$router->get ('/noticias',        '\CantinhoModa\Controller\AdminNoticiaController@listar');
-            self::$router->get ('/noticias/{valor}','\CantinhoModa\Controller\AdminNoticiaController@form');
-            self::$router->post('/noticias/{valor}','\CantinhoModa\Controller\AdminNoticiaController@postForm');
+            self::$router->get ('/news-msg',        '\CantinhoModa\Controller\AdminNewsMsgController@listar');
+            self::$router->get ('/news-msg/{valor}','\CantinhoModa\Controller\AdminNewsMsgController@form');
+            self::$router->post('/news-msg/{valor}','\CantinhoModa\Controller\AdminNewsMsgController@postForm');
 
-            self::$router->get ('/notificados',        '\CantinhoModa\Controller\AdminNotificadoController@listar');
-            self::$router->get ('/notificados/{valor}','\CantinhoModa\Controller\AdminNotificadoController@form');
-            self::$router->post('/notificados/{valor}','\CantinhoModa\Controller\AdminNotificadoController@postForm');
+            self::$router->get ('/news-usr',        '\CantinhoModa\Controller\AdminNewsUsrController@listar');
+            self::$router->get ('/news-usr/{valor}','\CantinhoModa\Controller\AdminNewsUsrController@form');
+            self::$router->post('/news-usr/{valor}','\CantinhoModa\Controller\AdminNewsUsrController@postForm');
 
             self::$router->get ('/produtos',        '\CantinhoModa\Controller\AdminProdutoController@listar');
             self::$router->get ('/produtos/{valor}','\CantinhoModa\Controller\AdminProdutoController@form');
