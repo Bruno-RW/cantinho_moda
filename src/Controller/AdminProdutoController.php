@@ -127,11 +127,11 @@ class AdminProdutoController
             'btn_class' => 'btn btn-primary px-5 mt-3',
             'btn_label' => ($novo ? 'Adicionar' : 'Atualizar'),
             'fields' => [
-                ['type'=>'readonly', 'name'=>'idproduto',   'class'=>'col-1', 'label'=>'Id. Produto'],
-                ['type'=>'text',     'name'=>'nome',        'class'=>'col-3', 'label'=>'Nome',      'required'=>true],
-                ['type'=>'select',   'name'=>'idcategoria', 'class'=>'col-2', 'label'=>'Categoria', 'required'=>true, 'options'=>$optionsCategoria],
-                ['type'=>'select', 'name'=>'idmarca', 'class'=>'col-2', 'label'=>'Marca', 'required'=>true, 'options'=>$optionsMarca],
-                ['type'=>'select', 'name'=>'tamanho', 'class'=>'col-2', 'required'=>true,
+                ['type'=>'readonly', 'name'=>'idproduto',   'class'=>'col-2', 'label'=>'Id. Produto'],
+                ['type'=>'text',     'name'=>'nome',        'class'=>'col-4', 'label'=>'Nome',      'required'=>true],
+                ['type'=>'select',   'name'=>'idcategoria', 'class'=>'col-3', 'label'=>'Categoria', 'required'=>true, 'options'=>$optionsCategoria],
+                ['type'=>'select', 'name'=>'idmarca', 'class'=>'col-3', 'label'=>'Marca', 'required'=>true, 'options'=>$optionsMarca],
+                ['type'=>'select', 'name'=>'tamanho', 'class'=>'col-3', 'required'=>true,
                     'options'=>[
                         ['value'=>'PP',      'label'=>'PP'],
                         ['value'=>'P',       'label'=>'P'],
@@ -156,7 +156,7 @@ class AdminProdutoController
                         ['value'=>'54',      'label'=>'54']
                     ]
                 ],
-                ['type'=>'text',   'name'=>'preco',   'class'=>'col-2', 'label'=>'Preço', 'required'=>true],
+                ['type'=>'text',   'name'=>'preco',   'class'=>'col-3', 'label'=>'Preço', 'required'=>true],
 
                 ['type'=>'textarea', 'name'=>'descricao', 'class'=>'col-12', 'label'=>'Descrição', 'rows'=>5],
                 ['type'=>'textarea', 'name'=>'especificacoes', 'class'=>'col-12', 'label'=>'Especificações', 'rows'=>5],
