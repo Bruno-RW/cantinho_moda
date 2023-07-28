@@ -3,10 +3,11 @@
 namespace CantinhoModa\Controller;
 
 use CantinhoModa\Core\Exception;
+use CantinhoModa\Model\ClienteJornal;
 use CantinhoModa\Model\MensagemJornal;
 use CantinhoModa\View\Render;
 
-class AdminNoticiaController
+class AdminNewsMsgController
 {
     public function listar()
     {
@@ -23,11 +24,11 @@ class AdminNoticiaController
 
         // Alimentando os dados para a página de listagem
         $dados = [];
-        $dados['titulo'] = 'Notícias';
+        $dados['titulo'] = 'News Mensagens';
         $dados['usuario'] = $_SESSION['usuario'];
         $dados['tabela'] = $htmlTabela;
 
-        Render::back('noticias', $dados);
+        Render::back('news-msg', $dados);
     }
 
     public function form($valor)
@@ -38,7 +39,7 @@ class AdminNoticiaController
             $resultado = $objeto->find( ['idmensagemjornal =' => $valor] );
 
             if ( empty($resultado) ) {
-                redireciona('/admin/noticias', 'danger', 'Link inválido, registro não localizado');
+                redireciona('/admin/news-msg', 'danger', 'Link inválido, registro não localizado');
             }
 
             $_POST = $resultado[0];
@@ -47,11 +48,11 @@ class AdminNoticiaController
 
         // Cria e exibe o formulário
         $dados = [];
-        $dados['titulo'] = 'Notícias - Manutenção';
+        $dados['titulo'] = 'News Mensagens - Manutenção';
         $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         
-        Render::back('noticias', $dados);
+        Render::back('news-msg', $dados);
     }
 
     public function postForm($valor)
@@ -61,7 +62,7 @@ class AdminNoticiaController
         // Se $valor tem um número, carrega os dados o registro informado nele
         if ( is_numeric($valor) ) {
             if ( !$objeto->loadById($valor) ) {
-                redireciona('/admin/noticias', 'danger', 'Link inválido, registro não localizado');
+                redireciona('/admin/news-msg', 'danger', 'Link inválido, registro não localizado');
             }
         }
 
@@ -83,7 +84,22 @@ class AdminNoticiaController
             exit;
         }
 
-        redireciona('/admin/noticias', 'success', 'Alterações realizadas com sucesso');
+        $objCliente = new ClienteJornal();
+        $localizados = $objCliente->find(
+            ['ativo=' => 'S']
+        );
+
+        foreach($localizados as $cadastrado) {
+            $objCliente->loadById($cadastrado['idclientejornal']);
+
+            $this->enviaMensagemCadastrada($_POST['assunto'], $_POST['texto'], $objCliente->getEmail());
+
+            $objCliente->recebidos = $objCliente->recebidos + 1;
+
+            $objCliente->save();
+        }
+
+        redireciona('/admin/news-msg', 'success', 'Alterações realizadas com sucesso');
     }
 
     public function renderizaFormulario($novo)
@@ -99,5 +115,11 @@ class AdminNoticiaController
             ]
         ];
         return Render::block('form', $dados);
+    }
+
+    private function enviaMensagemCadastrada($assunto, $mensagem, $destinatario) {
+        $mensagem = nl2br($mensagem);
+
+        
     }
 }

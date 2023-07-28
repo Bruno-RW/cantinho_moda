@@ -6,7 +6,7 @@ use CantinhoModa\Core\Exception;
 use CantinhoModa\Model\ClienteJornal;
 use CantinhoModa\View\Render;
 
-class AdminNotificadoController
+class AdminNewsUsrController
 {
     public function listar()
     {
@@ -24,11 +24,11 @@ class AdminNotificadoController
 
         // Alimentando os dados para a página de listagem
         $dados = [];
-        $dados['titulo'] = 'Notificados';
+        $dados['titulo'] = 'News Usuários';
         $dados['usuario'] = $_SESSION['usuario'];
         $dados['tabela'] = $htmlTabela;
 
-        Render::back('notificados', $dados);
+        Render::back('news-usr', $dados);
     }
 
     public function form($valor)
@@ -39,7 +39,7 @@ class AdminNotificadoController
             $resultado = $objeto->find( ['idclientejornal =' => $valor] );
 
             if ( empty($resultado) ) {
-                redireciona('/admin/notificados', 'danger', 'Link inválido, registro não localizado');
+                redireciona('/admin/news-usr', 'danger', 'Link inválido, registro não localizado');
             }
 
             $_POST = $resultado[0];
@@ -48,11 +48,11 @@ class AdminNotificadoController
 
         // Cria e exibe o formulário
         $dados = [];
-        $dados['titulo'] = 'Notificados - Manutenção';
+        $dados['titulo'] = 'News Usuários - Manutenção';
         $dados['usuario'] = $_SESSION['usuario'];
         $dados['formulario'] = $this->renderizaFormulario( empty($_POST) );
         
-        Render::back('notificados', $dados);
+        Render::back('news-usr', $dados);
     }
 
     public function postForm($valor)
@@ -62,7 +62,7 @@ class AdminNotificadoController
         // Se $valor tem um número, carrega os dados o registro informado nele
         if ( is_numeric($valor) ) {
             if ( !$objeto->loadById($valor) ) {
-                redireciona('/admin/notificados', 'danger', 'Link inválido, registro não localizado');
+                redireciona('/admin/news-usr', 'danger', 'Link inválido, registro não localizado');
             }
         }
 
@@ -84,7 +84,7 @@ class AdminNotificadoController
             exit;
         }
 
-        redireciona('/admin/notificados', 'success', 'Alterações realizadas com sucesso');
+        redireciona('/admin/news-usr', 'success', 'Alterações realizadas com sucesso');
     }
 
     public function renderizaFormulario($novo)
