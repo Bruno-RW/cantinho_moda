@@ -6,6 +6,8 @@ use CantinhoModa\Core\Exception;
 use CantinhoModa\Model\ClienteJornal;
 use CantinhoModa\Model\MensagemJornal;
 use CantinhoModa\View\Render;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
 class AdminNewsMsgController
 {
@@ -119,7 +121,40 @@ class AdminNewsMsgController
 
     private function enviaMensagemCadastrada($assunto, $mensagem, $destinatario) {
         $mensagem = nl2br($mensagem);
-
         
+        $mail = new PHPMailer(true);
+
+        try {
+            //Configurações de servidor
+            $mail->SMTPDebug = SMTP::DEBUG_OFF;
+            $mail->isSMTP();
+            $mail->Host       = MAIL_HOST;
+            $mail->SMTPAuth   = true;
+            $mail->Username   = MAIL_USER;
+            $mail->Password   = MAIL_PASS;
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port       = MAIL_PORT;
+
+            //Recipientes
+            $mail->setFrom(MAIL_USER, MAIL_NAME);
+            $mail->addAddress($destinatario);
+
+            $mail->addReplyTo('cantinhomodahz@gmail.com', 'Cantinho da Moda');
+
+            //Conteúdo
+            $mail->isHTML(true);
+            $mail->Subject = $assunto;
+            $mail->Body    = $mensagem;
+            $mail->AltBody = 'Esta mensagem está formatada com HTML, abra no navegador';
+
+            if ( !$mail->send() ) {
+                error_log('Erro de e-mail: ' . $mail->ErrorInfo);
+                throw new Exception('Erro ao enviar mensagem, tente novamente mais tarde');
+            }
+            return true;
+        } catch (Exception $e) {
+            error_log('Erro de e-mail: ' . $mail->ErrorInfo);
+            throw new Exception('Erro do processo de envio de mensagem');
+        }
     }
 }
