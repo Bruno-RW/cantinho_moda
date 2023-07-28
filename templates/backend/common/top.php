@@ -73,13 +73,12 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-building-fill"></i></div>
                             Empresas
                         </a>
-                        <a class="nav-link" href="/admin/noticias">
+                        <a class="nav-link" href="/admin/news-msg">
                             <div class="sb-nav-link-icon"><i class="bi bi-envelope-paper-fill"></i></div>
-                            Notícias
-                        </a>
-                        <a class="nav-link" href="/admin/notificados">
+                            News Msg
+                        <a class="nav-link" href="/admin/news-usr">
                             <div class="sb-nav-link-icon"><i class="bi bi-bell-fill"></i></div>
-                            Notificados
+                            News Usr 
                         </a>
                     </div>
                 </div>
