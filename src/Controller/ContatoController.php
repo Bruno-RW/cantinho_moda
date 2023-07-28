@@ -26,6 +26,7 @@ class ContatoController extends FrontController
         try {
             if ( empty($_POST['nome']) || 
                  empty($_POST['email']) ||
+                 empty($_POST['assunto']) ||
                  empty($_POST['mensagem']) ) {
                 throw new Exception('Todos os campos devem ser preenchidos');
             }
