@@ -29,7 +29,7 @@ define('DB_PASSWORD', '');
 /**
  * DEFINIÇÕES DE ENVIO DE E-MAIL
  */
-define('MAIL_HOST', 'smtp.office365.com');
+define('MAIL_HOST', 'smtp.gmail.com');
 define('MAIL_PORT', 587);
 
 define('MAIL_NAME', 'Cantinho da Moda');
