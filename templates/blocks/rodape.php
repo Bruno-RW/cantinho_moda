@@ -4,8 +4,8 @@
         <p>Receba atualizações no e-mail sobre nossa loja e <span>ofertas especiais</span></p>
     </div>
     <div class="form d-flex">
-        <input type="text" id="inscreverJornal" name="inscreverJornal" placeholder="Seu endereço de e-mail">
-        <button for="inscreverJornal" class="normal">Inscreva-se</button>
+        <input type="email" id="emailNews" name="email" placeholder="Seu endereço de e-mail" required>
+        <button for="emailNews" class="normal">Inscreva-se</button>
     </div>
 </section>
 

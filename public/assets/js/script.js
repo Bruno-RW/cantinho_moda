@@ -230,7 +230,7 @@
         btn.addEventListener('click', e => {
             e.preventDefault();
 
-            let email = document.querySelector('#inscreverJornal');
+            let email = document.querySelector('#emailNews');
 
             let dadosPost = new FormData();
             dadosPost.append('acao', 'cadastraNews');
