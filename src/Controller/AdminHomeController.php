@@ -9,32 +9,22 @@ class AdminHomeController
 {
     public function index()
     {
-        // Alimentando os dados para a tabela de listagem
-        // $dadosListagem = [];
-        // $dadosListagem['colunas'] = [
-        //     ['campo'=>'qtdclientes',   'class'=>'text-center align-middle'],
-        //     ['campo'=>'qtdprodutos',   'class'=>'text-center align-middle'],
-        //     ['campo'=>'qtdcategorias', 'class'=>'text-center align-middle'],
-        //     ['campo'=>'qtdmarcas',     'class'=>'text-center align-middle'],
-        // ];
-        // $htmlTabela = Render::block('tabela-admin', $dadosListagem);
-
         // Alimentando os dados para a página de listagem
         $dados = [];
         $dados['titulo'] = 'Home';
         $dados['usuario'] = $_SESSION['usuario'];
-        // $dados['tabela'] = $htmlTabela;
 
-        // $sql = "SELECT count() AS qtdclientes,   count() AS qtdprodutos,
-        //                count() AS qtdcategorias, count() AS qtdmarcas
-        //         FROM produtos p
-        //         INNER JOIN categorias ca ON p.idcategoria = ca.idcategoria
-        //         INNER JOIN marcas m      ON p.idmarca     = m.idmarca
-        //         INNER JOIN favoritos f   ON p.idproduto   = f.idproduto
-        //         INNER JOIN clientes cl   ON f.idcliente   = cl.idcliente
-        // ";
-        // $dadosBuscados = DB::select($sql);
+        $dados['info']['categorias'] = $this->selectQtd('categorias');
+        $dados['info']['clientes']   = $this->selectQtd('clientes');
+        $dados['info']['produtos']   = $this->selectQtd('produtos');
+        $dados['info']['marcas']     = $this->selectQtd('marcas');
 
         Render::back('home', $dados);
+    }
+
+    private function selectQtd(string $tabela): int
+    {
+        $sql = "SELECT count(0) AS total FROM {$tabela}";
+        return DB::select($sql)[0]['total'];
     }
 }
