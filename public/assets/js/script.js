@@ -226,6 +226,15 @@
 
 
 // ADICIONA COMPORTAMENTO DE CADASTRAR NO JORNAL
+
+    // ADICIONA POSSIBILIDADE DE ENVIAR POST COM A TECLA "ENTER"
+    document.querySelector("#jornal #emailNews").addEventListener('keydown', e => {
+        if (e.key === "Enter") {
+            document.querySelector("#jornal button").click();
+        }
+    });
+
+    // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS
     document.querySelectorAll('#jornal .form button').forEach(btn => {
         btn.addEventListener('click', e => {
             e.preventDefault();
