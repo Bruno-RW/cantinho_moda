@@ -11,7 +11,7 @@ use Respect\Validation\Validator as v;
 #[Entidade(name: 'clientesJornal')]
 class ClienteJornal extends DAO
 {
-    #[Campo(label: 'Cód. Cliente', pk: true, nn: true, auto: true)]
+    #[Campo(label: 'Cód. Cliente', pk: true, nn: true, auto: true, order: true)]
     protected $idClienteJornal;
 
     #[Campo(label: 'E-mail', nn: true)]
@@ -20,7 +20,7 @@ class ClienteJornal extends DAO
     #[Campo(label: 'Ativo', nn: true)]
     protected $ativo;
 
-    #[Campo(label: 'Recebidos', nn: true, order: true)]
+    #[Campo(label: 'Recebidos', nn: true)]
     protected $recebidos;
 
     #[Campo(label: 'Dt. Criação', nn: true, auto: true)]

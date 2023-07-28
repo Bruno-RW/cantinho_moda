@@ -10,7 +10,7 @@ use CantinhoModa\Core\Exception;
 #[Entidade(name: 'mensagensJornal')]
 class MensagemJornal extends DAO
 {
-    #[Campo(label: 'Cód. Mensagem', pk: true, nn: true, auto: true)]
+    #[Campo(label: 'Cód. Mensagem', pk: true, nn: true, auto: true, order: true)]
     protected $idMensagemJornal;
 
     #[Campo(label: 'Assunto', nn: true)]
