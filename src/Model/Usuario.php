@@ -23,9 +23,6 @@ class Usuario extends DAO
     #[Campo(label: 'Senha', nn: true)]
     protected $senha;
 
-    #[Campo(label: 'Tipo', nn: true)]
-    protected $tipo;
-
     #[Campo(label: 'Dt. Criação', nn: true, auto: true)]
     protected $created_at;
 
@@ -83,21 +80,6 @@ class Usuario extends DAO
         $senha = password_hash($hashDaSenha, PASSWORD_DEFAULT);
 
         $this->senha = $senha;
-        return $this;
-    }
-
-    public function getTipo()
-    {
-        return $this->tipo;
-    }
-    public function setTipo(string $tipo): self
-    {
-        $tipo = trim($tipo);
-        if ( !in_array($tipo, ['Gestor', 'Vendedor']) ) {
-            throw new Exception('O tipo de pessoa não está definido corretamente');
-        }
-
-        $this->tipo = $tipo;
         return $this;
     }
 
