@@ -164,6 +164,7 @@
                 `;
 
                 let prodImg = ( 1 in produto['imagens'] ) ? produto['imagens'][1]['url'] : produto['imagens'][0]['url'];
+                let prodDes = ''; let prodEsp = '';
 
                 if (produto.descricao) {
                     prodDes = `
@@ -184,7 +185,7 @@
                 document.querySelector('#modalProduto .modal-body').innerHTML = `
                     <div class="produto d-flex">
                         <div class="img">
-                            <img class="img-fluid img-produto" src="${prodImg}" alt="${produto.nome}">
+                            <img class="w-100" src="${prodImg}" alt="${produto.nome}">
                         </div>
 
                         <div class="info d-flex flex-column">
