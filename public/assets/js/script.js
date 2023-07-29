@@ -164,16 +164,21 @@
                 `;
 
                 let prodImg = ( 1 in produto['imagens'] ) ? produto['imagens'][1]['url'] : produto['imagens'][0]['url'];
-                let prodDes = ''; let stlDes  = ''; let prodEsp = ''; let stlEsp  = '';
 
                 if (produto.descricao) {
-                    prodDes = `<h3>Descrição</h3>${produto.descricao}`;
-                    stlDes = "style='margin: 15px 0 10px'";
+                    prodDes = `
+                        <div class="prod-desc">
+                            <h3>Descrição</h3>${produto.descricao}
+                        </div>
+                    `;
                 }
 
                 if (produto.especificacoes) {
-                    prodEsp = `<h3>Especificações</h3>${produto.especificacoes}`;
-                    stlEsp = "style='margin: 15px 0 10px'";
+                    prodEsp = `
+                        <div class="prod-espe">
+                            <h3>Especificações</h3>${produto.especificacoes}
+                        </div>
+                    `;
                 }
 
                 document.querySelector('#modalProduto .modal-body').innerHTML = `
@@ -210,12 +215,8 @@
                     </div>
 
                     <div class="extra d-flex flex-column">
-                        <div class="prod-desc" ${stlDes}>
-                            ${prodDes}
-                        </div>
-                        <div class="prod-espe" ${stlEsp}>
-                            ${prodEsp}
-                        </div>
+                        ${prodDes}
+                        ${prodEsp}
                     </div>
                 `;
                 modalProduto.show();

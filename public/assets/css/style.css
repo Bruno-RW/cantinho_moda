@@ -164,7 +164,7 @@ button.white {
 
 #modalProduto .modal-content {
     border: none;
-    min-width: 600px;
+    min-width: 650px;
 }
 
 #modalProduto .modal-header {
@@ -287,6 +287,13 @@ button.white {
     color: #B79130;
     font-size: 18px;
     font-weight: 600;
+}
+
+#modalProduto .extra div {
+    margin: 15px 0 10px;
+}
+#modalProduto .extra div:first-child {
+    margin-top: 20px;
 }
 
 
