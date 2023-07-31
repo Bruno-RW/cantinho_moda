@@ -120,6 +120,7 @@ class AdminNewsMsgController
     }
 
     private function enviaMensagemCadastrada($assunto, $mensagem, $destinatario) {
+        $assunto = $assunto . ' - ' . date('d/m/y');
         $mensagem = nl2br($mensagem);
         
         $mail = new PHPMailer(true);
