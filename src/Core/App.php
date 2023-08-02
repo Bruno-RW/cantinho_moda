@@ -53,19 +53,24 @@ class App
 
         self::$router->get('/sobre','\CantinhoModa\Controller\SobreController@sobre');
 
-        self::$router->get('/contato','\CantinhoModa\Controller\ContatoController@contato');
-        self::$router->post('/contato','\CantinhoModa\Controller\ContatoController@postContato');
-
-        self::$router->get('/login','\CantinhoModa\Controller\LoginController@login');
-        self::$router->post('/login','\CantinhoModa\Controller\LoginController@postLogin');
-        
         self::$router->get('/logout','\CantinhoModa\Controller\LoginController@logout');
 
-        self::$router->get('/cadastro','\CantinhoModa\Controller\CadastroController@cadastro');
+        self::$router->get('/favoritos','\CantinhoModa\Controller\FavoritosController@favoritos');
+
+        self::$router->get ('/contato','\CantinhoModa\Controller\ContatoController@contato');
+        self::$router->post('/contato','\CantinhoModa\Controller\ContatoController@postContato');
+
+        self::$router->get ('/login','\CantinhoModa\Controller\LoginController@login');
+        self::$router->post('/login','\CantinhoModa\Controller\LoginController@postLogin');
+
+        self::$router->get ('/cadastro','\CantinhoModa\Controller\CadastroController@cadastro');
         self::$router->post('/cadastro','\CantinhoModa\Controller\CadastroController@postCadastro');
 
-        self::$router->get('/favoritos','\CantinhoModa\Controller\FavoritosController@favoritos');
-        self::$router->get('/minha-conta','\CantinhoModa\Controller\MinhaContaController@minhaConta');
+        self::$router->get ('/minha-conta','\CantinhoModa\Controller\MinhaContaController@minhaConta');
+        self::$router->post('/minha-conta','\CantinhoModa\Controller\MinhaContaController@postMinhaConta');
+
+        self::$router->get ('/cancelar-jornal','\CantinhoModa\Controller\CancelarJornalController@cancelarJornal');
+        self::$router->post('/cancelar-jornal','\CantinhoModa\Controller\CancelarJornalController@postCancelarJornal');
 
         self::$router->post('/ajax','\CantinhoModa\Controller\AjaxController@loader');
     }
