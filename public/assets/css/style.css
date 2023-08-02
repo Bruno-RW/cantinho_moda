@@ -422,6 +422,62 @@ button.white {
 }
 
 
+/* ------ CANCELAR JORNAL ------ */
+#cancelar-jornal {
+    margin: 40px 0;
+}
+
+#cancelar-jornal .container {
+    width: 800px;
+    height: 300px;
+
+    padding: 20px;
+
+    border: 2px solid rgba(255, 255, 255, .5);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .35);
+}
+#cancelar-jornal h1 {
+    color: #1A1A1A;
+    font-size: 48px;
+    font-weight: 700;
+
+    text-align: center;
+    margin: 25px 0 10px 0;
+}
+#cancelar-jornal p {
+    color: #1A1A1A;
+    font-size: 1.2em;
+    
+    text-align: center;
+    padding: 0 70px 0 70px;
+}
+
+#cancelar-jornal .btn {
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+#cancelar-jornal .btn a {
+    display: inline-block;
+    color: #162938;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    margin: 0 10px;
+    padding: 10px 25px;
+
+    border-radius: 15px;
+    border: 2px solid #162938;
+    transition: all .3s ease;
+}
+#cancelar-jornal .btn a:hover {
+    color: #FFF;
+    background: #162938;
+}
+
+
 /* ------ ERROR 404 ------ */
 #erro {
     margin: 40px 0;
