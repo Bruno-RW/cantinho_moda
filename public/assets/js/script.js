@@ -55,7 +55,48 @@
 //
 
 
+// ADICIONA COMPORTAMENTO DE ENVIAR FORMULÁRIO DE CONTATO
+    const btnContato =  document.querySelector('#detalhes-form .btn');
+
+    if (btnContato) {
+        btnContato.addEventListener('click', e => {
+            e.preventDefault();
+            
+            const formulario = document.querySelector('#detalhes-form form');
+    
+            let dadosPost = new FormData();
+            dadosPost.append('acao',     'emailContato');
+            dadosPost.append('nome',     formulario.nome.value);
+            dadosPost.append('email',    formulario.email.value);
+            dadosPost.append('assunto',  formulario.assunto.value);
+            dadosPost.append('mensagem', formulario.mensagem.value);
+    
+    
+            ajax('/ajax', dadosPost, function(resposta) {
+                if (resposta.status != 'success') {
+                    Swal.fire({
+                        icon: resposta.status,
+                        title: 'Opsss...',
+                        text: resposta.mensagem
+                    });
+                    return;
+                }
+                
+                Swal.fire({
+                    icon: resposta.status,
+                    title: 'Sucesso',
+                    text: resposta.mensagem
+                });
+                return;
+            });
+            //! Add limpar formulário
+        });
+    }
+//
+
+
 // SISTEMA DE PÁGINA COM ELEMENTOS ABERTOS
+
     // PEGA INFORMAÇÕES DE UM ELEMENTO _GET DA PÁGINA
     const getUrlVars = (nome) => {
         let vars = {};
@@ -109,6 +150,7 @@
                     });
                     return;
                 }
+
                 // Se deu tudo certo, executa o código abaixo
                 if (resposta.dados.curtiu) {
                     linkCurtir.querySelector('i').style = {
@@ -237,46 +279,13 @@
     });
 
     // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA CADASTRAR
-    document.querySelectorAll('#jornal .form button').forEach(btn => {
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-
-            let email = document.querySelector('#emailNews');
-
-            let dadosPost = new FormData();
-            dadosPost.append('acao', 'cadastraNews');
-            dadosPost.append('email', email.value);
-
-            ajax('/ajax', dadosPost, function(resposta) {
-                if (resposta.status != 'success') {
-                    Swal.fire({
-                        icon: resposta.status,
-                        title: 'Opsss...',
-                        text: resposta.mensagem
-                    });
-                    return;
-                }
-
-                Swal.fire({
-                    icon: resposta.status,
-                    title: 'Sucesso',
-                    text: resposta.mensagem
-                });
-                return;
-            });
-
-            email.value = '';
-        });
-    });
-
-    // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA DESCADASTRAR
-    document.querySelector('#cancelar-jornal .btn a').addEventListener('click', e => {
+    document.querySelector('#jornal .form button').addEventListener('click', e => {
         e.preventDefault();
 
-        let email = document.querySelector('#cancelaNews');
+        let email = document.querySelector('#emailNews');
 
         let dadosPost = new FormData();
-        dadosPost.append('acao', 'cancelaNews');
+        dadosPost.append('acao', 'cadastraNews');
         dadosPost.append('email', email.value);
 
         ajax('/ajax', dadosPost, function(resposta) {
@@ -299,6 +308,49 @@
 
         email.value = '';
     });
+
+    // ADICIONA POSSIBILIDADE DE DESCADASTRAR COM A TECLA "ENTER"
+    let inputCancelaNews = document.querySelector("#cancelar-jornal #cancelaNews");
+    if (inputCancelaNews) {
+        inputCancelaNews.addEventListener('keydown', e => {
+            if (e.key === "Enter") {
+                document.querySelector("#cancelar-jornal .btn a").click();
+            }
+        });
+    }
+
+    // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA DESCADASTRAR
+    const btnCancelaNews = document.querySelector('#cancelar-jornal .btn a');
+
+    if (btnCancelaNews) {
+        btnCancelaNews.addEventListener('click', e => {
+            e.preventDefault();
+    
+            let dadosPost = new FormData();
+            dadosPost.append('acao', 'cancelaNews');
+            dadosPost.append('email', inputCancelaNews.value);
+    
+            ajax('/ajax', dadosPost, function(resposta) {
+                if (resposta.status != 'success') {
+                    Swal.fire({
+                        icon: resposta.status,
+                        title: 'Opsss...',
+                        text: resposta.mensagem
+                    });
+                    return;
+                }
+    
+                Swal.fire({
+                    icon: resposta.status,
+                    title: 'Sucesso',
+                    text: resposta.mensagem
+                });
+                return;
+            });
+    
+            inputCancelaNews.value = '';
+        });
+    }
 //
 
 
