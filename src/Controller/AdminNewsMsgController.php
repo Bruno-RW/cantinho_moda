@@ -121,7 +121,9 @@ class AdminNewsMsgController
 
     private function enviaMensagemCadastrada($assunto, $mensagem, $destinatario) {
         $assunto = $assunto . ' - ' . date('d/m/y');
+
         $mensagem = nl2br($mensagem);
+        $mensagem .= '<br><br>Para cancelar o recebimento de notificações, acesse este <a href="{URL}/cancelar-jornal">link</a>';
         
         $mail = new PHPMailer(true);
 
