@@ -21,61 +21,6 @@ class ContatoController extends FrontController
         Render::front('contato', $dados);
     }
 
-    public function postContato()
-    {
-        try {
-            if ( empty($_POST['nome']) || 
-                 empty($_POST['email']) ||
-                 empty($_POST['assunto']) ||
-                 empty($_POST['mensagem']) ) {
-                throw new Exception('Todos os campos devem ser preenchidos');
-            }
-
-            $nome = trim($_POST['nome']);
-            $email = trim($_POST['email']);
-            $assunto = trim($_POST['assunto']);
-            $mensagem = trim($_POST['mensagem']);
-
-            if (strlen($nome) < 6) {
-                throw new Exception('O nome precisa ser completo');
-            }
-
-            $emailValido = V::email()->validate($email);
-            if (!$emailValido) {
-                throw new Exception('O e-mail está incorreto');
-            }
-
-            if (strlen($assunto) < 4) {
-                throw new Exception('Por favor, seja mais descritivo sobre o assunto');
-            }
-
-            if (strlen($mensagem) < 6) {
-                throw new Exception('Por favor, seja mais descritivo na mensagem');
-            }
-
-            $dataMsg = date('d/m/Y H:i:s');
-            $mensagemFull = <<<HTML
-                - <strong>Nome</strong>: {$nome}<br>
-                - <strong>E-mail</strong>: {$email}<br>
-                - <strong>Assunto</strong>: {$assunto}<br>
-                - <strong>Mensagem</strong>: {$mensagem}<br>
-                <strong>Contato via site</strong> - {$dataMsg}
-            HTML;
-
-            SendMail::enviar(MAIL_CONTACTNAME, MAIL_CONTACTMAIL, $assunto, $mensagemFull, $nome, $email);
-
-        } catch (Exception $e) {
-            $_SESSION['mensagem'] = [
-                'tipo' => 'warning',
-                'texto' => $e->getMessage()
-            ];
-            $this->contato();
-            exit;
-        }
-        
-        redireciona('/contato', 'success', 'Mensagem enviada com sucesso');
-    }
-
     private function formContato()
     {
         $dados = [
