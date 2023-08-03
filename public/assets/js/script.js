@@ -227,16 +227,16 @@
 //
 
 
-// ADICIONA COMPORTAMENTO DE CADASTRAR NO JORNAL
+// ADICIONA COMPORTAMENTO DE JORNAL
 
-    // ADICIONA POSSIBILIDADE DE ENVIAR POST COM A TECLA "ENTER"
+    // ADICIONA POSSIBILIDADE DE CADASTRAR COM A TECLA "ENTER"
     document.querySelector("#jornal #emailNews").addEventListener('keydown', e => {
         if (e.key === "Enter") {
             document.querySelector("#jornal button").click();
         }
     });
 
-    // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS
+    // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA CADASTRAR
     document.querySelectorAll('#jornal .form button').forEach(btn => {
         btn.addEventListener('click', e => {
             e.preventDefault();
@@ -258,15 +258,46 @@
                 }
 
                 Swal.fire({
-                    icon: 'success',
+                    icon: resposta.status,
                     title: 'Sucesso',
-                    text: 'Inscrição realizada com sucesso'
+                    text: resposta.mensagem
                 });
                 return;
             });
 
             email.value = '';
         });
+    });
+
+    // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA DESCADASTRAR
+    document.querySelector('#cancelar-jornal .btn a').addEventListener('click', e => {
+        e.preventDefault();
+
+        let email = document.querySelector('#cancelaNews');
+
+        let dadosPost = new FormData();
+        dadosPost.append('acao', 'cancelaNews');
+        dadosPost.append('email', email.value);
+
+        ajax('/ajax', dadosPost, function(resposta) {
+            if (resposta.status != 'success') {
+                Swal.fire({
+                    icon: resposta.status,
+                    title: 'Opsss...',
+                    text: resposta.mensagem
+                });
+                return;
+            }
+
+            Swal.fire({
+                icon: resposta.status,
+                title: 'Sucesso',
+                text: resposta.mensagem
+            });
+            return;
+        });
+
+        email.value = '';
     });
 //
 

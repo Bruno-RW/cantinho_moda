@@ -185,4 +185,32 @@ class AjaxController
 
         $this->retorno('success', 'O e-mail foi cadastrado com sucesso');
     }
+
+    /**
+     * Método responsável por descadastrar
+     * e-mail do jornal eletrônico
+     *
+     * @param array $dados Espera o e-mail informado
+     * @return void
+    */
+    public function cancelaNews(array $dados) : void
+    {
+        if ( !filter_var($dados['email'], FILTER_VALIDATE_EMAIL) ) {
+            $this->retorno('error', 'O e-mail é inválido');
+        }
+
+        $news = new ClienteJornal();
+
+        $clienteJornalLocalizado = $news->find(['email='=>$dados['email']]);
+        if (!$clienteJornalLocalizado) {
+            $this->retorno('error', 'E-mail não registrado');
+        }
+        
+        $news->loadById($clienteJornalLocalizado[0]['idclientejornal']);
+        $news->ativo = 'N';
+
+        $news->save();
+
+        $this->retorno('success', 'O e-mail foi descadastrado com sucesso');
+    }
 }
