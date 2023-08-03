@@ -3,9 +3,11 @@
 namespace CantinhoModa\Controller;
 
 use CantinhoModa\Core\DB;
+use CantinhoModa\Core\SendMail;
 use CantinhoModa\Model\ClienteJornal;
 use CantinhoModa\Model\Favorito;
 use CantinhoModa\Model\Produto;
+use Respect\Validation\Validator as v;
 
 class AjaxController
 {
@@ -98,6 +100,57 @@ class AjaxController
         $this->retorno('error', 'Falha ao registrar ação, nehnum registro alterado');
     }
 
+    	/**
+     * Método responsável por enviar e-mail de contato
+     *
+     * @param array $dados Espera por: nome, e-mail, assunto e mensagem
+     * @return void
+    */
+    public function emailContato(array $dados) : void
+    {
+        if ( empty($dados['nome']) || 
+             empty($dados['email']) ||
+             empty($dados['assunto']) ||
+             empty($dados['mensagem']) ) {
+            $this->retorno('error', 'Todos os campos devem ser preenchidos');
+        }
+
+        $nome     = trim($dados['nome']);
+        $email    = trim($dados['email']);
+        $assunto  = trim($dados['assunto']);
+        $mensagem = trim($dados['mensagem']);
+
+        if (strlen($nome) < 6) {
+            $this->retorno('error', 'O nome precisa ser completo');
+        }
+
+        $emailValido = V::email()->validate($email);
+        if (!$emailValido) {
+            $this->retorno('error', 'O e-mail está incorreto');
+        }
+
+        if (strlen($assunto) < 4) {
+            $this->retorno('error', 'Por favor, seja mais descritivo sobre o assunto');
+        }
+
+        if (strlen($mensagem) < 6) {
+            $this->retorno('error', 'Por favor, seja mais descritivo na mensagem');
+        }
+
+        $dataMsg = date('d/m/Y H:i:s');
+        $mensagemFull = <<<HTML
+            - <strong>Nome</strong>: {$nome}<br>
+            - <strong>E-mail</strong>: {$email}<br>
+            - <strong>Assunto</strong>: {$assunto}<br>
+            - <strong>Mensagem</strong>: {$mensagem}<br>
+            <strong>Contato via site</strong> - {$dataMsg}
+        HTML;
+
+        SendMail::enviar(MAIL_CONTACTNAME, MAIL_CONTACTMAIL, $assunto, $mensagemFull, $nome, $email);
+        
+        $this->retorno('success', 'Mensagem enviada com sucesso');
+    }
+
     /**
      * Método responsável por passar informações do produto para o modal
      *
@@ -187,8 +240,7 @@ class AjaxController
     }
 
     /**
-     * Método responsável por descadastrar
-     * e-mail do jornal eletrônico
+     * Método responsável por descadastrar e-mail do jornal eletrônico
      *
      * @param array $dados Espera o e-mail informado
      * @return void
@@ -204,6 +256,10 @@ class AjaxController
         $clienteJornalLocalizado = $news->find(['email='=>$dados['email']]);
         if (!$clienteJornalLocalizado) {
             $this->retorno('error', 'E-mail não registrado');
+        }
+
+        if ($clienteJornalLocalizado[0]['ativo'] == 'N') {
+            $this->retorno('error', 'O e-mail já está descadastrado');
         }
         
         $news->loadById($clienteJornalLocalizado[0]['idclientejornal']);
