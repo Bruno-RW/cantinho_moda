@@ -64,3 +64,18 @@
     font-size: 22px;
     font-weight: 400;
 }
+
+
+/* ------ MEDIA ------ */
+@media (max-width:799px) {
+
+    /* ---- HOME ---- */
+    .conteudo .info {
+        margin: 18px;
+        width: 40%;
+    }
+}
+
+@media (max-width:477px) {
+
+}
