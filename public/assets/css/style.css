@@ -428,8 +428,8 @@ button.white {
 }
 
 #cancelar-jornal .container {
-    width: 800px;
-    height: 300px;
+    width: 820px;
+    height: 340px;
 
     padding: 20px;
 
@@ -438,24 +438,67 @@ button.white {
 }
 #cancelar-jornal h1 {
     color: #1A1A1A;
-    font-size: 48px;
+    font-size: 50px;
     font-weight: 700;
 
     text-align: center;
-    margin: 25px 0 10px 0;
+    margin-bottom: 15px;
 }
 #cancelar-jornal p {
     color: #1A1A1A;
     font-size: 1.2em;
     
     text-align: center;
-    padding: 0 70px 0 70px;
+    margin-bottom: 30px;
+    padding: 0 70px;
+}
+
+#cancelar-jornal .input-box {
+    width: 350px;
+    height: 50px;
+    padding: 0;
+
+    position: relative;
+    border-bottom: 2px solid #162938;
+}
+#cancelar-jornal .input-box i {
+    color: #162938;
+    font-size: 1.2em;
+    line-height: 40px;
+
+    position: absolute;
+    top: 7px;
+
+    margin-left: 328px;
+    z-index: 1;
+}
+#cancelar-jornal .input-box input {
+    padding-right: 35px;
+    width: 100%;
+    height: 120%;
+
+    border: none;
+    outline: none;
+    background: transparent;
+}
+#cancelar-jornal .input-box input[placeholder] {
+    color: #162938;
+    font-weight: 500;
+    font-size: 1em;
+
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 #cancelar-jornal .btn {
     display: flex;
-    margin: 0;
+    border: none;
+    cursor: auto;
+
     align-items: center;
+    margin-left: 15px;
+    padding: 0;
 }
 #cancelar-jornal .btn a {
     display: inline-block;
@@ -465,7 +508,6 @@ button.white {
     text-transform: uppercase;
     text-decoration: none;
 
-    margin: 0 10px;
     padding: 10px 25px;
 
     border-radius: 15px;
@@ -522,6 +564,9 @@ button.white {
     display: flex;
     margin: 25px 0;
     align-items: center;
+    
+    border: none;
+    cursor: auto;
 }
 #erro .btn a {
     display: inline-block;
