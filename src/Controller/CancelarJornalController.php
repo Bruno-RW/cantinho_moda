@@ -16,9 +16,4 @@ class CancelarJornalController extends FrontController
 
         Render::front('cancelar-jornal', $dados);
     }
-
-    public function postCancelarJornal()
-    {
-
-    }
 }
