@@ -38,7 +38,6 @@
         <div class="col">
             <span>DEIXE UMA MENSAGEM</span>
             <h2>Entre em contato conosco</h2>
-            <?= retornaHTMLAlertMensagemSessao() ?>
             <?= $formulario ?>
         </div>
     </div>
