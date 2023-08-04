@@ -5,7 +5,6 @@ namespace CantinhoModa\Controller;
 use CantinhoModa\Core\DB;
 use CantinhoModa\Core\SendMail;
 use CantinhoModa\Model\ClienteJornal;
-use CantinhoModa\Model\Favorito;
 use CantinhoModa\Model\Produto;
 use Respect\Validation\Validator as v;
 
@@ -184,7 +183,7 @@ class AjaxController
 
         $sql = "SELECT ativo FROM favoritos WHERE idcliente = ? AND idproduto = ?";
         $params = [$_SESSION['cliente']['idcliente']??0, $produto->getIdProduto()];
-        
+
         $produtoFavorito = DB::select($sql, $params)[0]['ativo'] ?? "N";
 
         $desconto = 0.15;
