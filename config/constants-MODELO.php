@@ -8,7 +8,7 @@ define('BACKEND_TITLE', 'Cantinho da Moda');
 define('TIMEZONE', 'America/Sao_Paulo');
 define('DISPLAY_ERRORS', 1);
 define('PATH_PROJETO', __DIR__ . '/../');
-define('SALT_SENHA', '9L2Z0E');
+define('SALT_SENHA', '');
 
 /**
  * DEFINIÇÕES DE PATH DE ARQUIVOS
