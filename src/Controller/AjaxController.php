@@ -182,8 +182,10 @@ class AjaxController
             }
         }
 
-        $favorito = new Favorito;
-        $produtoFavorito = $favorito->find( ["idproduto ="=>"{$produto->getIdProduto()}"], [], "ativo" );
+        $sql = "SELECT ativo FROM favoritos WHERE idcliente = ? AND idproduto = ?";
+        $params = [$_SESSION['cliente']['idcliente']??0, $produto->getIdProduto()];
+        
+        $produtoFavorito = DB::select($sql, $params)[0]['ativo'] ?? "N";
 
         $desconto = 0.15;
         $precoDesconto = round( $produto->getPreco() * (1 - $desconto), 2 );

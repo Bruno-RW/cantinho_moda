@@ -192,8 +192,12 @@
                 let produto = resposta.dados.produto;
                 const modalProduto = new bootstrap.Modal('#modalProduto');
 
-                let favorito = (produto['favorito'].length > 0) ? "ativo" : "";
-                let title = (produto['favorito'].length > 0) ? "title='Desfavoritar produto'" : "title='Favoritar produto'";
+                let verificaFavorito = produto['favorito'] == 'S';
+                
+                let favorito = (verificaFavorito) ? "ativo" : "";
+                let title = (verificaFavorito) ? "title='Desfavoritar produto'" : "title='Favoritar produto'";
+
+                console.log(produto['favorito']);
 
                 document.querySelector('#modalProduto .modal-header').innerHTML = `
                     <p class="d-flex">Categoria > ${produto.categoria}</p>
