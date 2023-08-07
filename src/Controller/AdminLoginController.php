@@ -21,6 +21,14 @@ class AdminLoginController
         Render::front('admin-login', $dados);
     }
 
+    public function logout()
+    {
+        $_SESSION = [];
+        session_destroy();
+        session_start();
+        redireciona('/admin', 'info', 'Desconectado com sucesso');   
+    }
+
     public function postLogin()
     {
         try {

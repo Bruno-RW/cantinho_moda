@@ -85,8 +85,11 @@ class App
                 redireciona('/admin', 'danger', 'Faça seu logon para continuar');
             }
         });
-
+        
         self::$router->mount('/admin', function() {
+            // Página de Logout
+            self::$router->get ('/logout', '\CantinhoModa\Controller\AdminLoginController@logout');
+
             // Página de Login
             self::$router->get ('/', '\CantinhoModa\Controller\AdminLoginController@login');
             self::$router->post('/', '\CantinhoModa\Controller\AdminLoginController@postLogin');

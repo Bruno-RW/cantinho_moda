@@ -96,7 +96,7 @@
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/admin/config">Modo: <span class="tema">Claro</span></a></li>
                                 <li class="px-2"><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/logout">Sair</a></li>
+                                <li><a class="dropdown-item" href="/admin/logout">Sair</a></li>
                             </ul>
                         </li>
                     </ul>
