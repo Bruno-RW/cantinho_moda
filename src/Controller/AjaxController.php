@@ -99,7 +99,7 @@ class AjaxController
         $this->retorno('error', 'Falha ao registrar ação, nehnum registro alterado');
     }
 
-    	/**
+    /**
      * Método responsável por enviar e-mail de contato
      *
      * @param array $dados Espera por: nome, e-mail, assunto e mensagem
