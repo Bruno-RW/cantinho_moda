@@ -52,18 +52,6 @@
         window.location.href = window.location.pathname + `?${filtro}${paramCategorias}${paramMarcas}`;
     };
 
-    // FUNÇÃO QUE LIMPA FORMULÁRIOS DA PÁGINA
-    function limpaFormulario(form) {
-        document.querySelectorAll('swal2-container .swal2-actions button').forEach( btn => {
-            addEventListener('change', () => {
-                const campos = [form.querySelectorAll('input'), form.querySelectorAll('select'), form.querySelectorAll('textarea')];
-                for (const campo of campos) {
-                    campo.value = '';
-                }
-            });
-        });
-    };
-
     // FUNÇÃO AJAX DO PROJETO
     function ajax(url, dados, callBack) {
         if (!url, !dados, !callBack) {
@@ -171,14 +159,13 @@
                 dadosPost.append('assunto',  formulario.assunto.value);
                 dadosPost.append('mensagem', formulario.mensagem.value);
         
-        
                 ajax('/ajax', dadosPost, function(resposta) {
                     if (resposta.status != 'success') {
                         Swal.fire({
                             icon: resposta.status,
                             title: 'Opsss...',
                             text: resposta.mensagem
-                        });
+                        }).then( () => {location.reload()} );
                         return;
                     }
                     
@@ -186,10 +173,9 @@
                         icon: resposta.status,
                         title: 'Sucesso',
                         text: resposta.mensagem
-                    });
+                    }).then( () => {location.reload()} );
                     return;
                 });
-                limpaFormulario(formulario);
             });
         }
     //
