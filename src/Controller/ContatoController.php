@@ -2,11 +2,8 @@
 
 namespace CantinhoModa\Controller;
 
-use CantinhoModa\Core\Exception;
 use CantinhoModa\Core\FrontController;
-use CantinhoModa\Core\SendMail;
 use CantinhoModa\View\Render;
-use Respect\Validation\Validator as v;
 
 class ContatoController extends FrontController
 {
