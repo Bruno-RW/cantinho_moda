@@ -1,7 +1,7 @@
-// FUNÇÕES GERAIS DO PROJETO
+//? FUNÇÕES GERAIS DO PROJETO
 
     // FUNÇÃO PARA RECARREGAR PÁG E MANTER NO MESMO LUGAR
-    const recarregaPag = () => {
+    function recarregaPag() {
         const location = window.location;
         const hash = location.hash;
 
@@ -11,7 +11,7 @@
     };
 
     // FUNÇÃO PARA PEGAR INFORMAÇÕES DE UM ELEMENTO _GET DA PÁGINA
-    const getUrlVars = nome => {
+    function getUrlVars(nome) {
         let vars = {};
         let partes = window.location.href.split('?');
 
@@ -29,64 +29,98 @@
         return vars[nome];
     };
 
-    // FUNÇÃO AJAX DO PROJETO
-        function ajax(url, dados, callBack) {
-            if (!url, !dados, !callBack) {
-                throw 'Todos os parâmetros devem ser preenchidos';
+    // FUNÇÃO PARA CONFIGURAR QUAIS FILTROS ESTÃO APLICADOS E ADICIONAR AO _GET DA PÁGINA
+    function pesquisaPorFiltros() {
+        let filtro = 'filtro=' + categoriaFiltroOrdenacao.value;
+
+        let categorias = [];
+        categoriaFiltroCategoria.forEach(check=>{
+            if (check.checked) {
+                categorias.push('categoria[]='+check.value);
             }
+        });
+        let paramCategorias = categorias.length ? '&' + categorias.join('&') : '';
 
-            let dadosCallBack = {};
-            let xhr = new XMLHttpRequest();
-            xhr.open('POST', url);
-            xhr.onload = function() {
-                if (xhr.readyState == 4) {
-                    if (xhr.status != 200) {
-                        Swal.fire({
-                            position: 'top-center',
-                            icon: 'warning',
-                            title: 'Falha na comunicação',
-                            text: 'Ocorreu um erro de conexão, por favor, tente novamente. Se o erro persistir, contate o suporte',
-                            showConfirmButton: false,
-                            timer: 3000
-                        });
-                        return;
-                    }
-                    try {
-                        dadosCallBack = JSON.parse( xhr.responseText );
-                    } catch(e) {
-                        Swal.fire({
-                            position: 'top-center',
-                            icon: 'warning',
-                            title: 'Falha de processamento',
-                            text: 'A resposta não pôde ser processada, tente novamente ou entre em contato com o suporte',
-                            showConfirmButton: false,
-                            timer: 3000
-                        });
-                        return;
-                    }
+        let marcas = [];
+        categoriaFiltroMarcas.forEach(check=>{
+            if (check.checked) {
+                marcas.push('marca[]='+check.value);
+            }
+        });
+        let paramMarcas = marcas.length ? '&' + marcas.join('&') : '';
 
-                    callBack(dadosCallBack);
+        window.location.href = window.location.pathname + `?${filtro}${paramCategorias}${paramMarcas}`;
+    };
+
+    // FUNÇÃO QUE LIMPA FORMULÁRIOS DA PÁGINA
+    function limpaFormulario(form) {
+        document.querySelectorAll('swal2-container .swal2-actions button').forEach( btn => {
+            addEventListener('change', () => {
+                const campos = [form.querySelectorAll('input'), form.querySelectorAll('select'), form.querySelectorAll('textarea')];
+                for (const campo of campos) {
+                    campo.value = '';
                 }
-            };
+            });
+        });
+    };
 
-            xhr.onerror = function() {
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'error',
-                    title: 'Falha na comunicação',
-                    text: 'Ocorreu um erro de conexão, por favor, tente novamente',
-                    showConfirmButton: false,
-                    timer: 3000
-                });
-            };
-
-            xhr.send(dados);
+    // FUNÇÃO AJAX DO PROJETO
+    function ajax(url, dados, callBack) {
+        if (!url, !dados, !callBack) {
+            throw 'Todos os parâmetros devem ser preenchidos';
         }
-    //
-// 
+
+        let dadosCallBack = {};
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.onload = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status != 200) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'warning',
+                        title: 'Falha na comunicação',
+                        text: 'Ocorreu um erro de conexão, por favor, tente novamente. Se o erro persistir, contate o suporte',
+                        showConfirmButton: false,
+                        timer: 3000
+                    });
+                    return;
+                }
+                try {
+                    dadosCallBack = JSON.parse( xhr.responseText );
+                } catch(e) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'warning',
+                        title: 'Falha de processamento',
+                        text: 'A resposta não pôde ser processada, tente novamente ou entre em contato com o suporte',
+                        showConfirmButton: false,
+                        timer: 3000
+                    });
+                    return;
+                }
+
+                callBack(dadosCallBack);
+            }
+        };
+
+        xhr.onerror = function() {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Falha na comunicação',
+                text: 'Ocorreu um erro de conexão, por favor, tente novamente',
+                showConfirmButton: false,
+                timer: 3000
+            });
+        };
+
+        xhr.send(dados);
+    }
+//? 
 
 
-// COMPORTAMENTOS DO PROJETO
+//? COMPORTAMENTOS DO PROJETO
 
     // COMPORTAMENTO DE NAVBAR PARA CELULARES
         const bar = document.querySelector('#header #bar');
@@ -119,35 +153,11 @@
         categoriaFiltroMarcas.forEach(check=>{
             check.addEventListener('change', pesquisaPorFiltros);
         });
-
-        // CONFIGURA QUAIS FILTROS ESTÃO APLICADOS E ADICIONA AO _GET DA PÁGINA
-        function pesquisaPorFiltros() {
-            let filtro = 'filtro=' + categoriaFiltroOrdenacao.value;
-
-            let categorias = [];
-            categoriaFiltroCategoria.forEach(check=>{
-                if (check.checked) {
-                    categorias.push('categoria[]='+check.value);
-                }
-            });
-            let paramCategorias = categorias.length ? '&' + categorias.join('&') : '';
-
-            let marcas = [];
-            categoriaFiltroMarcas.forEach(check=>{
-                if (check.checked) {
-                    marcas.push('marca[]='+check.value);
-                }
-            });
-            let paramMarcas = marcas.length ? '&' + marcas.join('&') : '';
-
-            window.location.href = window.location.pathname + `?${filtro}${paramCategorias}${paramMarcas}`;
-        }
     //
 
 
     // ADICIONA COMPORTAMENTO DE ENVIAR FORMULÁRIO DE CONTATO
-        const btnContato =  document.querySelector('#detalhes-form .btn');
-
+        const btnContato = document.querySelector('#detalhes-form .btn');
         if (btnContato) {
             btnContato.addEventListener('click', e => {
                 e.preventDefault();
@@ -179,7 +189,7 @@
                     });
                     return;
                 });
-                //! Add limpar formulário
+                limpaFormulario(formulario);
             });
         }
     //
@@ -386,7 +396,6 @@
 
         // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA DESCADASTRAR
         const btnCancelaNews = document.querySelector('#cancelar-jornal .btn a');
-
         if (btnCancelaNews) {
             btnCancelaNews.addEventListener('click', e => {
                 e.preventDefault();
@@ -417,4 +426,4 @@
             });
         }
     //
-//
+//?
