@@ -1570,7 +1570,7 @@ button.white {
 
 #login-admin .container {
     width: 800px;
-    height: 430px;
+    min-height: 430px;
     padding: 0;
     box-shadow: 0 0 40px rgba(0, 0, 0, .4);
 }
@@ -1592,13 +1592,13 @@ button.white {
 #login-admin .alert {
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: -20px;
+    margin: 0;
 }
 
 #login-admin form {
     padding: 20px 80px;
-    margin: 30px 0 20px;
     width: 100%;
+    margin-top: 8px;
 }
 #login-admin form label {
     display: none;
@@ -1648,26 +1648,30 @@ button.white {
         transition: .3s;
         background-color: #E3E6F3;
         box-shadow: 0 40px 60px rgba(0, 0, 0, .1);
-    }
-    #navbar.ativo {
-        right: 0px;
-        z-index: 1;
-    }
-    #navbar li {
-        margin-bottom: 25px;
+
+        &.ativo {
+            right: 0px;
+            z-index: 1;
+        }
+
+        & li {
+            margin-bottom: 25px;
+        }
     }
 
     #celular {
         display: flex;
         align-items: center;
-    }
-    #celular i {
-        color: #1A1A1A;
-        font-size: 24px;
-        padding-left: 20px;
-    }
-    #celular .fa-bars {
-        font-size: 27px;
+
+        & i {
+            color: #1A1A1A;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+
+        & .fa-bars {
+            font-size: 27px;
+        }
     }
 
     .usuario-celular .dropdown,
@@ -1718,126 +1722,148 @@ button.white {
 
     #qualidades {
         justify-content: center;
-    }
-    #qualidades .fe-box {
-        margin: 15px 15px;
+
+        & .fe-box {
+            margin: 15px 15px;
+        }
     }
 
     #produtos .pro-container {
         justify-content: center;
-    }
-    #produtos .pro {
-        margin: 15px;
+
+        & .pro {
+            margin: 15px;
+        }
     }
 
     #banner {
         height: 20vh;
     }
 
-    #sm-banner .banner-box {
-        min-width: 100%;
-        height: 30vh;
-        justify-content: space-between;
-    }
-    #sm-banner .banner-box2 {
-        margin-top: 40px;
+    #sm-banner {
+        & .banner-box {
+            min-width: 100%;
+            height: 30vh;
+            justify-content: space-between;
+        }
+
+        & .banner-box2 {
+            margin-top: 40px;
+        }
     }
 
     #banner3 {
         padding: 0 40px;
-    }
-    #banner3 .banner-box {
-        width: 28%;
+
+        & .banner-box {
+            width: 28%;
+        }
     }
 
 
     /* ---- CATÁLOGO ---- */
-    #catalogo .ordenar {
-        padding: 5px 0 20px 0;
-    }
-    #catalogo .filtro {
-        width: 27%;
-    }
-    #catalogo .filtro .accordion-button {
-        font-size: 14px;
-    }
-    #catalogo .filtro .form-check {
-        width: 73%;
-        padding: 4px 0;
-    }
-    #catalogo .filtro .form-check-label {
-        font-size: 12px;
+    #catalogo {
+        & .ordenar {
+            padding: 5px 0 20px 0;
+        }
+
+        & .filtro {
+            width: 27%;
+
+            & .accordion-button {
+                font-size: 14px;
+            }
+
+            & .form-check {
+                width: 73%;
+                padding: 4px 0;
+            }
+            & .form-check-label {
+                font-size: 12px;
+            }
+        }
+
+        & .pro-container {
+            width: 69%;
+        }
     }
 
-    #catalogo .pro-container {
-        width: 69%;
-    }
     #catalogo .pro {
         padding: 6px 6px;
         margin: 6px 4px 16px;
         border-radius: 15px;
-    }
-    #catalogo .pro img {
-        border-radius: 10px;
-    }
-    #catalogo .pro .favoritar {
-        top: -2px;
-        right: 10px;
-    }
-    #catalogo .pro .fa-heart {
-        font-size: 16px;
-        width: 18px;
-        height: 18px;
-    }
-    #catalogo .pro .des {
-        max-width: 80px;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    #catalogo .pro .des h5 {
-        font-size: 10px;
-    }
-    #catalogo .pro .des h4 {
-        font-size: 12px;
-        padding-top: 7px;
+
+        & img {
+            border-radius: 10px;
+        }
+
+        & .favoritar {
+            top: -2px;
+            right: 10px;
+        }
+
+        & .fa-heart {
+            font-size: 16px;
+            width: 18px;
+            height: 18px;
+        }
+
+        & .des {
+            max-width: 80px;
+            overflow: hidden;
+            white-space: nowrap;
+
+            & h5 {
+                font-size: 10px;
+            }
+
+            & h4 {
+                font-size: 12px;
+                padding-top: 7px;
+            }
+        }
     }
     
 
     /* ---- SOBRE ---- */
     #detalhes-sobre {
         flex-direction: column;
-    }
-    #detalhes-sobre img {
-        width: 100%;
-    }
-    
-    #detalhes-sobre h1 {
-        margin-bottom: 20px;
-    }
-    #detalhes-sobre p {
-        font-size: 20px;
+
+        & img {
+            width: 100%;
+        }
+
+        & h1 {
+            margin-bottom: 20px;
+        }
+        & p {
+            font-size: 20px;
+        }
     }
       
     #perguntas-frequentes .pro {
         width: 47%;
-    }
-    #perguntas-frequentes .pro h3 {
-        font-size: 28px;
-    }
-    #perguntas-frequentes .pro p {
-        font-size: 21px;
-    }
-    #perguntas-frequentes .conteudo {
-        height: 260px;
+
+        & h3 {
+            font-size: 28px;
+        }
+        & p {
+            font-size: 21px;
+        }
+
+        & .conteudo {
+            height: 260px;
+        }
     }
 
 
     /* ---- CONTATO ---- */
     #detalhes-form {
         padding: 40px;
-    }
-    #detalhes-form form {
-        width: 100%;
+
+        & form {
+            width: 100%;
+        }
     }
 
 
@@ -1847,14 +1873,15 @@ button.white {
     /* ---- MINHA CONTA ---- */
     #informacoes {
         flex-direction: column;
-    }
 
-    #informacoes .info-conta .conteudo {
-        width: 90%;
-    }
+        & .info-conta .conteudo {
+            width: 90%;
+        }
 
-    #informacoes .info-alterar {
-        margin-top: 60px;
+        & .info-alterar {
+            margin-top: 60px;
+        }
+    
     }
 
 
@@ -1865,32 +1892,36 @@ button.white {
     }
 
     /* ---- ADMIN LOGIN ---- */    
-    #login-admin .container {
-        height: 570px;
-    }
-    
-    #login-admin .titulo {
-        height: 150px;
-    }
-    
-    #login-admin .alert {
-        font-size: 22px;
-        height: 100px;
-        margin-bottom: -40px;
-    }
-    
-    #login-admin form {
-        padding: 20px 40px;
-        margin: 50px 0 20px;
-        height: 300px;
-    }
-    #login-admin form input {
-        height: 60px;
-        font-size: 20px;
-    }
-    #login-admin form button {
-        font-size: 20px;
-        height: 60px;
+    #login-admin {
+        & .container {
+            min-height: 420px;
+        }
+
+        & .titulo {
+            height: 150px;
+        }
+
+        & .alert {
+            font-size: 22px;
+            height: 100px;
+        }
+
+        & form {
+            padding: 20px 40px;
+            margin-bottom: 18px;
+
+            & div {
+                margin-top: 10px;
+            }
+            & input {
+                height: 60px;
+                font-size: 26px;
+            }
+            button {
+                font-size: 20px;
+                height: 60px;
+            }
+        }
     }
 }
 
@@ -2187,13 +2218,14 @@ button.white {
                 max-width: 130px;
                 overflow: hidden;
                 white-space: nowrap;
-            }
-            & .des h5 {
-                font-size: 14px;
-            }
-            & .des h4 {
-                font-size: 15px;
-                padding-top: 7px;
+
+                & h5 {
+                    font-size: 14px;
+                }
+                & h4 {
+                    font-size: 15px;
+                    padding-top: 7px;
+                }
             }
         }
     }
@@ -2394,10 +2426,6 @@ button.white {
 
     /* ADMIN LOGIN */
     #login-admin {
-        & .container {
-            height: 570px;
-        }
-
         & .titulo {
             height: 150px;
         }
@@ -2409,11 +2437,11 @@ button.white {
         & .alert {
             font-size: 20px;
             height: 120px;
-            margin-bottom: -50px;
         }
-
+        
         & form {
             padding: 20px;
+            margin-top: 5px;
 
             & input {
                 padding: 10px 12px;
