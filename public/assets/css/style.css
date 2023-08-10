@@ -1038,10 +1038,10 @@ button.white {
     font-weight: 600;
 }
 
-#perguntas-frequentes .pro-container {
+#perguntas-frequentes .container {
     padding-top: 20px;
 }
-#perguntas-frequentes .pro {
+#perguntas-frequentes .box {
     position: relative;
 
     margin: 10px;
@@ -1054,19 +1054,19 @@ button.white {
     border: 1px solid #CECACA;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .14);
 }
-#perguntas-frequentes .pro:hover {
+#perguntas-frequentes .box:hover {
     box-shadow: 10px 10px 30px rgba(0, 0, 0, .22);
 }
-#perguntas-frequentes .pro h3 {
+#perguntas-frequentes .box h3 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-#perguntas-frequentes .pro p {
+#perguntas-frequentes .box p {
     padding: 10px 0;
     margin-bottom: 0;
 }
-#perguntas-frequentes  a {
+#perguntas-frequentes a {
     color: #FFBD27;
     font-weight: 600;
     text-decoration: none;
@@ -1653,6 +1653,232 @@ button.white {
 
 
 /* ------ MEDIA ------ */
+
+@media (min-width:1601px) {
+    /* ---- GERAL ---- */
+    #header-banner h2 {
+        font-size: 56px;
+    }
+    #header-banner p {
+        font-size: 20px;
+    }
+    /* ---- CABEÇALHO ---- */
+    
+    #navbar li a {
+        font-size: 18px;
+    }
+    /* ---- RODAPÉ ---- */
+    /* ---- ERROR 404 ---- */
+
+
+    /* ---- HOME ---- */
+    #sm-banner .banner-box {
+        width: 43vw;
+    }
+    
+    /* ---- CATÁLOGO ---- */
+
+
+    /* ---- SOBRE ---- */
+    #detalhes-sobre h1 {
+        font-size: 56px;
+    }
+    #detalhes-sobre p {
+        font-size: 24px;
+    }
+
+    #perguntas-frequentes h2 {
+        font-size: 50px;
+    }
+
+    #perguntas-frequentes .box h3 {
+        font-size: 24px;
+    }
+    #perguntas-frequentes .box p {
+        font-size: 18px;
+    }
+
+    #perguntas-frequentes .box .conteudo {
+        margin-bottom: 20px;
+    }
+
+    /* ---- CONTATO ---- */
+
+
+    /* ---- LOGAR/CADASTRAR ---- */
+
+    
+    /* ---- MINHA CONTA ---- */
+    #informacoes .info-conta h1 {
+        font-size: 56px;
+    }
+
+    /* ---- FAVORITOS ---- */
+    #favoritos h1 {
+        font-size: 56px;
+    }
+    #favoritos .pro img {
+        max-height: 20vw;
+    }
+
+    /* ---- ADMIN LOGIN ---- */
+}
+
+@media (max-width:1600px) {
+   /* Tamanho padrão */
+}
+
+@media (max-width:1200px) {
+    /* ---- GERAL ---- */
+    /* ---- CABEÇALHO ---- */
+    /* ---- RODAPÉ ---- */
+    /* ---- ERROR 404 ---- */
+
+
+    /* ---- HOME ---- */
+    #sm-banner .banner-box {
+        min-width: 400px;
+        width: 41vw;
+    }
+
+
+    /* ---- CATÁLOGO ---- */
+    #catalogo .pro-container .pro {
+        width: 18vw;;
+    }
+
+    /* ---- SOBRE ---- */
+    #detalhes-sobre h1 {
+        margin-bottom: 20px;
+    }
+    #detalhes-sobre p {
+        font-size: 18px;
+    }
+
+    #perguntas-frequentes .box h3 {
+        font-size: 18px;
+    }
+    #perguntas-frequentes .box p {
+        font-size: 14px;
+    }
+
+    #perguntas-frequentes .box .conteudo {
+        margin-bottom: 20px;
+    }
+
+    /* ---- CONTATO ---- */
+
+
+    /* ---- LOGAR/CADASTRAR ---- */
+
+    
+    /* ---- MINHA CONTA ---- */
+
+
+    /* ---- FAVORITOS ---- */
+
+
+    /* ---- ADMIN LOGIN ---- */
+}
+
+@media (max-width:1024px) {
+    /* ---- GERAL ---- */
+    /* ---- CABEÇALHO ---- */
+    /* ---- RODAPÉ ---- */
+    #jornal .form {
+        width: 70%;
+    }
+
+    #footer .m-dir {
+        margin-right: 20px;
+    }
+
+    /* ---- ERROR 404 ---- */
+
+
+    /* ---- HOME ---- */
+    #produtos .pro-container {
+        justify-content: space-evenly;
+    }
+    #produtos .pro-container .pro {
+        margin: 15px;
+        width: 35%;
+    }
+
+    #sm-banner .banner-box {
+        min-width: 200px;
+        width: 400vh;
+        justify-content: space-between;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 40px;
+    }
+
+    #banner3 {
+        padding: 0 40px;
+    }
+    #banner3 .banner-box {
+        width: 28%;
+    }
+
+    /* ---- CATÁLOGO ---- */
+    #catalogo .filtro {
+        width: 27%;
+    }
+    #catalogo .filtro .accordion-button {
+        font-size: 14px;
+    }
+    #catalogo .filtro .form-check {
+        width: 80%;
+        padding: 4px 0;
+    }
+    #catalogo .filtro .form-check-label {
+        font-size: 12px;
+    }
+
+    #catalogo .ordenar {
+        padding: 5px 0 20px 0;
+    }
+
+    #catalogo .pro-container .pro {
+        width: 16vw;
+    }
+
+    #catalogo .pro .des {
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    /* ---- SOBRE ---- */
+    #detalhes-sobre {
+        flex-direction: column;
+    }
+    #detalhes-sobre img {
+        width: 100%;
+    }
+    #detalhes-sobre h1 {
+        margin-bottom: 20px;
+    }
+    #detalhes-sobre p {
+        font-size: 32px;
+    }
+
+    /* ---- CONTATO ---- */
+
+
+    /* ---- LOGAR/CADASTRAR ---- */
+
+    
+    /* ---- MINHA CONTA ---- */
+
+
+    /* ---- FAVORITOS ---- */
+
+
+    /* ---- ADMIN LOGIN ---- */
+}
+
 @media (max-width:800px) {
 
     /* ---- GERAL ---- */
@@ -1844,17 +2070,18 @@ button.white {
         font-size: 20px;
     }
       
-    #perguntas-frequentes .pro {
-        width: 47%;
+    #perguntas-frequentes .container .box {
+        width: 46%;
     }
-    #perguntas-frequentes .pro h3 {
-        font-size: 28px;
+    #perguntas-frequentes .box h3 {
+        font-size: 20px;
     }
-    #perguntas-frequentes .pro p {
-        font-size: 21px;
+    #perguntas-frequentes .box p {
+        font-size: 16px;
     }
-    #perguntas-frequentes .conteudo {
-        height: 260px;
+
+    #perguntas-frequentes .box .conteudo {
+        height: 190px;
     }
 
 
@@ -1885,11 +2112,11 @@ button.white {
     #informacoes .info-conta .conteudo {
         width: 90%;
     }
-    #informacoes .info-conta .conteudo .topico {
+    #informacoes .info-conta .topico {
         margin-bottom: 10px;
     }
-    #informacoes .info-conta .conteudo .topico p,
-    #informacoes .info-conta .conteudo .topico span {
+    #informacoes .info-conta .topico p,
+    #informacoes .info-conta .topico span {
         font-size: 22px;
     }
 
@@ -1933,26 +2160,26 @@ button.white {
     #login-admin .container {
         min-height: 420px;
     }
-    #login-admin .container .titulo {
+    #login-admin .titulo {
         height: 150px;
     }
-    #login-admin .container .alert {
+    #login-admin .alert {
         font-size: 22px;
         height: 100px;
     } 
 
-    #login-admin .container form {
+    #login-admin form {
         padding: 20px 40px;
         margin-bottom: 18px;
     }
-    #login-admin .container form div {
+    #login-admin form div {
         margin-top: 10px;
     }
-    #login-admin .container form div input {
+    #login-admin form input {
         height: 60px;
         font-size: 26px;
     }
-    #login-admin .container form div button {
+    #login-admin form button {
         font-size: 20px;
         height: 60px;
     }
@@ -1992,7 +2219,8 @@ button.white {
         min-width: 300px;
         width: 350px;
     }
-    #modalProduto .modal-content .modal-header{
+
+    #modalProduto .modal-header {
         padding-bottom: 0;
     }
 
@@ -2009,45 +2237,45 @@ button.white {
         margin-right: 10px;
     }
 
-    #modalProduto .modal-body .produto .info p {
+    #modalProduto .modal-body p {
         font-size: 15px;
         margin-bottom: 0px;
         line-height: 26px;
     }
-    #modalProduto .modal-body .produto .info span {
+    #modalProduto .modal-body span {
         font-size: 15px;
     }
 
-    #modalProduto .modal-body .produto .info .prod-info {
+    #modalProduto .modal-body .prod-info {
         flex-direction: row;
         flex-wrap: wrap;
         margin-bottom: 15px;
     }
 
-    #modalProduto .modal-body .produto .info .prod-info .prod-id {
+    #modalProduto .modal-body .prod-info .prod-id {
         margin-right: 10px;
     }
-    #modalProduto .modal-body .produto .info .prod-info .prod-id p {
+    #modalProduto .modal-body .prod-info .prod-id p {
         font-size: 15px;
         margin-bottom: 0
     }
 
-    #modalProduto .modal-body .produto .info .prod-preco-full {
+    #modalProduto .modal-body .prod-preco-full {
         font-size: 14px;
     }
         
-    #modalProduto .modal-body .produto .info .prod-preco-off .preco {
+    #modalProduto .modal-body .prod-preco-off .preco {
         font-size: 20px;
     }
-    #modalProduto .modal-body .produto .info .prod-preco-off .off {
+    #modalProduto .modal-body .prod-preco-off .off {
         font-size: 18px;
         margin-left: 6px;
     }
 
-    #modalProduto .modal-body .produto .info .prod-preco-parcela {
+    #modalProduto .modal-body .prod-preco-parcela {
         font-size: 12px;
     }
-    #modalProduto .modal-body .produto .info .prod-preco-parcela span {
+    #modalProduto .modal-body .prod-preco-parcela span {
         font-size: 12px;
     }
 
@@ -2192,36 +2420,46 @@ button.white {
         margin: 6px 7px 16px;
         border-radius: 15px;
     }
-    #catalogo .pro-container .pro img {
+    #catalogo .pro-container img {
         border-radius: 10px;
     }
 
-    #catalogo .pro-container .pro .favoritar {
+    #catalogo .pro-container .favoritar {
         top: 1px;
         right: 10px;
     }
 
-    #catalogo .pro-container .pro .fa-heart {
+    #catalogo .pro-container .fa-heart {
         font-size: 20px;
         width: 25px;
         height: 25px;
     }
 
-    #catalogo .pro-container .pro .des {
+    #catalogo .pro-container .des {
         max-width: 130px;
         overflow: hidden;
         white-space: nowrap;
     }
-    #catalogo .pro-container .pro .des h5 {
+    #catalogo .pro-container .des h5 {
         font-size: 14px;
     }
-    #catalogo .pro-container .pro .des h4 {
+    #catalogo .pro-container .des h4 {
         font-size: 15px;
         padding-top: 7px;
     }
 
 
     /* ---- SOBRE ---- */
+    #header-banner.sobre-banner {
+        margin-bottom: 20px;
+    }
+    #header-banner.sobre-banner h2 {
+        font-size: 40px;
+    }
+    #header-banner.sobre-banner p {
+        font-size: 18px;
+    }
+
     #detalhes-sobre div {
         padding-right: 0;
     }
@@ -2232,20 +2470,29 @@ button.white {
     #detalhes-sobre div p {
         font-size: 20px;
     }
-    
+    #perguntas-frequentes {
+        align-items: center;
+    }
     #perguntas-frequentes h2 {
         font-size: 39px;
+        text-align: center;
     }
 
-    #perguntas-frequentes .pro {
-        width: 90%;
+    #perguntas-frequentes .container .box {
+        width: 100%;
     }
-    #perguntas-frequentes .pro p {
-        font-size: 20px;
+    #perguntas-frequentes .box h3 {
+        font-size: 21px;
+        text-align: center;
+    }
+    #perguntas-frequentes .box p {
+        font-size: 17px;
+        text-align: justify;
     }
 
-    #perguntas-frequentes .conteudo {
-        height: 255px;
+    #perguntas-frequentes .box .conteudo {
+        height: 220px;
+        margin-bottom: 0;
     }
 
 
@@ -2253,12 +2500,11 @@ button.white {
     #header-banner.contato-banner {
         margin-bottom: 20px;
     }
-
-    #header-banner.contato-banner  h2 {
-        font-size: 46px;
+    #header-banner.contato-banner h2 {
+        font-size: 40px;
     }
-    #header-banner.contato-banner  p {
-        font-size: 20px;
+    #header-banner.contato-banner p {
+        font-size: 18px;
     }
 
     #detalhes-contato {
@@ -2332,13 +2578,13 @@ button.white {
             width: 100%;
     }
     
-    #informacoes .info-conta .conteudo .topico {
+    #informacoes .info-conta .topico {
         flex-direction: column;
     }
-    #informacoes .info-conta .conteudo .topico p {
+    #informacoes .info-conta .topico p {
         font-size: 20px;
     }
-    #informacoes .info-conta .conteudo .topico span {
+    #informacoes .info-conta .topico span {
         font-size: 20px;
         margin-left: 0px;
         padding: 0;
@@ -2347,7 +2593,7 @@ button.white {
         word-wrap: break-word;
     }
 
-    #informacoes .info-conta .conteudo .topico:first-child p:first-child {
+    #informacoes .info-conta .topico:first-child p:first-child {
         padding-top: 0;
     }
 
