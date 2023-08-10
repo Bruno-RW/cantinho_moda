@@ -4,6 +4,7 @@ namespace CantinhoModa\Controller;
 
 use CantinhoModa\Core\DB;
 use CantinhoModa\Core\SendMail;
+use CantinhoModa\Model\Cliente;
 use CantinhoModa\Model\ClienteJornal;
 use CantinhoModa\Model\Produto;
 use Respect\Validation\Validator as v;
@@ -148,6 +149,55 @@ class AjaxController
         SendMail::enviar(MAIL_CONTACTNAME, MAIL_CONTACTMAIL, $assunto, $mensagemFull, $nome, $email);
         
         $this->retorno('success', 'Mensagem enviada com sucesso');
+    }
+
+    /**
+     * Método responsável por alterar
+     * informações de e-mail do cliente
+     *
+     * @param array $dados Espera por e-mail 
+     * @return void
+    */
+    public function alteraDadosEmail(array $dados) : void
+    {
+        if ( empty($dados['email']) || empty($dados['email2']) ) {
+            $this->retorno('error', 'Todos os campos devem ser preenchidos');
+        }
+
+        $email  = trim($dados['email']);
+        $email2 = trim($dados['email2']);
+
+        if ($email == $email2) {
+            $this->retorno('error', 'O novo e-mail deve ser diferente do antigo');
+        }
+        
+        if ($email != $_SESSION['cliente']['email']) {
+            $this->retorno('error', 'E-mail incorreto');
+        }
+
+        $emailValido  = V::email()->validate($email);
+        $email2Valido = V::email()->validate($email2);
+
+        if (!$emailValido || !$email2Valido) {
+            $this->retorno('error', 'Infome um e-mail válido');
+        }
+
+        $cliente = new Cliente;
+
+        $procuraNovoEmail = $cliente->find(['email='=>$email2]);
+        if ($procuraNovoEmail) {
+            $this->retorno('error', 'E-mail já cadastrado');
+        }
+
+        $clienteLocalizado = $cliente->find(['email='=>$email]);
+        if ($clienteLocalizado) {
+            $cliente->loadById($clienteLocalizado[0]['idcliente']);
+        }
+        
+        $cliente->email = $email2;
+        $cliente->save();
+        
+        $this->retorno('success', 'E-mail alterado com sucesso');
     }
 
     /**

@@ -144,6 +144,22 @@
     //
 
 
+    // SISTEMA DE PÁGINA COM ELEMENTOS ABERTOS
+        const categoriaCollapse = getUrlVars('categoria%5B%5D'); // categoria%5B%5D == categoria[]
+        const marcaCollapse = getUrlVars('marca%5B%5D'); // marca%5B%5D == marca[]
+
+        if (categoriaCollapse) {
+            const collapseCate = document.querySelectorAll('#catalogo #collapseCate');
+            const collapseCateAtivo = [...collapseCate].map(collapseEl => new bootstrap.Collapse(collapseEl));
+        }
+
+        if (marcaCollapse) {
+            const collapeMarc = document.querySelectorAll('#catalogo #collapseMarc');
+            const collapeMarcAtivo = [...collapeMarc].map(collapseEl => new bootstrap.Collapse(collapseEl));
+        }
+    //
+
+
     // ADICIONA COMPORTAMENTO DE ENVIAR FORMULÁRIO DE CONTATO
         const btnContato = document.querySelector('#detalhes-form .btn');
         if (btnContato) {
@@ -181,18 +197,143 @@
     //
 
 
-    // SISTEMA DE PÁGINA COM ELEMENTOS ABERTOS
-        const categoriaCollapse = getUrlVars('categoria%5B%5D'); // categoria%5B%5D == categoria[]
-        const marcaCollapse = getUrlVars('marca%5B%5D'); // marca%5B%5D == marca[]
+    // ADICIONA COMPORTAMENTO PARA ALTERAR E-MAIL E SENHA
 
-        if (categoriaCollapse) {
-            const collapseCate = document.querySelectorAll('#catalogo #collapseCate');
-            const collapseCateAtivo = [...collapseCate].map(collapseEl => new bootstrap.Collapse(collapseEl));
+        // COMPORTAMENTO DE BOTÃO DE E-MAIL
+        const btnAlteraEmail = document.querySelector('#informacoes .info-conta .btn-email');
+        if (btnAlteraEmail) {
+            btnAlteraEmail.addEventListener('click', e => {
+                e.preventDefault();
+                
+                let infoAlterar = document.querySelector('#informacoes .info-alterar');
+
+                if (infoAlterar.classList.contains('ativo')) {
+                    if (window.innerWidth >= 800) {
+                        document.querySelector('#informacoes .info-conta .conteudo').style.width = '45%';
+                    }
+                    infoAlterar.classList.remove('ativo');
+                }
+                else {
+                    if (window.innerWidth >= 800) {
+                        document.querySelector('#informacoes .info-conta .conteudo').style.width = '90%';
+                    }
+                    infoAlterar.classList.add('ativo');
+                    infoAlterar.querySelector('h2').textContent = 'Alterar e-mail';
+                }
+            });
+
+            document.querySelector('#informacoes .btn.normal').addEventListener('click', e => {
+                e.preventDefault();
+
+                const formulario = document.querySelector('#informacoes .form-email');
+            
+                let dadosPost = new FormData();
+                dadosPost.append('acao',     'alteraDadosEmail');
+                dadosPost.append('email',     formulario.email.value);
+                dadosPost.append('email2',    formulario.email2.value);
+        
+                ajax('/ajax', dadosPost, function(resposta) {
+                    if (resposta.status != 'success') {
+                        Swal.fire({
+                            icon: resposta.status,
+                            title: 'Opsss...',
+                            text: resposta.mensagem
+                        }).then( () => {location.reload()} );
+                        return;
+                    }
+                    
+                    Swal.fire({
+                        icon: resposta.status,
+                        title: 'Sucesso',
+                        text: resposta.mensagem
+                    }).then( () => {location.reload()} );
+                    return;
+                });
+            });
+        }
+    //
+
+
+    // ADICIONA COMPORTAMENTO DE JORNAL
+
+        // ADICIONA POSSIBILIDADE DE CADASTRAR COM A TECLA "ENTER"
+        document.querySelector("#jornal #emailNews").addEventListener('keydown', e => {
+            if (e.key === "Enter") {
+                document.querySelector("#jornal button").click();
+            }
+        });
+
+        // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA CADASTRAR
+        document.querySelector('#jornal .form button').addEventListener('click', e => {
+            e.preventDefault();
+
+            let email = document.querySelector('#emailNews');
+
+            let dadosPost = new FormData();
+            dadosPost.append('acao', 'cadastraNews');
+            dadosPost.append('email', email.value);
+
+            ajax('/ajax', dadosPost, function(resposta) {
+                if (resposta.status != 'success') {
+                    Swal.fire({
+                        icon: resposta.status,
+                        title: 'Opsss...',
+                        text: resposta.mensagem
+                    });
+                    return;
+                }
+
+                Swal.fire({
+                    icon: resposta.status,
+                    title: 'Sucesso',
+                    text: resposta.mensagem
+                });
+                return;
+            });
+
+            email.value = '';
+        });
+
+        // ADICIONA POSSIBILIDADE DE DESCADASTRAR COM A TECLA "ENTER"
+        let inputCancelaNews = document.querySelector("#cancelar-jornal #cancelaNews");
+        if (inputCancelaNews) {
+            inputCancelaNews.addEventListener('keydown', e => {
+                if (e.key === "Enter") {
+                    document.querySelector("#cancelar-jornal .btn a").click();
+                }
+            });
         }
 
-        if (marcaCollapse) {
-            const collapeMarc = document.querySelectorAll('#catalogo #collapseMarc');
-            const collapeMarcAtivo = [...collapeMarc].map(collapseEl => new bootstrap.Collapse(collapseEl));
+        // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA DESCADASTRAR
+        const btnCancelaNews = document.querySelector('#cancelar-jornal .btn a');
+        if (btnCancelaNews) {
+            btnCancelaNews.addEventListener('click', e => {
+                e.preventDefault();
+        
+                let dadosPost = new FormData();
+                dadosPost.append('acao', 'cancelaNews');
+                dadosPost.append('email', inputCancelaNews.value);
+        
+                ajax('/ajax', dadosPost, function(resposta) {
+                    if (resposta.status != 'success') {
+                        Swal.fire({
+                            icon: resposta.status,
+                            title: 'Opsss...',
+                            text: resposta.mensagem
+                        });
+                        return;
+                    }
+        
+                    Swal.fire({
+                        icon: resposta.status,
+                        title: 'Sucesso',
+                        text: resposta.mensagem
+                    });
+                    return;
+                });
+        
+                inputCancelaNews.value = '';
+            });
         }
     //
 
@@ -327,89 +468,5 @@
                 });
             });
         });
-    //
-
-
-    // ADICIONA COMPORTAMENTO DE JORNAL
-
-        // ADICIONA POSSIBILIDADE DE CADASTRAR COM A TECLA "ENTER"
-        document.querySelector("#jornal #emailNews").addEventListener('keydown', e => {
-            if (e.key === "Enter") {
-                document.querySelector("#jornal button").click();
-            }
-        });
-
-        // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA CADASTRAR
-        document.querySelector('#jornal .form button').addEventListener('click', e => {
-            e.preventDefault();
-
-            let email = document.querySelector('#emailNews');
-
-            let dadosPost = new FormData();
-            dadosPost.append('acao', 'cadastraNews');
-            dadosPost.append('email', email.value);
-
-            ajax('/ajax', dadosPost, function(resposta) {
-                if (resposta.status != 'success') {
-                    Swal.fire({
-                        icon: resposta.status,
-                        title: 'Opsss...',
-                        text: resposta.mensagem
-                    });
-                    return;
-                }
-
-                Swal.fire({
-                    icon: resposta.status,
-                    title: 'Sucesso',
-                    text: resposta.mensagem
-                });
-                return;
-            });
-
-            email.value = '';
-        });
-
-        // ADICIONA POSSIBILIDADE DE DESCADASTRAR COM A TECLA "ENTER"
-        let inputCancelaNews = document.querySelector("#cancelar-jornal #cancelaNews");
-        if (inputCancelaNews) {
-            inputCancelaNews.addEventListener('keydown', e => {
-                if (e.key === "Enter") {
-                    document.querySelector("#cancelar-jornal .btn a").click();
-                }
-            });
-        }
-
-        // FUNÇÃO DE COMPORTAMENTO E ENVIO DE DADOS PARA DESCADASTRAR
-        const btnCancelaNews = document.querySelector('#cancelar-jornal .btn a');
-        if (btnCancelaNews) {
-            btnCancelaNews.addEventListener('click', e => {
-                e.preventDefault();
-        
-                let dadosPost = new FormData();
-                dadosPost.append('acao', 'cancelaNews');
-                dadosPost.append('email', inputCancelaNews.value);
-        
-                ajax('/ajax', dadosPost, function(resposta) {
-                    if (resposta.status != 'success') {
-                        Swal.fire({
-                            icon: resposta.status,
-                            title: 'Opsss...',
-                            text: resposta.mensagem
-                        });
-                        return;
-                    }
-        
-                    Swal.fire({
-                        icon: resposta.status,
-                        title: 'Sucesso',
-                        text: resposta.mensagem
-                    });
-                    return;
-                });
-        
-                inputCancelaNews.value = '';
-            });
-        }
     //
 //?

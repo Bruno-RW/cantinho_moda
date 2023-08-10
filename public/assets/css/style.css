@@ -1393,10 +1393,9 @@ button.white {
     margin: 10px 0;
     padding: 20px;
 
-    width: 50%;
+    width: 45%;
     min-width: 260px;
 
-    transition: .2s ease;
     border: 1px solid #CECACA;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
 }
@@ -1449,9 +1448,15 @@ button.white {
 }
 #informacoes .info-alterar.ativo {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
 }
+
+#informacoes .info-alterar .form {
+    width: 60%;
+}
+
 #informacoes .info-alterar .input-box {
     margin: 20px 0;
     padding: 0;
@@ -1481,6 +1486,27 @@ button.white {
 
     position: absolute;
     left: 0;
+}
+#informacoes .info-alterar .input-box i {
+    position: absolute;
+    top: 20px;
+    right: 2px;
+}
+
+#informacoes .info-alterar .col-12 button {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 10px 0;
+    width: 100%;
+
+    transition: .2s;
+    border-radius: 4px;
+    background-color: #041E42;
+}
+#informacoes .info-alterar .col-12 button:hover {
+    background: #011530;
 }
 
 /* ------ FAVORITOS ------ */
@@ -1874,8 +1900,39 @@ button.white {
     #informacoes {
         flex-direction: column;
 
-        & .info-conta .conteudo {
-            width: 90%;
+        & .info-conta {
+            & h1 {
+                text-align: center;
+            }
+    
+            & .conta {
+                align-items: center;
+    
+                & .conteudo {
+                    width: 90%;
+    
+                    & .topico {
+                        margin-bottom: 10px;
+
+                        & p,
+                        & span {
+                            font-size: 22px;
+                        }
+                    }
+                }
+    
+                & .botoes {
+                    margin-top: 30px;
+                    
+                    & a {
+                        font-size: 18px;
+                        padding: 20px 30px;
+                    }
+                    & a:first-child {
+                        margin-right: 30px;
+                    }
+                }
+            }
         }
 
         & .info-alterar {
