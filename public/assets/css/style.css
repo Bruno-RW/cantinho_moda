@@ -1895,18 +1895,33 @@ button.white {
         font-size: 22px;
     }
 
-    #informacoes .info-conta .conteudo .botoes {
+    #informacoes .info-conta .botoes {
         margin-top: 20px;
     }
-    #informacoes .info-conta .conteudo .botoes a {
+    #informacoes .info-conta .botoes a {
         font-size: 18px;
-        padding: 20px 30px;
     }
-    #informacoes .info-conta .conteudo .botoes a:first-child {
+    #informacoes .info-conta .botoes a:first-child {
         margin-right: 30px;
     }
     #informacoes .info-alterar {
         margin-top: 60px;
+    }
+    #informacoes .info-alterar h2 {
+        font-size: 44px;
+    }
+
+    #informacoes .info-alterar .input-box input[placeholder] {
+        font-size: 22px;
+    }
+    #informacoes .info-alterar .input-box i {
+        font-size: 22px;
+        top: 18px;
+        right: 2px;
+    }
+
+    #informacoes .info-alterar .col-12 button {
+        font-size: 18px;
     }
 
 
