@@ -19,7 +19,7 @@
                 </div>
             </div>
     
-            <div class="botoes">
+            <div class="botoes d-flex">
                 <a href="#" class="btn-email">Alterar e-mail</a>
                 <a href="#" class="btn-senha">Alterar senha</a>
             </div>
