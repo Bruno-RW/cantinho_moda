@@ -152,6 +152,10 @@ button.white {
     font-size: 24px;
 }
 
+#navbar .dropdown-menu li:first-child {
+    margin-bottom: 2px;
+}
+
 #fechar,
 #celular {
     display: none;
@@ -1491,6 +1495,7 @@ button.white {
     position: absolute;
     top: 20px;
     right: 2px;
+    z-index: 1;
 }
 
 #informacoes .info-alterar .col-12 button {
@@ -1546,7 +1551,7 @@ button.white {
 }
 #favoritos .pro img {
     width: 100%;
-    max-height: 415px;
+    max-height: 325px;
     border-radius: 20px;
     background-color: #F0E8E8;
 }
@@ -1648,7 +1653,7 @@ button.white {
 
 
 /* ------ MEDIA ------ */
-@media (max-width:799px) {
+@media (max-width:800px) {
 
     /* ---- GERAL ---- */
     .section-p1 {
@@ -1740,13 +1745,6 @@ button.white {
         height: 70vh;
         padding: 0 80px;
         background-position: top 30% right 30%;
-    }
-
-    #qualidades {
-        justify-content: center;
-    }
-    #qualidades .fe-box {
-        margin: 15px 15px;
     }
 
     #produtos .pro-container {
@@ -1960,7 +1958,7 @@ button.white {
     }
 }
 
-@media (max-width:477px) {
+@media (max-width:480px) {
 
     /* ---- GERAL ---- */
     h1 {
@@ -2122,14 +2120,6 @@ button.white {
     #hero {
         padding: 0 20px;
         background-position: 55%;
-    }
-
-    #qualidades {
-        justify-content: space-between;
-    }
-    #qualidades .fe-box {
-        width: 155px;
-        margin: 0 0 15px 0
     }
 
     #produtos .pro-container {
@@ -2376,6 +2366,25 @@ button.white {
 
     #informacoes .info-alterar {
         margin-top: 40px;
+    }
+    #informacoes .info-alterar h2 {
+        font-size: 40px;
+    }
+
+    #informacoes .info-alterar .form {
+        width: 90%;
+    }
+    #informacoes .info-alterar .input-box input[placeholder] {
+        font-size: 18px;
+    }
+    #informacoes .info-alterar .input-box i {
+        font-size: 22px;
+        top: 18px;
+        right: 2px;
+    }
+
+    #informacoes .info-alterar .col-12 button {
+        font-size: 18px;
     }
 
 
