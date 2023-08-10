@@ -1421,7 +1421,7 @@ button.white {
     margin-top: 20px;
 }
 #informacoes .info-conta .botoes a:first-child {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 #informacoes .info-conta a {
     color: #fff;
@@ -1674,30 +1674,26 @@ button.white {
         transition: .3s;
         background-color: #E3E6F3;
         box-shadow: 0 40px 60px rgba(0, 0, 0, .1);
-
-        &.ativo {
-            right: 0px;
-            z-index: 1;
-        }
-
-        & li {
-            margin-bottom: 25px;
-        }
+    }
+    #navbar.ativo {
+        right: 0px;
+        z-index: 1;
+    }
+    #navbar li {
+        margin-bottom: 25px;
     }
 
     #celular {
         display: flex;
         align-items: center;
-
-        & i {
-            color: #1A1A1A;
-            font-size: 24px;
-            padding-left: 20px;
-        }
-
-        & .fa-bars {
-            font-size: 27px;
-        }
+    }
+    #celular i {
+        color: #1A1A1A;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #celular .fa-bars {
+        font-size: 27px;
     }
 
     .usuario-celular .dropdown,
@@ -1748,148 +1744,128 @@ button.white {
 
     #qualidades {
         justify-content: center;
-
-        & .fe-box {
-            margin: 15px 15px;
-        }
+    }
+    #qualidades .fe-box {
+        margin: 15px 15px;
     }
 
     #produtos .pro-container {
-        justify-content: center;
-
-        & .pro {
-            margin: 15px;
-        }
+        justify-content: space-evenly;
+    }
+    #produtos .pro-container .pro {
+        margin: 15px;
+        width: 35%;
     }
 
     #banner {
         height: 20vh;
     }
 
-    #sm-banner {
-        & .banner-box {
-            min-width: 100%;
-            height: 30vh;
-            justify-content: space-between;
-        }
-
-        & .banner-box2 {
-            margin-top: 40px;
-        }
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 30vh;
+        justify-content: space-between;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 40px;
     }
 
     #banner3 {
         padding: 0 40px;
-
-        & .banner-box {
-            width: 28%;
-        }
+    }
+    #banner3 .banner-box {
+        width: 28%;
     }
 
 
     /* ---- CATÁLOGO ---- */
-    #catalogo {
-        & .ordenar {
-            padding: 5px 0 20px 0;
-        }
+    #catalogo .filtro {
+        width: 27%;
+    }
+    #catalogo .filtro .accordion-button {
+        font-size: 14px;
+    }
+    #catalogo .filtro .form-check {
+        width: 73%;
+        padding: 4px 0;
+    }
+    #catalogo .filtro .form-check-label {
+        font-size: 12px;
+    }
 
-        & .filtro {
-            width: 27%;
+    #catalogo .ordenar {
+        padding: 5px 0 20px 0;
+    }
 
-            & .accordion-button {
-                font-size: 14px;
-            }
-
-            & .form-check {
-                width: 73%;
-                padding: 4px 0;
-            }
-            & .form-check-label {
-                font-size: 12px;
-            }
-        }
-
-        & .pro-container {
-            width: 69%;
-        }
+    #catalogo .pro-container {
+        width: 69%;
     }
 
     #catalogo .pro {
         padding: 6px 6px;
         margin: 6px 4px 16px;
         border-radius: 15px;
-
-        & img {
-            border-radius: 10px;
-        }
-
-        & .favoritar {
-            top: -2px;
-            right: 10px;
-        }
-
-        & .fa-heart {
-            font-size: 16px;
-            width: 18px;
-            height: 18px;
-        }
-
-        & .des {
-            max-width: 80px;
-            overflow: hidden;
-            white-space: nowrap;
-
-            & h5 {
-                font-size: 10px;
-            }
-
-            & h4 {
-                font-size: 12px;
-                padding-top: 7px;
-            }
-        }
+    }
+    #catalogo .pro img {
+        border-radius: 10px;
+    }
+    #catalogo .pro .favoritar {
+        top: -2px;
+        right: 10px;
+    }
+    #catalogo .pro .fa-heart {
+        font-size: 16px;
+        width: 18px;
+        height: 18px;
+    }
+    #catalogo .pro .des {
+        max-width: 80px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #catalogo .pro .des h5 {
+        font-size: 10px;
+    }
+    #catalogo .pro .des h4 {
+        font-size: 12px;
+        padding-top: 7px;
     }
     
 
     /* ---- SOBRE ---- */
     #detalhes-sobre {
         flex-direction: column;
-
-        & img {
-            width: 100%;
-        }
-
-        & h1 {
-            margin-bottom: 20px;
-        }
-        & p {
-            font-size: 20px;
-        }
+    }
+    #detalhes-sobre img {
+        width: 100%;
+    }
+    #detalhes-sobre h1 {
+        margin-bottom: 20px;
+    }
+    #detalhes-sobre p {
+        font-size: 20px;
     }
       
     #perguntas-frequentes .pro {
         width: 47%;
-
-        & h3 {
-            font-size: 28px;
-        }
-        & p {
-            font-size: 21px;
-        }
-
-        & .conteudo {
-            height: 260px;
-        }
+    }
+    #perguntas-frequentes .pro h3 {
+        font-size: 28px;
+    }
+    #perguntas-frequentes .pro p {
+        font-size: 21px;
+    }
+    #perguntas-frequentes .conteudo {
+        height: 260px;
     }
 
 
     /* ---- CONTATO ---- */
     #detalhes-form {
         padding: 40px;
-
-        & form {
-            width: 100%;
-        }
+    }
+    #detalhes-form form {
+        width: 100%;
     }
 
 
@@ -1899,46 +1875,38 @@ button.white {
     /* ---- MINHA CONTA ---- */
     #informacoes {
         flex-direction: column;
+    }
 
-        & .info-conta {
-            & h1 {
-                text-align: center;
-            }
-    
-            & .conta {
-                align-items: center;
-    
-                & .conteudo {
-                    width: 90%;
-    
-                    & .topico {
-                        margin-bottom: 10px;
+    #informacoes .info-conta h1 {
+        text-align: center;
+    }
+    #informacoes .info-conta .conta {
+        align-items: center;
+    }
 
-                        & p,
-                        & span {
-                            font-size: 22px;
-                        }
-                    }
-                }
-    
-                & .botoes {
-                    margin-top: 30px;
-                    
-                    & a {
-                        font-size: 18px;
-                        padding: 20px 30px;
-                    }
-                    & a:first-child {
-                        margin-right: 30px;
-                    }
-                }
-            }
-        }
+    #informacoes .info-conta .conteudo {
+        width: 90%;
+    }
+    #informacoes .info-conta .conteudo .topico {
+        margin-bottom: 10px;
+    }
+    #informacoes .info-conta .conteudo .topico p,
+    #informacoes .info-conta .conteudo .topico span {
+        font-size: 22px;
+    }
 
-        & .info-alterar {
-            margin-top: 60px;
-        }
-    
+    #informacoes .info-conta .conteudo .botoes {
+        margin-top: 20px;
+    }
+    #informacoes .info-conta .conteudo .botoes a {
+        font-size: 18px;
+        padding: 20px 30px;
+    }
+    #informacoes .info-conta .conteudo .botoes a:first-child {
+        margin-right: 30px;
+    }
+    #informacoes .info-alterar {
+        margin-top: 60px;
     }
 
 
@@ -1949,36 +1917,31 @@ button.white {
     }
 
     /* ---- ADMIN LOGIN ---- */    
-    #login-admin {
-        & .container {
-            min-height: 420px;
-        }
+    #login-admin .container {
+        min-height: 420px;
+    }
+    #login-admin .container .titulo {
+        height: 150px;
+    }
+    #login-admin .container .alert {
+        font-size: 22px;
+        height: 100px;
+    } 
 
-        & .titulo {
-            height: 150px;
-        }
-
-        & .alert {
-            font-size: 22px;
-            height: 100px;
-        }
-
-        & form {
-            padding: 20px 40px;
-            margin-bottom: 18px;
-
-            & div {
-                margin-top: 10px;
-            }
-            & input {
-                height: 60px;
-                font-size: 26px;
-            }
-            button {
-                font-size: 20px;
-                height: 60px;
-            }
-        }
+    #login-admin .container form {
+        padding: 20px 40px;
+        margin-bottom: 18px;
+    }
+    #login-admin .container form div {
+        margin-top: 10px;
+    }
+    #login-admin .container form div input {
+        height: 60px;
+        font-size: 26px;
+    }
+    #login-admin .container form div button {
+        font-size: 20px;
+        height: 60px;
     }
 }
 
@@ -2407,12 +2370,19 @@ button.white {
         }
 
         & .conteudo {
-            width: 100%;
+            width: 100% !important;
 
             & .topico {
                 flex-direction: column;
                 margin-bottom: 10px;
             }
+
+            & .botoes {
+                justify-content: space-evenly;
+                margin-top: 15px;
+                width: 100%;
+            }
+
             & p,
             & span {
                 font-size: 20px;
@@ -2430,18 +2400,18 @@ button.white {
             }
         }
 
-        & .botoes {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-    
-            & a {
-                padding: 15px 25px;
-            }
-            & a:first-child {
-                margin-right: 0;
-            }
-        }
+    }
+
+    #informacoes .info-conta .botoes {
+        justify-content: space-evenly;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    #informacoes .info-conta .botoes 
+
+    #informacoes .info-conta .botoes a:first-child {
+        margin-right: 0px;
     }
 
     #informacoes .info-alterar {
