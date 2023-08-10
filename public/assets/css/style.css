@@ -1978,86 +1978,71 @@ button.white {
     #modalProduto .modal-content {
         min-width: 300px;
         width: 350px;
-
-        & .modal-header{
-            padding-bottom: 0;
-        }
+    }
+    #modalProduto .modal-content .modal-header{
+        padding-bottom: 0;
     }
 
     #modalProduto .modal-body {
         padding-top: 0;
+    }
+    #modalProduto .modal-body h2 {
+        font-size: 28px;
+        word-break: break-all;
+        margin-bottom: 15px;
+    }
 
-        & h2 {
-            font-size: 28px;
-            word-break: break-all;
-            margin-bottom: 15px;
-        }
+    #modalProduto .modal-body .produto .img {
+        margin-right: 10px;
+    }
 
-        /* Informações do produto */
-        & .produto {
-            & .img {
-                margin-right: 10px;
-            }
+    #modalProduto .modal-body .produto .info p {
+        font-size: 15px;
+        margin-bottom: 0px;
+        line-height: 26px;
+    }
+    #modalProduto .modal-body .produto .info span {
+        font-size: 15px;
+    }
 
-            & .info {
-                & p {
-                    font-size: 15px;
-                    margin-bottom: 0px;
-                    line-height: 26px;
-                }
-                & span {
-                    font-size: 15px;
-                }
+    #modalProduto .modal-body .produto .info .prod-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
 
-                & .prod-info {
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    margin-bottom: 15px;
+    #modalProduto .modal-body .produto .info .prod-info .prod-id {
+        margin-right: 10px;
+    }
+    #modalProduto .modal-body .produto .info .prod-info .prod-id p {
+        font-size: 15px;
+        margin-bottom: 0
+    }
 
-                    & .prod-id {
-                        margin-right: 10px;
-                
-                        & p {
-                            font-size: 15px;
-                            margin-bottom: 0
-                        }
-                    }
-                }
+    #modalProduto .modal-body .produto .info .prod-preco-full {
+        font-size: 14px;
+    }
+        
+    #modalProduto .modal-body .produto .info .prod-preco-off .preco {
+        font-size: 20px;
+    }
+    #modalProduto .modal-body .produto .info .prod-preco-off .off {
+        font-size: 18px;
+        margin-left: 6px;
+    }
 
-                & .prod-preco-full {
-                    font-size: 14px;
-                }
-            
-                & .prod-preco-off {
-                    & .preco {
-                        font-size: 20px;
-                    }
-            
-                    & .off {
-                        font-size: 18px;
-                        margin-left: 6px;
-                    }
-                }
-            
-                & .prod-preco-parcela {
-                    font-size: 12px;
-            
-                    & span {
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
+    #modalProduto .modal-body .produto .info .prod-preco-parcela {
+        font-size: 12px;
+    }
+    #modalProduto .modal-body .produto .info .prod-preco-parcela span {
+        font-size: 12px;
+    }
 
-        /* Descrição e especificações */
-        .extra {
-            & div {
-                font-size: 14px;
-            }
-            & h3 {
-                font-size: 20px;
-            }
-        }
+    #modalProduto .modal-body .extra div {
+        font-size: 14px;
+    }
+    #modalProduto .modal-body .extra h3 {
+        font-size: 20px;
     }
 
 
@@ -2068,33 +2053,26 @@ button.white {
     #jornal {
         padding: 40px 20px;
         margin: 20px 0;
-
-        .form {
-            width: 100%;
-        }
-
-        input {
-            padding: 0 .25em;
-        }
+    }
+    #jornal .form {
+        width: 100%;
+    }
+    #jornal input {
+        padding: 0 .25em;
     }
 
-    #footer {
-        & .top {
-            padding-right: 20px;
-        }
-
-        & .logo {
-            width: 100%;
-        }
-
-        & .m-top {
-            margin-top: 20px;
-        }
-
-        & .copyright {
-            text-align: start;
-            margin-top: 10px;
-        }
+    #footer .top {
+        padding-right: 20px;
+    }
+    #footer .logo {
+        width: 100%;
+    }
+    #footer .m-top {
+        margin-top: 20px;
+    }
+    #footer .copyright {
+        text-align: start;
+        margin-top: 10px;
     }
 
 
@@ -2102,29 +2080,26 @@ button.white {
     #erro .container {
         height: 430px;
         padding: 0px;
+    }
+    #erro .container h1 {
+        font-size: 64px;
+        margin: 25px 0 10px 0;
+    }
+    #erro .container h4 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    #erro .container p {
+        font-size: 18px;
+        padding: 0 20px 0 20px;
+    }
 
-        & h1 {
-            font-size: 64px;
-            margin: 25px 0 10px 0;
-        }
-        & h4 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        & p {
-            font-size: 18px;
-            padding: 0 20px 0 20px;
-        }
-
-        & .btn {
-            margin: 10px 0 25px 0;
-            padding: 0;
-
-            & a {
-                padding: 10px 25px;
-            }
-        }
-        
+    #erro .container .btn {
+        margin: 10px 0 25px 0;
+        padding: 0;
+    }
+    #erro .container .btn a {
+        padding: 10px 25px;
     }
 
 
@@ -2136,187 +2111,169 @@ button.white {
 
     #qualidades {
         justify-content: space-between;
-
-        & .fe-box {
-            width: 155px;
-            margin: 0 0 15px 0
-        }
+    }
+    #qualidades .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0
     }
 
     #produtos .pro-container {
         justify-content: center;
-
-        & .pro {
-            width: 100%;
-        }
+    }
+    #produtos .pro-container .pro {
+        width: 100%;
     }
 
     #banner {
         height: 40vh;
     }
 
-    #sm-banner {
-        & .banner-box {
-            height: 40vh;
-        }
-        & .banner-box2 {
-            margin-top: 20px;
-        }
+    #sm-banner .banner-box {
+        height: 40vh;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
     }
 
     #banner3 {
         padding: 0 20px;
-
-        & .banner-box {
-            width: 100%;
-        }
+    }
+    #banner3 .banner-box {
+        width: 100%;
     }
 
 
     /* ---- CATÁLOGO ---- */
-    #catalogo {
-        & span {
-            font-size: 18px;
-        }
+    #catalogo span {
+        font-size: 18px;
+    }
 
-        & .ordenar {
-            padding: 5px 0 20px 0;
-            justify-content: start;
-        }
+    #catalogo .ordenar {
+        padding: 5px 0 20px 0;
+        justify-content: start;
+    }
 
-        & .conteudo {
-            flex-direction: column;
-        }
+    #catalogo .conteudo {
+        flex-direction: column;
     }
 
     #catalogo .filtro {
         width: 103%;
         border-right: 0;
         margin-right: 0;
+    }
 
-        & #acordeaoFiltro{
-            padding-right: 0;
-        }
+    #catalogo .filtro #acordeaoFiltro {
+        padding-right: 0;
+    }
 
-        & .accordion-button {
-            font-size: 16px;
-        }
+    #catalogo .filtro .accordion-button {
+        font-size: 16px;
+    }
 
-        & .form-check {
-            width: 80%;
-            padding: 8px 0;
-        }
-        & .form-check-label {
-            font-size: 14px;
-        }
+    #catalogo .filtro .form-check {
+        width: 80%;
+        padding: 8px 0;
+    }
+    #catalogo .filtro .form-check-label {
+        font-size: 14px;
     }
 
     #catalogo .pro-container {
         width: 100%;
+    }
+    #catalogo .pro-container .pro {
+        width: 45%;
+        margin: 6px 7px 16px;
+        border-radius: 15px;
+    }
+    #catalogo .pro-container .pro img {
+        border-radius: 10px;
+    }
 
-        & .pro {
-            width: 45%;
-            margin: 6px 7px 16px;
-            border-radius: 15px;
+    #catalogo .pro-container .pro .favoritar {
+        top: 1px;
+        right: 10px;
+    }
 
-            & img {
-                border-radius: 10px;
-            }
+    #catalogo .pro-container .pro .fa-heart {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+    }
 
-            & .favoritar {
-                top: 1px;
-                right: 10px;
-            }
-
-            & .fa-heart {
-                font-size: 20px;
-                width: 25px;
-                height: 25px;
-            }
-
-            & .des {
-                max-width: 130px;
-                overflow: hidden;
-                white-space: nowrap;
-
-                & h5 {
-                    font-size: 14px;
-                }
-                & h4 {
-                    font-size: 15px;
-                    padding-top: 7px;
-                }
-            }
-        }
+    #catalogo .pro-container .pro .des {
+        max-width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #catalogo .pro-container .pro .des h5 {
+        font-size: 14px;
+    }
+    #catalogo .pro-container .pro .des h4 {
+        font-size: 15px;
+        padding-top: 7px;
     }
 
 
     /* ---- SOBRE ---- */
-    #detalhes-sobre {
-        & div {
-            padding-right: 0;
-        }
-
-        & h1 {
-            font-size: 43px;
-            margin-bottom: 20px;
-        }
-        & p {
-            font-size: 20px;
-        }
+    #detalhes-sobre div {
+        padding-right: 0;
+    }
+    #detalhes-sobre div h1 {
+        font-size: 43px;
+        margin-bottom: 20px;
+    }
+    #detalhes-sobre div p {
+        font-size: 20px;
     }
     
-    #perguntas-frequentes {
-        & h2 {
-            font-size: 39px;
-        }
+    #perguntas-frequentes h2 {
+        font-size: 39px;
+    }
 
-        & .pro {
-            width: 90%;
+    #perguntas-frequentes .pro {
+        width: 90%;
+    }
+    #perguntas-frequentes .pro p {
+        font-size: 20px;
+    }
 
-            & p {
-                font-size: 20px;
-            }
-        }
-
-        & .conteudo {
-            height: 255px;
-        }
-    } 
+    #perguntas-frequentes .conteudo {
+        height: 255px;
+    }
 
 
     /* ---- CONTATO ---- */
     #header-banner.contato-banner {
         margin-bottom: 20px;
+    }
 
-        & h2 {
-            font-size: 46px;
-        }
-        & p {
-            font-size: 20px;
-        }
+    #header-banner.contato-banner  h2 {
+        font-size: 46px;
+    }
+    #header-banner.contato-banner  p {
+        font-size: 20px;
     }
 
     #detalhes-contato {
         flex-direction: column;
+    }
 
-        & .detalhes {
-            width: 100%;
-            margin-bottom: 30px;
-        }
+    #detalhes-contato .detalhes {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
-        & .mapa {
-            width: 100%;
-        }
-        
+    #detalhes-contato .mapa {
+        width: 100%;
     }
 
     #detalhes-form {
         padding: 20px;
-
-        & button {
-            font-size: 16px;
-        }
+    }
+    #detalhes-form button {
+        font-size: 16px;
     }
 
     
@@ -2325,81 +2282,68 @@ button.white {
     #cadastro .container {
         width: 330px;
         padding: 20px 40px;
+    }
 
-        & .input-box input[placeholder] {
-            font-size: 18px;
-            padding-right: 25px;
-        }
+    #login .input-box input[placeholder],
+    #cadastro .input-box input[placeholder] {
+        font-size: 18px;
+        padding-right: 25px;
+    }
 
-        & .btn {
-            font-size: 18px;
-        }
+    #login .btn,
+    #cadastro .btn {
+        font-size: 18px;
     }
     
-    #login .checkbox {
-        & .form-check-label {
-            font-size: 16px;
-            bottom: 36.7%;
-        }
+    #login .checkbox .form-check-label {
+        font-size: 16px;
+        bottom: 36.7%;
+    }
 
-        & input {
-            height: 16px;
-            width: 16px;
-        }
+    #login .checkbox input {
+        height: 16px;
+        width: 16px;
     }
         
-    #cadastro {
-        & .termos p {
-            font-size: 14px;
-        }
+    #cadastro .termos p {
+        font-size: 14px;
+    }
 
-        & .btn {
-            margin: 70px 0 5px
-        }
+    #cadastro .btn {
+        margin: 70px 0 5px
+    }
 
-        & .logar-registrar {
-            margin-top: 80px;
-        }
+    #cadastro .logar-registrar {
+        margin-top: 80px;
     }
 
     
     /* ---- MINHA CONTA ---- */
-    #informacoes .info-conta {
-        & h1 {
-            text-align: center;
-        }
+    #informacoes .info-conta h1 {
+        text-align: center;
+    }
 
-        & .conteudo {
-            width: 100% !important;
-
-            & .topico {
-                flex-direction: column;
-                margin-bottom: 10px;
-            }
-
-            & .botoes {
-                justify-content: space-evenly;
-                margin-top: 15px;
-                width: 100%;
-            }
-
-            & p,
-            & span {
-                font-size: 20px;
-            }
-            & span {
-                margin-left: 0px;
-                padding: 0;
-
-                white-space: wrap;
-                word-wrap: break-word;
-            }
+    #informacoes .info-conta .conteudo {
+            width: 100%;
+    }
     
-            & .topico:first-child p:first-child {
-                padding-top: 0;
-            }
-        }
+    #informacoes .info-conta .conteudo .topico {
+        flex-direction: column;
+    }
+    #informacoes .info-conta .conteudo .topico p {
+        font-size: 20px;
+    }
+    #informacoes .info-conta .conteudo .topico span {
+        font-size: 20px;
+        margin-left: 0px;
+        padding: 0;
 
+        white-space: wrap;
+        word-wrap: break-word;
+    }
+
+    #informacoes .info-conta .conteudo .topico:first-child p:first-child {
+        padding-top: 0;
     }
 
     #informacoes .info-conta .botoes {
@@ -2407,9 +2351,10 @@ button.white {
         margin-top: 15px;
         width: 100%;
     }
-
-    #informacoes .info-conta .botoes 
-
+    #informacoes .info-conta .botoes a {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
     #informacoes .info-conta .botoes a:first-child {
         margin-right: 0px;
     }
@@ -2423,57 +2368,52 @@ button.white {
     #favoritos {
         align-items: center;
         padding: 20px 10px;
-        
-        & h1 {
-            text-align: center;
-        }
+    }
+    #favoritos h1 {
+        text-align: center;
+    }
 
-        & .pro {
-            width: 46%;
-            margin: 6px 7px 16px;
-            min-width: 100px;
+    #favoritos .pro {
+        width: 46%;
+        margin: 6px 7px 16px;
+        min-width: 100px;
+    }
 
-            & .des {
-                max-width: 130px;
-                overflow: hidden;
-                white-space: nowrap;
-            }
+    #favoritos .pro .des {
+        max-width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 
-            & .favoritar {
-                right: 15px;
-            }
+    #favoritos .pro .favoritar {
+        right: 15px;
+    }
 
-            & .fa-heart {
-                font-size: 20px;
-                width: 25px;
-                height: 25px;
-            }
-        }
+    #favoritos .pro .fa-heart {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
     }
 
     /* ADMIN LOGIN */
-    #login-admin {
-        & .titulo {
-            height: 150px;
-        }
+    #login-admin .titulo {
+        height: 150px;
+    }
+    #login-admin h1 {
+        font-size: 36px;
+    }
 
-        & h1 {
-            font-size: 36px;
-        }
-
-        & .alert {
-            font-size: 20px;
-            height: 120px;
-        }
+    #login-admin .alert {
+        font-size: 20px;
+        height: 120px;
+    }
         
-        & form {
-            padding: 20px;
-            margin-top: 5px;
-
-            & input {
-                padding: 10px 12px;
-                font-size: 16px;
-            }
-        }
+    #login-admin form {
+        padding: 20px;
+        margin-top: 5px;
+    }
+    #login-admin form input {
+        padding: 10px 12px;
+        font-size: 16px;
     }
 }
