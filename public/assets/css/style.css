@@ -2177,7 +2177,7 @@ button.white {
     }
     #login-admin form input {
         height: 60px;
-        font-size: 26px;
+        font-size: 22px;
     }
     #login-admin form button {
         font-size: 20px;
@@ -2669,12 +2669,12 @@ button.white {
     #login-admin .titulo {
         height: 150px;
     }
-    #login-admin h1 {
+    #login-admin .titulo h1 {
         font-size: 36px;
     }
 
     #login-admin .alert {
-        font-size: 20px;
+        font-size: 18px;
         height: 120px;
     }
         
@@ -2683,7 +2683,12 @@ button.white {
         margin-top: 5px;
     }
     #login-admin form input {
+        height: 50px;
+        font-size: 18px;
+        margin-bottom: 8px;
         padding: 10px 12px;
-        font-size: 16px;
+    }
+    #login-admin form button {
+        font-size: 18px;
     }
 }
