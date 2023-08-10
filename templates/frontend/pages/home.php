@@ -31,6 +31,7 @@
         <?php
             $tempTricot = 0;
             foreach($produtos as $p) {
+                $imagem =     ( array_key_exists(1, $p['imagens']) ) ? $p['imagens'][1]['url'] : $p['imagens'][0]['url'];
                 $nome = strlen($p['nome']) <= 60 ? $p['nome']  : substr($p['nome'], 0, 57) . '...';
                 $precoTotal = number_format($p['preco'], 2, ',', '.');
                 $favorito = ($p['ativo'] == 'S') ? "style= 'font-weight: 600;'" : "style='font-weight: 500'";
@@ -40,7 +41,7 @@
                     if ($tempTricot < 4) {
                         echo <<<HTML
                             <div class="pro" data-idproduto="{$p['idproduto']}">
-                                <img src="{$p['imagens'][0]['url']}" alt="">
+                                <img src="{$imagem}" alt="">
                                 <div class="des">
                                     <span>{$p['marca']}</span>
                                     <h5>{$nome}</h5>
@@ -74,6 +75,7 @@
             $tempShort = 0;
             $tempSaia = 0;
             foreach($produtos as $p) {
+                $imagem =     ( array_key_exists(1, $p['imagens']) ) ? $p['imagens'][1]['url'] : $p['imagens'][0]['url'];
                 $nome = strlen($p['nome']) <= 60 ? $p['nome']  : substr($p['nome'], 0, 57) . '...';
                 $precoTotal = number_format($p['preco'], 2, ',', '.');
                 $favorito = ($p['ativo'] == 'S') ? "style= 'font-weight: 600;'" : "style='font-weight: 500'";
@@ -83,7 +85,7 @@
                     if ($tempShort < 4) {
                         echo <<<HTML
                             <div class="pro" data-idproduto="{$p['idproduto']}">
-                                <img src="{$p['imagens'][1]['url']}" alt="">
+                                <img src="{$imagem}" alt="">
                                 <div class="des">
                                     <span>{$p['marca']}</span>
                                     <h5>{$nome}</h5>
