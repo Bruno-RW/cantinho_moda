@@ -16,7 +16,7 @@
     <h2>Perguntas frequentes</h2>
 
     <div class="container row justify-content-center">
-        <div class="box">
+        <div class="box d-flex flex-column justify-content-between">
             <h3>Por que não consigo comprar produtos?</h3>
             <div class="conteudo">
                 <p>Este site possui o objetivo de expor os itens no catálogo da loja Cantinho da Moda. Caso esteja a fim de realizar a compra de produtos, dirija-se até a nossa loja física.</p>
@@ -25,7 +25,7 @@
             <p>Caso necessário, entre na página de <a href="/contato">contato</a>.</p>
         </div>
         
-        <div class="box">
+        <div class="box d-flex flex-column justify-content-between">
             <h3>Que tipos de produtos são vendidos?</h3>
             <div class="conteudo">
                 <p>Na Cantinho da Moda vendemos desde roupas de verão até roupas de inverno. Além disso, também vendemos alguns acessórios, como bolsas, brincos e colares.</p>
@@ -33,7 +33,7 @@
             <p>Vá para a nossa página e aproveite: <a href="/catalogo">catálogo</a>.</p>
         </div>
 
-        <div class="box">
+        <div class="box d-flex flex-column justify-content-between">
             <h3>Como faço para utilizar a página "catálogo"?</h3>
             <div class="conteudo">
                 <p>Basta alterar as personalizações de pesquisa, localizadas a esquerda da página, através das categorias e ordens de visualização entre preços  de produtos.</p>
@@ -41,7 +41,7 @@
             <p>Vá agora e teste novos produtos: <a href="/catalogo">catálogo</a>.</p>
         </div>
 
-        <div class="box">
+        <div class="box d-flex flex-column justify-content-between">
             <h3>Quais são os métodos de pagamento?</h3>
             <div class="conteudo">
                 <p>Ao visitar nossa loja física aceitamos cartões de débito e crédito da Visa, Mastercard, Elo e Cabal. Ademais, também aceitmos pagamento por Pix e Banri Compras</p>
