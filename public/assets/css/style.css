@@ -1049,6 +1049,7 @@ button.white {
 
     width: 23%;
     min-width: 260px;
+    min-height: 35vh;
 
     transition: .2s ease;
     border: 1px solid #CECACA;
@@ -1077,8 +1078,7 @@ button.white {
     text-decoration: underline;
 }
 #perguntas-frequentes .conteudo {
-    height: 165px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -1653,7 +1653,6 @@ button.white {
 
 
 /* ------ MEDIA ------ */
-
 @media (min-width:1601px) {
     /* ---- GERAL ---- */
     #header-banner h2 {
@@ -1663,19 +1662,28 @@ button.white {
         font-size: 20px;
     }
     /* ---- CABEÇALHO ---- */
-    
+    #header {
+        padding: 25px 80px;
+    }
     #navbar li a {
-        font-size: 18px;
+        font-size: 20px;
+    }
+    #navbar .dropdown i {
+        font-size: 24px;
     }
     /* ---- RODAPÉ ---- */
     /* ---- ERROR 404 ---- */
 
 
     /* ---- HOME ---- */
+    #produtos .pro img {
+        max-height: 77vh;
+    }
     #sm-banner .banner-box {
         width: 43vw;
     }
     
+
     /* ---- CATÁLOGO ---- */
 
 
@@ -1690,7 +1698,9 @@ button.white {
     #perguntas-frequentes h2 {
         font-size: 50px;
     }
-
+    #perguntas-frequentes .box {
+        height: 52vh;
+    }
     #perguntas-frequentes .box h3 {
         font-size: 24px;
     }
@@ -1698,9 +1708,6 @@ button.white {
         font-size: 18px;
     }
 
-    #perguntas-frequentes .box .conteudo {
-        margin-bottom: 20px;
-    }
 
     /* ---- CONTATO ---- */
 
@@ -1721,15 +1728,15 @@ button.white {
         max-height: 20vw;
     }
 
-    /* ---- ADMIN LOGIN ---- */
-}
 
-@media (max-width:1600px) {
-   /* Tamanho padrão */
+    /* ---- ADMIN LOGIN ---- */
 }
 
 @media (max-width:1200px) {
     /* ---- GERAL ---- */
+    .section-m1 {
+        padding: 40px;
+    }
     /* ---- CABEÇALHO ---- */
     /* ---- RODAPÉ ---- */
     /* ---- ERROR 404 ---- */
@@ -1755,15 +1762,19 @@ button.white {
         font-size: 18px;
     }
 
+    #perguntas-frequentes .box {
+        height: 42vh;
+    }
     #perguntas-frequentes .box h3 {
-        font-size: 18px;
+        font-size: 17px;
     }
     #perguntas-frequentes .box p {
         font-size: 14px;
+        text-align: justify;
     }
 
     #perguntas-frequentes .box .conteudo {
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
     /* ---- CONTATO ---- */
@@ -1805,9 +1816,13 @@ button.white {
         width: 35%;
     }
 
+    #sm-banner {
+        padding: 40px;
+    }
     #sm-banner .banner-box {
         min-width: 200px;
-        width: 400vh;
+        height: 80vh;
+        width: 400vw;
         justify-content: space-between;
     }
     #sm-banner .banner-box2 {
@@ -1855,15 +1870,32 @@ button.white {
         flex-direction: column;
     }
     #detalhes-sobre img {
-        width: 100%;
+        width: 80%;
+        align-self: center;
     }
     #detalhes-sobre h1 {
         margin-bottom: 20px;
     }
     #detalhes-sobre p {
-        font-size: 32px;
+        font-size: 20px;
     }
 
+    #perguntas-frequentes .container .box {
+        width: 30%;
+    }
+    #perguntas-frequentes .box h3 {
+        font-size: 17px;
+        text-align: center;
+    }
+    #perguntas-frequentes .box p {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    #perguntas-frequentes .box .conteudo {
+        height: 150px;
+        margin-bottom: 0;
+    }
     /* ---- CONTATO ---- */
 
 
@@ -2072,6 +2104,7 @@ button.white {
       
     #perguntas-frequentes .container .box {
         width: 46%;
+        height: 35vh;
     }
     #perguntas-frequentes .box h3 {
         font-size: 20px;
@@ -2480,6 +2513,7 @@ button.white {
 
     #perguntas-frequentes .container .box {
         width: 100%;
+        height: 47vh;
     }
     #perguntas-frequentes .box h3 {
         font-size: 21px;
