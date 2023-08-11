@@ -17,7 +17,7 @@ class MinhaContaController extends FrontController
         $dados['rodape'] = $this->carregaHTMLRodape();
         
         $dados['cliente'] = $_SESSION['cliente'];
-        $dados['cliente']['email'] = escondeCaracteres($dados['cliente']['email']);
+        $dados['cliente']['email'] = escondeEmail($dados['cliente']['email']);
 
         $dtCadastro = strtotime($dados['cliente']['created_at']);
         $dados['cliente']['created_at'] = str_replace("-", "/", date("d-m-Y", $dtCadastro));

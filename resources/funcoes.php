@@ -69,7 +69,7 @@ function acessoRestrito()
  * @param string $email
  * @return string
 */
-function escondeCaracteres (string $email) {
+function escondeEmail(string $email) {
 
     $posArroba = strpos($email, "@");
 
@@ -78,5 +78,5 @@ function escondeCaracteres (string $email) {
 
     $email = str_replace($texto, str_repeat("*", $tamanhoTexto), $email);
 
-return $email;
+    return $email;
 }
