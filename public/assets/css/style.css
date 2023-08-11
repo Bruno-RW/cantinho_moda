@@ -2619,7 +2619,7 @@ button.white {
     #login .input-box input[placeholder],
     #cadastro .input-box input[placeholder] {
         font-size: 18px;
-        padding-right: 25px;
+        padding-right: 30px;
     }
 
     #login .btn,
