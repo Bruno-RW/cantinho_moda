@@ -1734,15 +1734,18 @@ button.white {
 
 @media (max-width:1200px) {
     /* ---- GERAL ---- */
-    .section-m1 {
-        padding: 40px;
-    }
     /* ---- CABEÇALHO ---- */
     /* ---- RODAPÉ ---- */
     /* ---- ERROR 404 ---- */
 
 
     /* ---- HOME ---- */
+    #produtos .pro-container {
+        justify-content: center;
+    }
+    #produtos .pro-container .pro {
+        margin: 20px 18px;
+    }
     #sm-banner .banner-box {
         min-width: 400px;
         width: 41vw;
@@ -1763,7 +1766,7 @@ button.white {
     }
 
     #perguntas-frequentes .box {
-        height: 42vh;
+        height: 70vh;
     }
     #perguntas-frequentes .box h3 {
         font-size: 17px;
@@ -1773,9 +1776,6 @@ button.white {
         text-align: justify;
     }
 
-    #perguntas-frequentes .box .conteudo {
-        margin-bottom: 0;
-    }
 
     /* ---- CONTATO ---- */
 
@@ -1882,6 +1882,7 @@ button.white {
 
     #perguntas-frequentes .container .box {
         width: 30%;
+        height: 60vh;
     }
     #perguntas-frequentes .box h3 {
         font-size: 17px;
@@ -1892,10 +1893,6 @@ button.white {
         text-align: justify;
     }
 
-    #perguntas-frequentes .box .conteudo {
-        height: 150px;
-        margin-bottom: 0;
-    }
     /* ---- CONTATO ---- */
 
 
@@ -1903,6 +1900,56 @@ button.white {
 
     
     /* ---- MINHA CONTA ---- */
+    #informacoes {
+        flex-direction: column;
+    }
+
+    #informacoes .info-conta h1 {
+        text-align: center;
+    }
+    #informacoes .info-conta .conta {
+        align-items: center;
+    }
+
+    #informacoes .info-conta .conteudo {
+        width: 100%;
+    }
+    #informacoes .info-conta .topico {
+        margin-bottom: 10px;
+    }
+    #informacoes .info-conta .topico p,
+    #informacoes .info-conta .topico span {
+        font-size: 22px;
+    }
+
+    #informacoes .info-conta .botoes {
+        margin-top: 20px;
+    }
+    #informacoes .info-conta .botoes a {
+        font-size: 18px;
+    }
+    #informacoes .info-conta .botoes a:first-child {
+        margin-right: 30px;
+    }
+    #informacoes .info-alterar {
+        margin-top: 60px;
+    }
+    #informacoes .info-alterar h2 {
+        font-size: 44px;
+    }
+
+    #informacoes .info-alterar .input-box input[placeholder] {
+        font-size: 22px;
+    }
+    #informacoes .info-alterar .input-box i {
+        font-size: 22px;
+        top: 18px;
+        right: 2px;
+    }
+
+    #informacoes .info-alterar .col-12 button {
+        font-size: 18px;
+    }
 
 
     /* ---- FAVORITOS ---- */
@@ -2131,55 +2178,8 @@ button.white {
 
 
     /* ---- MINHA CONTA ---- */
-    #informacoes {
-        flex-direction: column;
-    }
-
-    #informacoes .info-conta h1 {
-        text-align: center;
-    }
-    #informacoes .info-conta .conta {
-        align-items: center;
-    }
-
     #informacoes .info-conta .conteudo {
         width: 90%;
-    }
-    #informacoes .info-conta .topico {
-        margin-bottom: 10px;
-    }
-    #informacoes .info-conta .topico p,
-    #informacoes .info-conta .topico span {
-        font-size: 22px;
-    }
-
-    #informacoes .info-conta .botoes {
-        margin-top: 20px;
-    }
-    #informacoes .info-conta .botoes a {
-        font-size: 18px;
-    }
-    #informacoes .info-conta .botoes a:first-child {
-        margin-right: 30px;
-    }
-    #informacoes .info-alterar {
-        margin-top: 60px;
-    }
-    #informacoes .info-alterar h2 {
-        font-size: 44px;
-    }
-
-    #informacoes .info-alterar .input-box input[placeholder] {
-        font-size: 22px;
-    }
-    #informacoes .info-alterar .input-box i {
-        font-size: 22px;
-        top: 18px;
-        right: 2px;
-    }
-
-    #informacoes .info-alterar .col-12 button {
-        font-size: 18px;
     }
 
 
@@ -2498,10 +2498,12 @@ button.white {
     }
     #detalhes-sobre div h1 {
         font-size: 43px;
+        text-align: center;
         margin-bottom: 20px;
     }
     #detalhes-sobre div p {
         font-size: 20px;
+        text-align: justify;
     }
     #perguntas-frequentes {
         align-items: center;
@@ -2604,12 +2606,8 @@ button.white {
 
     
     /* ---- MINHA CONTA ---- */
-    #informacoes .info-conta h1 {
-        text-align: center;
-    }
-
     #informacoes .info-conta .conteudo {
-            width: 100%;
+        width: 100%;
     }
     
     #informacoes .info-conta .topico {

@@ -212,13 +212,13 @@
                 let infoAlterar = document.querySelector('#informacoes .info-alterar');
 
                 if (infoAlterar.classList.contains('ativo')) {
-                    if (window.innerWidth >= 800) {
+                    if (window.innerWidth > 1024) {
                         document.querySelector('#informacoes .info-conta .conteudo').style.width = '45%';
                     }
                     infoAlterar.classList.remove('ativo');
                 }
                 else {
-                    if (window.innerWidth >= 800) {
+                    if (window.innerWidth > 1024) {
                         document.querySelector('#informacoes .info-conta .conteudo').style.width = '90%';
                     }
                     infoAlterar.classList.add('ativo');
