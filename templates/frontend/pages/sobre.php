@@ -44,7 +44,7 @@
         <div class="box d-flex flex-column justify-content-between">
             <h3>Quais são os métodos de pagamento?</h3>
             <div class="conteudo">
-                <p>Ao visitar nossa loja física aceitamos cartões de débito e crédito da Visa, Mastercard, Elo e Cabal. Ademais, também aceitmos pagamento por Pix e Banri Compras</p>
+                <p>Ao visitar nossa loja física aceitamos cartões de débito e crédito da Visa, Mastercard, Elo e Cabal. Ademais, também aceitamos pagamento por Pix e Banri Compras</p>
             </div>
             <p>Caso tenha dúvidas, visite a página de <a href="/contato">contato</a>.</p>
         </div>
