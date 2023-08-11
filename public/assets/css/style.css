@@ -1732,6 +1732,48 @@ button.white {
     /* ---- ADMIN LOGIN ---- */
 }
 
+@media (max-width:1600px) {
+    /* ---- GERAL ---- */
+    /* ---- CABEÇALHO ---- */
+    /* ---- RODAPÉ ---- */
+    /* ---- ERROR 404 ---- */
+
+
+    /* ---- HOME ---- */
+    #sm-banner .banner-box {
+        min-width: 200px;
+        width: 41vw;
+    }
+
+    #banner3 .banner-box {
+        width: 31%;
+    }
+
+    /* ---- CATÁLOGO ---- */
+    #catalogo .pro-container .pro {
+        width: 22%;
+    }
+
+    /* ---- SOBRE ---- */
+    #perguntas-frequentes .box p {
+        text-align: justify;
+    }
+
+    /* ---- CONTATO ---- */
+
+
+    /* ---- LOGAR/CADASTRAR ---- */
+
+    
+    /* ---- MINHA CONTA ---- */
+
+
+    /* ---- FAVORITOS ---- */
+
+
+    /* ---- ADMIN LOGIN ---- */
+}
+
 @media (max-width:1200px) {
     /* ---- GERAL ---- */
     /* ---- CABEÇALHO ---- */
