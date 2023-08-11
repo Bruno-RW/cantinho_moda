@@ -115,7 +115,7 @@
         const fecharBar = document.querySelector('#header #fechar');
         const navbar = document.querySelector('#header #navbar');
 
-        const mapaContato = document.querySelector('#detalhes-contato .mapa');
+        const mapaContato = document.querySelector('#detalhes-contato .mapa') ?? '';
 
         bar.addEventListener('click', () => {
             navbar.classList.add('ativo');
