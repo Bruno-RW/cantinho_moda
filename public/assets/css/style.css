@@ -2435,6 +2435,9 @@ button.white {
     #banner {
         height: 40vh;
     }
+    #sm-banner {
+        padding: 20px;
+    }
 
     #sm-banner .banner-box {
         height: 40vh;
