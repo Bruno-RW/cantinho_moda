@@ -466,7 +466,7 @@
                                 modalFavoritar.classList.remove('ativo');
                             }
 
-                            document.querySelector('#modalProduto .btn-close').addEventListener("click", recarregaPag());
+                            document.querySelector('#modalProduto .btn-close').addEventListener("click", recarregaPag);
                         });
                     });
                 });
